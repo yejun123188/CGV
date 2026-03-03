@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>깊이 빠져 보다, CGV</title>
+    <link rel="icon" href="./images/favicon.ico">
+    <link rel="stylesheet" href="./css/pretendard-font.css">
+    <link rel="stylesheet" href="./css/sub-common.css">
+    <!-- vvv css 이름 변경 후 경로 재수정 vvv -->
+    <link rel="stylesheet" href="./css/sub-theater-reserv.css">
+</head>
+
+<!-- 하단에 스크립트 추가하면서 body에 position:relative 추가했습니다
+극장별에서 영화 시간 선택하면 예매팝업창 띄우는 거 ai로 코드짜서 구현해뒀어요
+말로 설명하는 거 보다 ai로 썼어도 이렇게 작동(?)하는거라고 보여드리는 게 나을 거 같아서 추가했어요 ! -->
+
+<body>
+    <!-- header -->
+    <header class="sub-header">
+        <div class="fixed-bar">
+            <div class="ham-btn">
+                <a href="#"><img src="./images/ham.png" alt="햄버거"></a>
+            </div>
+
+            <h1 class="fixed-logo">
+                <a href="index.html"><img src="./images/fixed-header-logo.png" alt="CGV 고정로고"></a>
+            </h1>
+
+            <ul class="gnb-list">
+                <li><a href="#"><img src="./images/search.png" alt="검색"></a></li>
+                <li><a href="#"><img src="./images/ticket.png" alt="티켓"></a></li>
+                <li><a href="#"><img src="./images/user.png" alt="사용자"></a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div class="page-section">
+            <div class="page-inner">
+                <div class="page-wrap">
+                    <h2>극장별 예매</h2>
+                    <div class="location">
+                        <span><a href="index.html">홈</a></span>
+                        <span>></span>
+                        <span>예매</span>
+                        <span>></span>
+                        <span>극장별 예매</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section>
+            <div class="inner">
+                <!-- VVV 여기 아래로 작업 VVV -->
+                <div class="tab-menu">
+                    <ul>
+                        <li><a href="#">전체</a></li>
+                        <li><a href="#" class="select">서울 (29)</a></li>
+                        <li><a href="#">경기 (52)</a></li>
+                        <li><a href="#">인천 (11)</a></li>
+                        <li><a href="#">강원 (5)</a></li>
+                        <li><a href="#">대전/충청 (20)</a></li>
+                        <li><a href="#">대구 (8)</a></li>
+                        <li><a href="#">부산/울산 (18) </a></li>
+                        <li><a href="#">경상 (15)</a></li>
+                        <li><a href="#">광주/전라/제주 (20)</a></li>
+                    </ul>
+                </div>
+
+                <!-- 지역리스트 -->
+                <div class="local-list">
+                    <ul class="seoul">
+                        <li><a href="#" class="active">강남</a></li>
+                        <li><a href="#">강변</a></li>
+                        <li><a href="#">건대입구</a></li>
+                        <li><a href="#">고덕강일</a></li>
+                        <li><a href="#">구로</a></li>
+                        <li><a href="#">대학로</a></li>
+                        <li><a href="#">동대문</a></li>
+                        <li><a href="#">등촌</a></li>
+                        <li><a href="#">명동</a></li>
+                        <li><a href="#">미아</a></li>
+                        <li><a href="#">방학</a></li>
+                        <li><a href="#">불광</a></li>
+                        <li><a href="#">상봉</a></li>
+                        <li><a href="#">성신여대입구</a></li>
+                        <li><a href="#">수유</a></li>
+                        <li><a href="#">신촌아트레온</a></li>
+                        <li><a href="#">씨네드쉐프 압구정</a></li>
+                        <li><a href="#">씨네드쉐프 용산</a></li>
+                        <li><a href="#">압구정</a></li>
+                        <li><a href="#">여의도</a></li>
+                        <li><a href="#">연남</a></li>
+                        <li><a href="#">영등포 타임스퀘어</a></li>
+                        <li><a href="#">왕십리</a></li>
+                        <li><a href="#" class="active">용산아이파크몰</a></li>
+                        <li><a href="#">중계</a></li>
+                        <li><a href="#">천호</a></li>
+                        <li><a href="#">청담씨네시티</a></li>
+                        <li><a href="#">피카디리1958</a></li>
+                        <li><a href="#">홍대</a></li>
+                    </ul>
+                </div>
+
+                <!-- 지역선택 -->
+                <hr>
+                <div class="local-select">
+                    <ul>
+                        <li><a href="#">강남</a></li>
+                        <li><a href="#">용산아이파크몰</a></li>
+                        <li><a href="#">이천</a></li>
+                    </ul>
+                </div>
+
+                <!-- 페이지 탭메뉴 -->
+                <div class="page-menu">
+                    <ul>
+                        <li><a href="#" class="select">전체</a></li>
+                        <li><a href="#">특별관</a></li>
+                    </ul>
+                </div>
+
+                <!-- 극장리스트 -->
+                <div class="theater list-wrap">
+                    <div class="theater-list">
+                        <!-- 아바타3 : 불과 재 -->
+                        <div class="avatar3">
+                            <div class="title">
+                                <h3>아바타3: 불과 재</h3>
+                                <p>AVARTA3: Fire & Ash</p>
+                                <img class="down-arrow" src="./images/jy-sub/movie-theater/down-arrow.png" alt="">
+                            </div>
+                            <p class="look">2D</p>
+                            <!-- 상영시간표 -->
+                            <div class="time-group">
+                                <div class="table-list-wrap">
+                                    <div class="table-list">
+                                        <!-- 상영시간 -->
+                                        <div class="clock">
+                                            <strong>08:30</strong>
+                                            <p>- 11:32</p>
+                                            <img class="time-icon" src="./images/jy-sub/movie-theater/sun-icon.png"
+                                                alt="조조">
+                                        </div>
+
+                                        <!-- 좌석 -->
+                                        <div class="seat">
+                                            <p class="situation">132</p>
+                                            <span>/</span>
+                                            <p>210석</p>
+                                        </div>
+
+                                        <!-- 극장 -->
+                                        <div class="theater-info">
+                                            <p>2관</p>
+                                            <span>/</span>
+                                            <p>laser</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="table-list-wrap">
+                                    <div class="table-list">
+                                        <!-- 상영시간 -->
+                                        <div class="clock">
+                                            <strong>11:50</strong>
+                                            <p>- 14:27</p>
+                                        </div>
+
+                                        <!-- 좌석 -->
+                                        <div class="seat">
+                                            <p class="situation">132</p>
+                                            <span>/</span>
+                                            <p>210석</p>
+                                        </div>
+
+                                        <!-- 극장 -->
+                                        <div class="theater-info">
+                                            <p>2관</p>
+                                            <span>/</span>
+                                            <p>laser</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="table-list-wrap">
+                                    <div class="table-list">
+                                        <!-- 상영시간 -->
+                                        <div class="clock">
+                                            <strong>14:36</strong>
+                                            <p>- 17:58</p>
+                                        </div>
+
+                                        <!-- 좌석 -->
+                                        <div class="seat">
+                                            <p class="no-seat">0</p>
+                                            <span>/</span>
+                                            <p>210석</p>
+                                        </div>
+
+                                        <!-- 극장 -->
+                                        <div class="theater-info">
+                                            <p>2관</p>
+                                            <span>/</span>
+                                            <p>laser</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="table-list-wrap">
+                                    <div class="table-list">
+                                        <!-- 상영시간 -->
+                                        <div class="clock">
+                                            <strong>18:10</strong>
+                                            <p>- 21:32</p>
+                                        </div>
+
+                                        <!-- 좌석 -->
+                                        <div class="seat">
+                                            <p class="situation">132</p>
+                                            <span>/</span>
+                                            <p>210석</p>
+                                        </div>
+
+                                        <!-- 극장 -->
+                                        <div class="theater-info">
+                                            <p>2관</p>
+                                            <span>/</span>
+                                            <p>laser</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="table-list-wrap">
+                                    <div class="table-list">
+                                        <!-- 상영시간 -->
+                                        <div class="clock">
+                                            <strong>21:40</strong>
+                                            <p>- 25:06</p>
+                                            <img class="time-icon" src="./images/jy-sub/movie-theater/moon-icon.png"
+                                                alt="심야">
+                                        </div>
+
+                                        <!-- 좌석 -->
+                                        <div class="seat">
+                                            <p class="situation">132</p>
+                                            <span>/</span>
+                                            <p>210석</p>
+                                        </div>
+
+                                        <!-- 극장 -->
+                                        <div class="theater-info">
+                                            <p>2관</p>
+                                            <span>/</span>
+                                            <p>laser</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="table-list-wrap">
+                                    <div class="table-list">
+                                        <!-- 상영시간 -->
+                                        <div class="clock">
+                                            <strong>25:15</strong>
+                                            <p>- 28:23</p>
+                                            <img class="time-icon" src="./images/jy-sub/movie-theater/moon-icon.png"
+                                                alt="심야">
+                                        </div>
+
+                                        <!-- 좌석 -->
+                                        <div class="seat">
+                                            <p class="situation">132</p>
+                                            <span>/</span>
+                                            <p>210석</p>
+                                        </div>
+
+                                        <!-- 극장 -->
+                                        <div class="theater-info">
+                                            <p>2관</p>
+                                            <span>/</span>
+                                            <p>laser</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="look">4DX</p>
+                            <!-- 상영시간표 -->
+                            <div class="time-group">
+                                <div class="table-list-wrap">
+                                    <div class="table-list">
+                                        <!-- 상영시간 -->
+                                        <div class="clock">
+                                            <strong>08:30</strong>
+                                            <p>- 11:32</p>
+                                            <img class="time-icon" src="./images/jy-sub/movie-theater/sun-icon.png"
+                                                alt="조조">
+                                        </div>
+
+                                        <!-- 좌석 -->
+                                        <div class="seat">
+                                            <p class="warning">24</p>
+                                            <span>/</span>
+                                            <p>210석</p>
+                                        </div>
+
+                                        <!-- 극장 -->
+                                        <div class="theater-info">
+                                            <p>2관</p>
+                                            <span>/</span>
+                                            <p>laser</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="table-list-wrap">
+                                    <div class="table-list">
+                                        <!-- 상영시간 -->
+                                        <div class="clock">
+                                            <strong>11:45</strong>
+                                            <p>- 15:02</p>
+                                        </div>
+
+                                        <!-- 좌석 -->
+                                        <div class="seat">
+                                            <p class="situation">132</p>
+                                            <span>/</span>
+                                            <p>210석</p>
+                                        </div>
+
+                                        <!-- 극장 -->
+                                        <div class="theater-info">
+                                            <p>2관</p>
+                                            <span>/</span>
+                                            <p>laser</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="table-list-wrap">
+                                    <div class="table-list">
+                                        <!-- 상영시간 -->
+                                        <div class="clock">
+                                            <strong>15:10</strong>
+                                            <p>- 18:22</p>
+                                        </div>
+
+                                        <!-- 좌석 -->
+                                        <div class="seat">
+                                            <p class="situation">132</p>
+                                            <span>/</span>
+                                            <p>210석</p>
+                                        </div>
+
+                                        <!-- 극장 -->
+                                        <div class="theater-info">
+                                            <p>2관</p>
+                                            <span>/</span>
+                                            <p>laser</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="table-list-wrap">
+                                    <div class="table-list">
+                                        <!-- 상영시간 -->
+                                        <div class="clock">
+                                            <strong>19:00</strong>
+                                            <p>- 21:07</p>
+                                        </div>
+
+                                        <!-- 좌석 -->
+                                        <div class="seat">
+                                            <p class="situation">132</p>
+                                            <span>/</span>
+                                            <p>210석</p>
+                                        </div>
+
+                                        <!-- 극장 -->
+                                        <div class="theater-info">
+                                            <p>2관</p>
+                                            <span>/</span>
+                                            <p>laser</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="table-list-wrap">
+                                    <div class="table-list">
+                                        <!-- 상영시간 -->
+                                        <div class="clock">
+                                            <strong>21:30</strong>
+                                            <p>- 24:38</p>
+                                            <img class="time-icon" src="./images/jy-sub/movie-theater/moon-icon.png"
+                                                alt="심야">
+                                        </div>
+
+                                        <!-- 좌석 -->
+                                        <div class="seat">
+                                            <p class="situation">132</p>
+                                            <span>/</span>
+                                            <p>210석</p>
+                                        </div>
+
+                                        <!-- 극장 -->
+                                        <div class="theater-info">
+                                            <p>2관</p>
+                                            <span>/</span>
+                                            <p>laser</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 만약에 우리 -->
+                    <div class="once">
+                        <div class="title">
+                            <h3>만약에 우리</h3>
+                            <p>Once We were Us</p>
+                            <img class="down-arrow" src="./images/jy-sub/movie-theater/down-arrow.png" alt="">
+                        </div>
+                        <p class="look">2D</p>
+                        <div class="time-group">
+                            <div class="table-list-wrap">
+                                <div class="table-list">
+                                    <!-- 상영시간 -->
+                                    <div class="clock">
+                                        <strong>08:30</strong>
+                                        <span>-</span>
+                                        <p>11:32</p>
+                                        <img class="time-icon" src="./images/jy-sub/movie-theater/sun-icon.png"
+                                            alt="조조">
+                                    </div>
+
+                                    <!-- 좌석 -->
+                                    <div class="seat">
+                                        <p class="situation">132</p>
+                                        <span>/</span>
+                                        <p>210석</p>
+                                    </div>
+
+                                    <!-- 극장 -->
+                                    <div class="theater-info">
+                                        <p>2관</p>
+                                        <span>/</span>
+                                        <p>laser</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table-list-wrap">
+                                <div class="table-list">
+                                    <!-- 상영시간 -->
+                                    <div class="clock">
+                                        <strong>11:40</strong>
+                                        <span>-</span>
+                                        <p>13:46</p>
+                                    </div>
+
+                                    <!-- 좌석 -->
+                                    <div class="seat">
+                                        <p class="situation">114</p>
+                                        <span>/</span>
+                                        <p>210석</p>
+                                    </div>
+
+                                    <!-- 극장 -->
+                                    <div class="theater-info">
+                                        <p>2관</p>
+                                        <span>/</span>
+                                        <p>laser</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table-list-wrap">
+                                <div class="table-list">
+                                    <!-- 상영시간 -->
+                                    <div class="clock">
+                                        <strong>13:55</strong>
+                                        <span>-</span>
+                                        <p>15:58</p>
+                                    </div>
+
+                                    <!-- 좌석 -->
+                                    <div class="seat">
+                                        <p class="situation">105</p>
+                                        <span>/</span>
+                                        <p>210석</p>
+                                    </div>
+
+                                    <!-- 극장 -->
+                                    <div class="theater-info">
+                                        <p>2관</p>
+                                        <span>/</span>
+                                        <p>laser</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table-list-wrap">
+                                <div class="table-list">
+                                    <!-- 상영시간 -->
+                                    <div class="clock">
+                                        <strong>16:05</strong>
+                                        <span>-</span>
+                                        <p>18:13</p>
+                                    </div>
+
+                                    <!-- 좌석 -->
+                                    <div class="seat">
+                                        <p class="situation">99</p>
+                                        <span>/</span>
+                                        <p>210석</p>
+                                    </div>
+
+                                    <!-- 극장 -->
+                                    <div class="theater-info">
+                                        <p>2관</p>
+                                        <span>/</span>
+                                        <p>laser</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table-list-wrap">
+                                <div class="table-list">
+                                    <!-- 상영시간 -->
+                                    <div class="clock">
+                                        <strong>18:25</strong>
+                                        <span>-</span>
+                                        <p>20:34</p>
+                                    </div>
+
+                                    <!-- 좌석 -->
+                                    <div class="seat">
+                                        <p class="situation">102</p>
+                                        <span>/</span>
+                                        <p>210석</p>
+                                    </div>
+
+                                    <!-- 극장 -->
+                                    <div class="theater-info">
+                                        <p>2관</p>
+                                        <span>/</span>
+                                        <p>laser</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table-list-wrap">
+                                <div class="table-list">
+                                    <!-- 상영시간 -->
+                                    <div class="clock">
+                                        <strong>20:40</strong>
+                                        <span>-</span>
+                                        <p>22:46</p>
+                                    </div>
+
+                                    <!-- 좌석 -->
+                                    <div class="seat">
+                                        <p class="situation">109</p>
+                                        <span>/</span>
+                                        <p>210석</p>
+                                    </div>
+
+                                    <!-- 극장 -->
+                                    <div class="theater-info">
+                                        <p>2관</p>
+                                        <span>/</span>
+                                        <p>laser</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table-list-wrap">
+                                <div class="table-list">
+                                    <!-- 상영시간 -->
+                                    <div class="clock">
+                                        <strong>22:54</strong>
+                                        <span>-</span>
+                                        <p>24:58</p>
+                                        <img class="time-icon" src="./images/jy-sub/movie-theater/moon-icon.png"
+                                            alt="심야">
+                                    </div>
+
+                                    <!-- 좌석 -->
+                                    <div class="seat">
+                                        <p class="situation">117</p>
+                                        <span>/</span>
+                                        <p>210석</p>
+                                    </div>
+
+                                    <!-- 극장 -->
+                                    <div class="theater-info">
+                                        <p>2관</p>
+                                        <span>/</span>
+                                        <p>laser</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table-list-wrap">
+                                <div class="table-list">
+                                    <!-- 상영시간 -->
+                                    <div class="clock">
+                                        <strong>25:00</strong>
+                                        <span>-</span>
+                                        <p>27:13</p>
+                                        <img class="time-icon" src="./images/jy-sub/movie-theater/moon-icon.png"
+                                            alt="심야">
+                                    </div>
+
+                                    <!-- 좌석 -->
+                                    <div class="seat">
+                                        <p class="situation">103</p>
+                                        <span>/</span>
+                                        <p>210석</p>
+                                    </div>
+
+                                    <!-- 극장 -->
+                                    <div class="theater-info">
+                                        <p>2관</p>
+                                        <span>/</span>
+                                        <p>laser</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 휴민트 -->
+                    <div class="humint">
+                        <div class="title">
+                            <h3>휴민트</h3>
+                            <p>Humint</p>
+                            <img class="down-arrow" src="./images/jy-sub/movie-theater/down-arrow.png" alt="">
+                        </div>
+                        <p class="look">2D</p>
+                        <div class="time-group">
+                            <!-- 상영시간표 -->
+                            <div class="table-list-wrap">
+                                <div class="table-list">
+                                    <!-- 상영시간 -->
+                                    <div class="clock">
+                                        <strong>07:40</strong>
+                                        <span>-</span>
+                                        <p>09:43</p>
+                                        <img class="time-icon" src="./images/jy-sub/movie-theater/sun-icon.png"
+                                            alt="조조">
+                                    </div>
+
+                                    <!-- 좌석 -->
+                                    <div class="seat">
+                                        <p class="situation">132</p>
+                                        <span>/</span>
+                                        <p>210석</p>
+                                    </div>
+
+                                    <!-- 극장 -->
+                                    <div class="theater-info">
+                                        <p>2관</p>
+                                        <span>/</span>
+                                        <p>laser</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 상영시간표 -->
+                            <div class="table-list-wrap">
+                                <div class="table-list">
+                                    <!-- 상영시간 -->
+                                    <div class="clock">
+                                        <strong>10:00</strong>
+                                        <span>-</span>
+                                        <p>12:32</p>
+                                    </div>
+
+                                    <!-- 좌석 -->
+                                    <div class="seat">
+                                        <p class="situation">132</p>
+                                        <span>/</span>
+                                        <p>210석</p>
+                                    </div>
+
+                                    <!-- 극장 -->
+                                    <div class="theater-info">
+                                        <p>2관</p>
+                                        <span>/</span>
+                                        <p>laser</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 상영시간표 -->
+                            <div class="table-list-wrap">
+                                <div class="table-list">
+                                    <!-- 상영시간 -->
+                                    <div class="clock">
+                                        <strong>12:40</strong>
+                                        <span>-</span>
+                                        <p>14:49</p>
+                                    </div>
+
+                                    <!-- 좌석 -->
+                                    <div class="seat">
+                                        <p class="situation">132</p>
+                                        <span>/</span>
+                                        <p>210석</p>
+                                    </div>
+
+                                    <!-- 극장 -->
+                                    <div class="theater-info">
+                                        <p>2관</p>
+                                        <span>/</span>
+                                        <p>laser</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 상영시간표 -->
+                            <div class="table-list-wrap">
+                                <div class="table-list">
+                                    <!-- 상영시간 -->
+                                    <div class="clock">
+                                        <strong>14:55</strong>
+                                        <span>-</span>
+                                        <p>17:02</p>
+                                    </div>
+
+                                    <!-- 좌석 -->
+                                    <div class="seat">
+                                        <p class="situation">132</p>
+                                        <span>/</span>
+                                        <p>210석</p>
+                                    </div>
+
+                                    <!-- 극장 -->
+                                    <div class="theater-info">
+                                        <p>2관</p>
+                                        <span>/</span>
+                                        <p>laser</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 상영시간표 -->
+                            <div class="table-list-wrap">
+                                <div class="table-list">
+                                    <!-- 상영시간 -->
+                                    <div class="clock">
+                                        <strong>17:30</strong>
+                                        <span>-</span>
+                                        <p>19:41</p>
+                                    </div>
+
+                                    <!-- 좌석 -->
+                                    <div class="seat">
+                                        <p class="situation">132</p>
+                                        <span>/</span>
+                                        <p>210석</p>
+                                    </div>
+
+                                    <!-- 극장 -->
+                                    <div class="theater-info">
+                                        <p>2관</p>
+                                        <span>/</span>
+                                        <p>laser</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 상영시간표 -->
+                            <div class="table-list-wrap">
+                                <div class="table-list">
+                                    <!-- 상영시간 -->
+                                    <div class="clock">
+                                        <strong>20:00</strong>
+                                        <span>-</span>
+                                        <p>22:05</p>
+                                    </div>
+
+                                    <!-- 좌석 -->
+                                    <div class="seat">
+                                        <p class="situation">132</p>
+                                        <span>/</span>
+                                        <p>210석</p>
+                                    </div>
+
+                                    <!-- 극장 -->
+                                    <div class="theater-info">
+                                        <p>2관</p>
+                                        <span>/</span>
+                                        <p>laser</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- 푸터영역 -->
+    <footer>
+        <div class="inner">
+            <!-- VVV 여기 아래로 작업 VVV -->
+            <h2 class="footer-logo"><img src="./images/footer/footer-cgv-logo.png" alt="">
+            </h2>
+            <div class="footer-middle">
+                <address>
+                    <p>(04377)서울특별시 용산구 한강대로 23길 55, 아이파크몰 6층(한강로동)</p>
+                    <p>통신판매업신고번호 : 2017-서울용산-0662사업자정보확인</p>
+                    <p>사업자등록번호 : 104-81-45690</p>
+                    <p>호스팅사업자 : CJ올리브네트웍스</p>
+                    <p> 대표이메일 : cjcgvmaster@cj.net</p>
+                </address>
+                <ul class="qr-list">
+                    <li>
+                        <p>QR코드 찍고</p>
+                        <p>CGV 앱에서 자세히 보기</p>
+                        <P>QR코드를 스캔해보세요</P>
+                    </li>
+                    <li><img src="./images/footer/footer-qr.png" alt="CGV QR"></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <div class="f-inner-left">
+                    <select class="select-company">
+                        <optgroup label="CJ그룹">
+                            <option>CJ주식회사</option>
+                        </optgroup>
+                        <optgroup label="식품 & 식품서비스">
+                            <option>CJ제일제당</option>
+                            <option>CJ푸드빌</option>
+                            <option>CJ프레시웨이</option>
+                        </optgroup>
+                        <optgroup label="생명공학">
+                            <option>CJ제일제당 BIO사업부문</option>
+                            <option>CJ Feed&Care</option>
+                        </optgroup>
+                        <optgroup label="물류 & 신유통">
+                            <option>CJ대한통운</option>
+                            <option>CJ대한통운 건설부문</option>
+                            <option>CJ올리브영/option>
+                            <option>CJ올리브네트웍스</option>
+                            <option>CJ ENM 커머스부문</option>
+                        </optgroup>
+                        <optgroup label="엔터테인먼트 & 미디어">
+                            <option>CJ ENM 엔터테인먼트부문</option>
+                            <option>CJ CGV</option>
+                        </optgroup>
+                    </select>
+                    <ul class="bt-list">
+                        <li><a href="#">채용정보</a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">위치기반서비스 이용약관</a></li>
+                    </ul>
+                </div>
+                <ul class="sns-list">
+                    <li><a href="https://pf.kakao.com/_VXwbj/97906262"><img src="./images/footer/kakao.png"
+                                alt="카카오톡"></a></li>
+                    <li><a href="https://www.instagram.com/cgv_korea/?hl=ko"><img src="./images/footer/instagram.png"
+                                alt="인스타"></a></li>
+                    <li><a href="https://www.youtube.com/channel/UCmjUMtUw6wXLrsULdxuXWdg"><img
+                                src="./images/footer/youtube.png" alt="유튜브"></a></li>
+                    <li><a href="https://x.com/CGV_KOREA"><img src="./images/footer/X.png" alt="트위터"></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    </main>
+    <!-- 햄버거 오버레이 -->
+    <div class="ham-overlay"></div>
+
+    <!-- 햄버거 메뉴 패널 -->
+    <div class="ham-panel">
+        <!-- 닫기 버튼 -->
+        <button class="ham-close">
+            <img src="./images/ham-close.png" alt="닫기">
+        </button>
+        <nav class="ham-nav">
+            <ul class="ham-main">
+                <li>
+                    <span class="ham-main-title">영화</span>
+                    <ul class="ham-sub">
+                        <li><a href="#">현재상영작</a></li>
+                        <li><a href="#">상영예정작</a></li>
+                        <li><a href="#">CGV ONLY</a></li>
+                        <li><a href="#">아트하우스</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="ham-main-title">예매</span>
+                    <ul class="ham-sub">
+                        <li><a href="#">빠른예매</a></li>
+                        <li><a href="#">영화별예매</a></li>
+                        <li><a href="#">극장별예매</a></li>
+                        <li><a href="#">포토플레이</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="ham-main-title">매점</span>
+                    <ul class="ham-sub">
+                        <li><a href="#">푸드</a></li>
+                        <li><a href="#">캐릭터굿즈</a></li>
+                        <li><a href="#">기프트샵</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="ham-main-title">이벤트</span>
+                    <ul class="ham-sub">
+                        <li><a href="#">SPECIAL</a></li>
+                        <li><a href="#">무대인사/시사회</a></li>
+                        <li><a href="#">제휴</a></li>
+                        <li><a href="#">멤버쉽/클럽</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="ham-main-title">극장</span>
+                    <ul class="ham-sub">
+                        <li><a href="sub-all-CGV.html">전체 극장</a></li>
+                        <li><a href="#">특별관</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="ham-main-title">액티비티</span>
+                    <ul class="ham-sub">
+                        <li><a href="#">피커스</a></li>
+                        <li><a href="#">볼링펍</a></li>
+                        <li><a href="#">씨네드쉐프</a></li>
+                        <li><a href="#">미션브레이크</a></li>
+                        <li><a href="#">롤롤</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="ham-main-title">고객센터</span>
+                    <ul class="ham-sub">
+                        <li><a href="#">고객센터 안내</a></li>
+                        <li><a href="#">자주 찾는 질문</a></li>
+                        <li><a href="#">단체/대관문의</a></li>
+                        <li><a href="#">나의 문의내역</a></li>
+                        <li><a href="#">공지사항</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="ham-main-title">나의 정보 관리</span>
+                    <ul class="ham-sub">
+                        <li><a href="#">예약/결제내역</a></li>
+                        <li><a href="#">자주가는 CGV</a></li>
+                        <li><a href="#">보관함</a></li>
+                        <li><a href="#">내 차량번호 조회</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            let hamBtns = document.querySelectorAll('.ham-btn a');
+            let closeBtn = document.querySelector('.ham-close');
+
+            hamBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    document.body.classList.add('active');
+                });
+            });
+
+            function closeHam() {
+                document.body.classList.remove('active');
+            }
+
+            closeBtn.addEventListener('click', closeHam);
+        });
+    </script>
+    <!-- script -->
+    <script src="./js/theater-reserv-popup.js"></script>
+</body>
+
+</html>

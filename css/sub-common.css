@@ -1,0 +1,317 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+img,
+video {
+    vertical-align: middle;
+}
+
+address {
+    font-style: normal;
+}
+
+body {
+    font-family: "Pretendard", sans-serif;
+    color: #DDDDDD;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#222222+0,111111+100 */
+    background: linear-gradient(to bottom, rgba(34, 34, 34, 1) 0%, rgba(17, 17, 17, 1) 60%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    padding-top: 80px;
+}
+
+/* 공통사항 */
+section {
+    padding: 50px 0 40px;
+}
+
+.inner {
+    max-width: 1700px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+/* 헤더영역 */
+.sub-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: #222;
+    z-index: 2000;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.55);
+}
+
+.fixed-bar {
+    max-width: 1700px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.fixed-logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+}
+
+/* gnb */
+.gnb-list {
+    display: flex;
+    gap: 15px;
+}
+
+.gnb-list>li {
+    width: 44px;
+    height: 44px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s ease;
+}
+
+.gnb-list>li:hover {
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* 페이지 공통 */
+footer {
+    background-color: var(--main);
+    padding: 30px 0 30px;
+
+}
+
+.footer-logo {
+    filter: contrast(200%);
+}
+
+.footer-logo img {
+    width: 150px;
+}
+
+.footer-middle {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+}
+
+address p {
+    line-height: 20px;
+    font-size: var(--px12);
+}
+
+.qr-list {
+    display: flex;
+    gap: 20px;
+}
+
+.qr-list p {
+    font-size: 1.13em;
+    font-weight: 500;
+}
+
+.qr-list p:last-child {
+    font-size: var(--px14);
+    font-weight: 300;
+    padding-top: 20px;
+}
+
+.footer-bottom {
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.select-company {
+    border: none;
+    border-radius: 20px;
+    appearance: none;
+    background: url(/images/footer/footerup.png) no-repeat right 10px center;
+    background-color: #fff;
+    padding: 2px 10px 0;
+}
+
+.f-inner-left {
+    display: flex;
+    gap: 35px;
+
+}
+
+.footer-bottom .bt-list {
+    display: flex;
+    font-size: var(--px14);
+    gap: 35px;
+}
+
+.footer-bottom .sns-list {
+    display: flex;
+    gap: 50px;
+
+}
+
+.footer-bottom .sns-list>li:first-child {
+    background: #FEE500;
+    padding: 5px;
+    border-radius: 40%;
+}
+
+.sns-list img {
+    width: 20px;
+}
+
+.footer-bottom .sns-list>li:nth-child(2) {
+    background: #833AB4;
+    background: linear-gradient(241deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+    padding: 5px;
+    border-radius: 40%;
+}
+
+.footer-bottom .sns-list>li:nth-child(3) {
+    background: #E40006;
+    padding: 5px;
+    border-radius: 40%;
+}
+
+.footer-bottom .sns-list>li:last-child {
+    background: #1C1C1B;
+    padding: 5px;
+    border-radius: 40%;
+}
+
+/* 햄버거 오버레이 */
+.ham-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.70);
+    backdrop-filter: blur(20px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s ease;
+    z-index: 30000;
+}
+
+/* 햄버거 패널 */
+.ham-panel {
+    position: fixed;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1760px;
+    height: auto;
+    background: rgba(0, 0, 0, 0.50);
+    backdrop-filter: blur(20px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s ease, transform .3s ease;
+    z-index: 30001;
+    overflow: hidden;
+}
+
+/* 닫기 버튼 */
+.ham-close {
+    position: absolute;
+    top: 38px;
+    left: 80px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.ham-close img {
+    width: 40px;
+    height: 40px;
+}
+
+body.active .ham-overlay {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+body.active .ham-panel {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+}
+
+.ham-nav {
+    height: 100%;
+    padding: 100px 80px 60px;
+}
+
+.ham-main {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 50px 60px;
+}
+
+/* 메인메뉴 */
+.ham-main>li {
+    text-align: center;
+}
+
+.ham-main-title {
+    display: inline-block;
+    width: 280PX;
+    font-size: var(--px24);
+    font-weight: 700;
+    color: #ffffff;
+    padding: 20px 0 0;
+    position: relative;
+}
+
+.ham-main-title::after {
+    content: "";
+    display: block;
+    width: 32px;
+    height: 3px;
+    background: var(--main);
+    margin: 20px auto 0;
+}
+
+/* 서브메뉴 */
+.ham-sub {
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+}
+
+.ham-sub a {
+    height: 28px;
+    line-height: 28px;
+    display: inline-block;
+    color: rgba(221, 221, 221, 0.85);
+    font-size: var(--px20);
+    font-weight: 400;
+    transition: .2s ease;
+}
+
+.ham-sub a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}

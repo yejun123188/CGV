@@ -1,0 +1,239 @@
+/* 변수 */
+:root {
+    /* color */
+    --main: #EE3123;
+    --mian-text: #DDDDDD;
+    --support-text: #AAAAAA;
+    --ssupport-text: #707070;
+    --icon: #CCCCCC;
+    --blk-btn: #00000080;
+    --red-btn: #EE312380;
+    --Hblk-btn: #000000;
+    --Hred-btn: #EE3123;
+    /* font */
+    --px12: 0.75em;
+    --px14: 0.875em;
+    --px16: 1em;
+    --px20: 1.25em;
+    --px24: 1.5em;
+    --px28: 1.75em;
+    --px32: 2em;
+    --px40: 2.5em;
+    /* etc */
+    --radius: 1.75em;
+}
+
+/* 페이지 제목 */
+.page-section {
+    background: #222222;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.page-inner {
+    max-width: 1700px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+.page-inner>.page-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 100px;
+    padding-bottom: 20px;
+}
+
+/* 페이지명 */
+.page-wrap>h2 {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+/* 페이지경로 */
+.page-wrap>.location>span {
+    font-size: 12px;
+    color: #707070;
+}
+
+.page-wrap>.location>span:last-child {
+    color: #DDD;
+    font-weight: 600;
+}
+
+.page-wrap>.location>span>a:hover {
+    text-decoration: underline;
+}
+
+/* search */
+.btn-wrap {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 25px;
+}
+
+.btn {
+    width: auto;
+    padding: 12px 28px;
+    height: 48px;
+    border: none;
+    border-radius: var(--radius);
+    background: var(--blk-btn);
+    font-size: var(--px16);
+    color: var(--mian-text);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: var(--Hblk-btn);
+}
+
+.btn.active {
+    background: var(--red-btn);
+}
+
+.btn-wrap>form {
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    border-radius: 28px;
+    height: 40px;
+    margin-top: 4px;
+}
+
+.btn-wrap>form>input {
+    height: 40px;
+    background: none;
+    border: none;
+    margin-left: 18px;
+}
+
+.btn-wrap>form>button {
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+}
+
+.btn-wrap>form>button>img {
+    width: 20px;
+}
+
+.all-cgv-wrap>.inner>div {
+    margin-bottom: 80px;
+}
+
+.region-cgv-wrap {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.all-cgv-wrap h3 {
+    padding: 16px 0;
+    font-size: var(--px24);
+}
+
+.region-cgv-wrap>div {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#8b8b8b+0,4d4d4d+100&0.4+0,0.5+100 */
+    background: linear-gradient(to bottom, rgba(139, 139, 139, 0.4) 0%, rgba(77, 77, 77, 0.5) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    height: 280px;
+    width: 520px;
+    border-radius: 24px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+
+.region-cgv-wrap>div>p {
+    line-height: 28px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.region-cgv-wrap>div>span {
+    line-height: 28px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #AAA;
+    width: 360px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.region-cgv-wrap>div>.special-wrap {
+    padding: 9px;
+    width: 464px;
+    height: 56px;
+
+}
+
+.region-cgv-wrap>div .special-list {
+    display: flex;
+    gap: 3px;
+}
+
+.region-cgv-wrap>div .special-list>.special-hall {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+}
+
+.region-cgv-wrap>div .special-list>.special-hall>a {
+    display: block;
+    padding: 3px 8px;
+    height: 34px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 28px;
+}
+
+.region-cgv-wrap>div .special-list>.activity {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 12px;
+}
+
+.region-cgv-wrap>div .special-list>.activity>a {
+    padding: 3px 8px;
+    height: 34px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 28px;
+}
+
+.region-cgv-wrap>div>.hall-see-btn a {
+    display: block;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 12px 28px;
+    width: 180px;
+    text-align: center;
+    border-radius: 28px;
+    margin: 0 0 0 284px;
+}
+
+.region-cgv-wrap>div>.hall-see-btn:hover a {
+    background: rgba(0, 0, 0);
+}
+
+.region-cgv-wrap>div>.star-wrap {
+    position: absolute;
+    right: 28px;
+    top: 28px;
+}
+
+.region-cgv-wrap>div>.star-wrap>.star,
+.region-cgv-wrap>div>.star-wrap>.y-star {
+    display: none;
+}
+
+.region-cgv-wrap>div>.star-wrap>.active {
+    display: block;
+}
+
+.region-cgv-wrap>div>img {
+    position: absolute;
+    right: 28px;
+    top: 76px;
+}
