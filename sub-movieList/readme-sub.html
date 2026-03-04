@@ -1,0 +1,209 @@
+읽어주세요
+
+<!-- ------------------------------------------------------------------- -->
+1. CGV-test 파일 말고 제가 드린 파일에서 작성해서 저한테 보내주시면 됩니다.
+<!-- git 적용된 파일에서 작업하면 큰일납니다. -->
+
+2. 작업전 수정할 사항
+=> [sub-00.html], [sub-00.css] 파일 본인 페이지 이름으로 수정
+<!-- 예시 [sub-all-cgv.html], [sub-all-cgv.css] -->
+=> 수정한 이름 css를 html에 링크경로 재설정
+<!-- 공통사항은 메인과 같아 수정금지 -->
+=> 본인 서브 이미지파일은 이미지파일 안에 [이니셜-sub] 생성 후 넣기
+<!-- 예시 [./images/yj-suv] -->
+
+3. html(index) 파일은
+이름을 바꾼 [sub-00.html] 열어서 작업해주시면 되고
+수정1~3 본인 페이지에 맞게 텍스트 작성하시면 됩니다.
+"<!-- VVV 여기 아래로 작업 VVV -->"
+
+4. css(style) 파일은
+이름을 바꾼 [sub-00.css] 열어서
+서브 css 작성해주시면 됩니다.
+
+5. 중복요소 아래에 작성해두었으니 html/css 각각 붙여주시면 됩니다.
+<!-- 변수 적용해뒀으니 그대로 쓰시고 css 위치만 조절하시면 됩니다 -->
+<!-- 피그마랑 크기 안맞는게 있어 수정해뒀어요 -->
+
+6. 기본 글씨색(#DDDDDD)은 공통으로 전체 적용해두었으니 적용 안되는 검정 글씨만 기본변수 적용해주세요
+--support-text > 보조글씨
+--ssupport-text > 보조의보조글씨 입니다!
+<!-- icon은 하영님 icon-list에 있는 아이콘에 적용해주시면 됩니다 -->
+"font-size"는 "font"변수로만 작성해주세요! (반응형때 필요함)
+<!-- * 필요한 변수(색상, 폰트크기)가 있으면 연락 바랍니다!!! -->
+
+7. 그냥 붙여넣고 오류만 고치는것도 좋지만
+최대한 시간 되는대로 마크업 다시해주시면 감사하겠습니다!!!
+
+8. 오류나거나 모르는것. 추가해야할것 등이 있으시다면 연락주세요.
+
+<!-- ------------------------------중복요소------------------------------ -->
+<!-- 검색창 -->
+<!-- html -->
+<form>
+    <input type="text" placeholder="미리 들어가있을 텍스트">
+    <button><img src="./images/search.png" alt=""></button>
+</form>
+<!-- css -->
+form {
+<!-- width는 20px 단위로 수정 -->
+width: 300px;
+background: rgba(255, 255, 255, 0.2);
+display: flex;
+align-items: center;
+border-radius: 28px;
+height: 40px;
+margin-top: 4px;
+}
+
+form>input {
+flex: 1;
+height: 100%;
+background: none;
+border: none;
+margin-left: 18px;
+color: #fff;
+}
+
+form>button {
+width: 40px;
+height: 100%;
+background: none;
+border: none;
+display: flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+}
+
+form>button img {
+width: 20px;
+}
+<!-- ------------------------------------------------------------------- -->
+<!-- more> 버튼 -->
+<!-- html -->
+<div class="more-btn">
+    <a href="#">MORE ></a>
+</div>
+<!-- css -->
+.more-btn {
+display: inline-block;
+font-size: var(--px12);
+}
+
+.more-btn a {
+color: var(--support-text);
+text-decoration: none;
+}
+
+.more-btn a:hover {
+color: var(--ssupport-text);
+}
+<!-- ------------------------------------------------------------------- -->
+<!-- 예매버튼&상세버튼 -->
+<!-- html -->
+<div class="mov-btn-wrap">
+    <a href="#" class="btn reserv">예매하기</a>
+    <a href="#" class="btn view">상세보기</a>
+</div>
+<!-- css -->
+.mov-btn-wrap {
+display: flex;
+gap: 10px;
+}
+
+.btn {
+display: inline-block;
+<!-- width는 너비 안맞으면 맞게 수정 -->
+width: auto;
+padding: 12px 28px;
+height: 48px;
+border-radius: var(--radius);
+line-height: 24px;
+transition: all 0.3s ease;
+text-aline: center;
+}
+
+.reserv {
+background-color: var(--red-btn);
+}
+
+.reserv:hover {
+background-color: var(--Hred-btn);
+}
+
+.view {
+background-color: var(--blk-btn);
+}
+
+.view:hover {
+background-color: var(--Hblk-btn);
+}
+<!-- ------------------------------------------------------------------- -->
+<!-- 탭버튼 -->
+<!-- html -->
+<div class="btn-wrap">
+    <button class="btn active">1</button>
+    <button class="btn">2</button>
+    <button class="btn">3</button>
+    <!-- 필요한만큼 복제하여 사용 -->
+</div>
+<!-- css -->
+.btn {
+width: auto;
+padding: 12px 28px;
+height: 48px;
+border: none;
+border-radius: var(--radius);
+background: var(--blk-btn);
+font-size: var(--px16);
+color: var(--mian-text);
+cursor: pointer;
+transition: all 0.3s ease;
+}
+
+.btn:hover {
+background: var(--Hblk-btn);
+}
+
+.btn.active {
+background: var(--red-btn);
+}
+<!-- ------------------------------------------------------------------- -->
+<!-- 화살표 -->
+<!-- html -->
+<ul class="arrow-btn-wrap">
+    <li class="arrow-btn-left">
+        <a href="#"><img src="./images/left-arrow.png" alt="">
+        </a>
+    </li>
+    <li class="arrow-btn-right">
+        <a href="#"><img src="./images/right-arrow.png" alt="">
+        </a>
+    </li>
+</ul>
+<!-- css -->
+!!!! 화살표 적용할 부모 슬라이더 !!!! {
+position: relative;
+}
+
+.arrow-btn-wrap>li {
+position: absolute;
+top: 50%;
+display: flex;
+gap: 50px;
+}
+
+.arrow-btn-wrap>.arrow-btn-left {
+left: -70px;
+}
+
+.arrow-btn-wrap>.arrow-btn-right {
+right: -70px;
+}
+<!-- ------------------------------------------------------------------- -->
+<!-- 후광 -->
+<!-- css -->
+!!!! 후광 적용할 객체 !!!! {
+box-shadow: 0 0 50px #FFFFFF40;
+}

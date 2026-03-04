@@ -1,0 +1,458 @@
+/* 변수 */
+:root {
+    /* color */
+    --main: #EE3123;
+    --mian-text: #DDDDDD;
+    --support-text: #AAAAAA;
+    --ssupport-text: #707070;
+    --icon: #CCCCCC;
+    --blk-btn: #00000080;
+    --red-btn: #EE312380;
+    --Hblk-btn: #000000;
+    --Hred-btn: #EE3123;
+    /* font */
+    --px12: 0.75em;
+    --px14: 0.875em;
+    --px16: 1em;
+    --px20: 1.25em;
+    --px24: 1.5em;
+    --px28: 1.75em;
+    --px32: 2em;
+    --px40: 2.5em;
+    /* etc */
+    --radius: 1.75em;
+}
+
+/* 공통사항 */
+body {
+    padding-top: 80px;
+}
+
+section {
+    padding: 110px 0 40px;
+}
+
+.inner {
+    max-width: 1700px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+/* 헤더영역 */
+.sub-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: #222;
+    z-index: 2000;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.55);
+}
+
+.fixed-bar {
+    max-width: 1700px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.fixed-logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+}
+
+/* gnb */
+.gnb-list {
+    display: flex;
+    gap: 15px;
+}
+
+.gnb-list>li {
+    width: 44px;
+    height: 44px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s ease;
+}
+
+.gnb-list>li:hover {
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* 페이지 제목 */
+.page-section {
+    background: #222222;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.page-inner {
+    max-width: 1700px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+.page-inner>.page-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 100px;
+    padding-bottom: 20px;
+}
+
+/* 페이지명 */
+.page-wrap>h2 {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+/* 페이지경로 */
+.page-wrap>.location>span {
+    font-size: 12px;
+    color: #707070;
+}
+
+.page-wrap>.location>span:last-child {
+    color: #DDD;
+    font-weight: 600;
+}
+
+.page-wrap>.location>span>a:hover {
+    text-decoration: underline;
+}
+
+/* ^^^ 돈 땃쥐 더 탑 ^^^ */
+form {
+    width: 300px;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    border-radius: 28px;
+    height: 40px;
+    margin-top: 4px;
+}
+
+form>input {
+    flex: 1;
+    height: 100%;
+    background: none;
+    border: none;
+    margin-left: 18px;
+    color: #fff;
+}
+
+form>button {
+    width: 40px;
+    height: 100%;
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+form>button img {
+    width: 20px;
+}
+
+
+
+
+
+.content>.list-wrap {
+
+    display: grid;
+    /* grid-template-columns: 200px 200px 200px; */
+    /* grid-template-columns: repeat(3, 200px); */
+    /* grid-template-columns: 1tr 1tr 1tr; */
+    grid-template-columns: repeat(4, auto);
+    /* 기기 디스플레이 맞게 숫자만 바꿔줌 - 계산해서 보임 - 2차원적 개념 플렉스와차이 */
+    gap: 30px;
+    /* 위치는 바뀌지 않음 */
+    margin-top: 80px;
+    /* margin-left: 160px;
+    margin-right: 160px; */
+    margin-bottom: 150px;
+
+
+}
+
+.content>div .movie1 {
+    position: relative;
+    /* padding: 30px; */
+    align-items: center;
+    text-align: center;
+    width: 311px;
+    height: 558px;
+    margin-bottom: 55px;
+}
+
+.content>div .movie1 .img-box img {
+    width: 287px;
+    height: 441px;
+    border-radius: 10PX;
+    z-index: 0;
+}
+
+.content>div .movie1 .img-box {
+    position: relative;
+    margin: 0 auto;
+    width: 287px;
+    height: 441px;
+}
+
+.content>.list-wrap .movie1 .img-box p {
+    display: block;
+    position: absolute;
+    font-weight: bold;
+    color: #ffffff;
+
+    font-style: oblique;
+    font-size: 60px;
+    width: 40px;
+    height: 40px;
+    bottom: 50px;
+    left: 10px;
+
+
+    /* position: absolute;
+    font-size: 80px;
+    font-weight: bold;
+    color: #fff;
+    left: 16px;
+    bottom: 100px;
+    width: 40px;
+    height: 40px; */
+}
+
+.content>div .movie1 .text-box .title {
+    color: #fff;
+    display: flex;
+
+    font-size: 25px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+
+
+}
+
+.content>div .movie1 .text-box .title {
+
+    /* 자식요소를 박스형태로 옆으로 붙일때 사용한다 */
+    display: -webkit-box;
+    /* 방향설정 세로방향 */
+    -webkit-box-orient: vertical;
+    /* 줄수 장하기 */
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    /* 줄을 변경될 경우 단어를 묶어서 */
+    word-break: keep-all;
+}
+
+.content>div .movie1 .text-box .title a {}
+
+
+.content>div .movie1 .text-box .title img {
+
+    margin-right: 7px;
+}
+
+.content>div .movie1 .text-box .title span {
+
+    text-align: center;
+    height: 31px;
+}
+
+.content>div .movie1 .btn-box {
+
+    display: flex;
+    flex-grow: 0;
+    margin-top: 15px;
+    ;
+    gap: 9px;
+
+}
+
+
+
+.btn-box>.btn {
+    position: relative;
+    color: #fff;
+    width: 94px;
+    height: 35px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    padding: 7px;
+    padding-left: 5px;
+    padding-right: 5px;
+
+    /* background: rgba(0, 0, 0, 0.5); */
+}
+
+
+
+.content>div .movie1 .btn-box .like-btn {
+    background: rgba(0, 0, 0, 0.25);
+    display: flex;
+    gap: 7px;
+
+
+    /* display: flex;
+    color: #fff;
+
+    width: 94px;
+    height: px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.5); */
+}
+
+.like-btn:hover {}
+
+.content>div .movie1 .btn-box .like-btn .p {}
+
+
+.content>div .movie1 .btn-box .like-btn .img {
+
+    /* .content>div .movie1 .text-box .story-btn {
+
+    height: ;
+    color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    ;
+    border-radius: 15px;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.5); */
+}
+
+.res-btn {
+    background: #af2d23;
+}
+
+.content>div .movie1 .sub-info {
+    color: #fff;
+    padding: 5px;
+    ;
+}
+
+/*===FOOTER=== */
+footer {
+    background-color: #EE3123;
+    padding: 60px 0;
+
+}
+
+.footer-logo {
+    filter: contrast(200%);
+}
+
+.footer-middle {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 58px;
+}
+
+address p {
+    line-height: 25px;
+}
+
+.qr-list {
+    display: flex;
+    gap: 20px;
+}
+
+.qr-list p {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+
+
+.qr-list p:last-child {
+    font-size: 14px;
+    font-weight: 300;
+    padding-top: 20px;
+}
+
+.footer-bottom {
+    padding-top: 58px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.select-company {
+
+    border: none;
+    border-radius: 20px;
+}
+
+.f-inner-left {
+    display: flex;
+    gap: 35px;
+
+}
+
+.footer-bottom .bt-list {
+    display: flex;
+    gap: 35px;
+}
+
+.footer-bottom .sns-list {
+    display: flex;
+    gap: 50px;
+
+}
+
+.footer-bottom .sns-list>li:first-child {
+    background: #FEE500;
+    padding: 5px;
+    border-radius: 40%;
+}
+
+.sns-list img {
+    width: 20px;
+}
+
+.footer-bottom .sns-list>li:nth-child(2) {
+    background: #833AB4;
+    background: linear-gradient(241deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+    padding: 5px;
+    border-radius: 40%;
+}
+
+.footer-bottom .sns-list>li:nth-child(3) {
+    background: #E40006;
+    padding: 5px;
+    border-radius: 40%;
+}
+
+.footer-bottom .sns-list>li:last-child {
+    background: #1C1C1B;
+    padding: 5px;
+    border-radius: 40%;
+}
+
+/* =============반응형============== */
+/* ipad */
+@media screen and (max-width: 1280px) {}
+
+/* mobile */
+@media screen and (max-width:768px) {}
+
+@media screen and (max-width:480px) {}
