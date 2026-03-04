@@ -2619,48 +2619,42 @@
     <script>
         document.addEventListener("DOMContentLoaded", () => {
 
-            const listWrap = document.querySelector(".content .list-wrap");
-            if (!listWrap) return;
+            document.addEventListener("click", (e) => {
 
-            listWrap.addEventListener("click", (e) => {
-
+                // 하트 버튼만 잡기
                 const btn = e.target.closest(".heart-btn");
                 if (!btn) return;
 
+                // (중요) a 태그 기본 이동 막기 → 탭이 바뀌거나 #으로 튕기는 거 방지
                 e.preventDefault();
 
                 const img = btn.querySelector("img");
                 const countEl = btn.querySelector(".like-count");
+                if (!img || !countEl) return;
 
                 let text = countEl.textContent.trim();
 
                 const liked = btn.classList.toggle("liked");
 
-                if (liked) {
-                    img.src = "./images/icon-movieList/heart-01.png";
-                } else {
-                    img.src = "./images/icon-movieList/heart-02.png";
-                }
+                // 이미지 토글
+                img.src = liked
+                    ? "./images/icon-movieList/heart-01.png"
+                    : "./images/icon-movieList/heart-02.png";
 
                 // k 포함되면 숫자 변경 안함
                 if (text.includes("k") || text.includes("K")) return;
 
-                // 숫자만 추출
-                let count = parseInt(text.replace(/[^\d]/g, ""));
-
+                // 숫자만 추출 (콤마/공백/문자 있어도 안전)
+                let count = parseInt(text.replace(/[^\d]/g, ""), 10);
                 if (isNaN(count)) return;
 
-                if (liked) {
-                    count++;
-                } else {
-                    count--;
-                }
-
+                count = liked ? count + 1 : count - 1;
                 countEl.textContent = count;
 
             });
 
         });
+
 
 
 
