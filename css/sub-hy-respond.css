@@ -1,0 +1,54 @@
+/* ipad */
+@media screen and (max-width: 1280px) {
+    .best-seller-list li img {
+        width: 60%;
+    }
+
+    .seller-wrap {
+        margin: 20px 0;
+    }
+
+    .grid-wrap {
+        gap: 1em;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .box-wrap .img-box {
+        padding-top: 5px;
+    }
+
+    .box-wrap .text-box h3 {
+        padding-top: 0;
+    }
+
+    .box-wrap .text-box p:nth-child(2) {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .box-wrap .text-box p:nth-child(3) {
+        padding-bottom: 0;
+    }
+
+}
+
+/* mobile */
+@media screen and (max-width:768px) {
+    .grid-wrap {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width:480px) {
+    .body {
+        font-size: 12px;
+    }
+
+    .grid-wrap {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+
+
+}
