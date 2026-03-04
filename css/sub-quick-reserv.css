@@ -23,71 +23,8 @@
     --radius: 1.75em;
 }
 
-/* 공통사항 */
-body {
-    padding-top: 80px;
-}
-
 section {
-    padding: 110px 0 100px;
-}
-
-.inner {
-    max-width: 1700px;
-    margin: 0 auto;
-    padding: 0 50px;
-}
-
-/* 헤더영역 */
-.sub-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 80px;
-    background: #222;
-    z-index: 2000;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.55);
-}
-
-.fixed-bar {
-    max-width: 1700px;
-    height: 100%;
-    margin: 0 auto;
-    padding: 0 50px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-}
-
-.fixed-logo {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    margin: 0;
-}
-
-/* gnb */
-.gnb-list {
-    display: flex;
-    gap: 15px;
-}
-
-.gnb-list>li {
-    width: 44px;
-    height: 44px;
-    border-radius: 50px;
-    background: rgba(255, 255, 255, 0.2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: 0.2s ease;
-}
-
-.gnb-list>li:hover {
-    background: rgba(255, 255, 255, 0.4);
-    box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 50px 0 100px;
 }
 
 /* 페이지 제목 */
@@ -130,8 +67,6 @@ section {
 .page-wrap>.location>span>a:hover {
     text-decoration: underline;
 }
-
-/* ^^^ 돈 땃쥐 더 탑 ^^^ */
 
 /* 아래에 작업 */
 /* 날짜바 */
