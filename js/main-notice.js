@@ -1,10 +1,10 @@
 let swiper = new Swiper(".slider-wrap", {
     loop: true,
     centeredSlides: true,
-    // autoplay: {
-    //     delay: 2500,
-    //     disableOnInteraction: false,
-    // },
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
     speed: 800,
     navigation: {
         nextEl: ".arrow-btn-right",

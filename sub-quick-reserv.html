@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>깊이 빠져 보다, CGV</title>
+    <link rel="icon" href="./images/favicon.ico">
+    <link rel="stylesheet" href="./css/pretendard-font.css">
+    <link rel="stylesheet" href="./css/sub-common.css">
+    <!-- vvv css 이름 변경 후 경로 재수정 vvv -->
+    <link rel="stylesheet" href="./css/sub-quick-reserv.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header class="sub-header">
+        <div class="fixed-bar">
+            <div class="ham-btn">
+                <a href="#"><img src="./images/ham.png" alt="햄버거"></a>
+            </div>
+
+            <h1 class="fixed-logo">
+                <a href="index.html"><img src="./images/fixed-header-logo.png" alt="CGV 고정로고"></a>
+            </h1>
+
+            <ul class="gnb-list">
+                <li><a href="#"><img src="./images/search.png" alt="검색"></a></li>
+                <li><a href="#"><img src="./images/ticket.png" alt="티켓"></a></li>
+                <li><a href="#"><img src="./images/user.png" alt="사용자"></a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div class="page-section">
+            <div class="page-inner">
+                <div class="page-wrap">
+                    <h2>빠른예매</h2>
+                    <div class="location">
+                        <span><a href="index.html">홈</a></span>
+                        <span>></span>
+                        <span>예매</span>
+                        <span>></span>
+                        <span>빠른예매</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section>
+            <div class="inner">
+                <!-- VVV 여기 아래로 작업 VVV -->
+                <!-- 날짜바 -->
+                <div class="date-bar">
+                    <span class="month">2026.03</span>
+                    <button class="date-arrow">&#8249</button>
+                    <ul class="date-list">
+                        <li>
+                            <button class="date-item active">
+                                <span class="d-num">01</span>
+                                <span class="d-week">토</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="date-item sun">
+                                <span class="d-num">02</span>
+                                <span class="d-week">일</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="date-item">
+                                <span class="d-num">03</span>
+                                <span class="d-week">월</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="date-item">
+                                <span class="d-num">04</span>
+                                <span class="d-week">화</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="date-item">
+                                <span class="d-num">05</span>
+                                <span class="d-week">수</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="date-item">
+                                <span class="d-num">06</span>
+                                <span class="d-week">목</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="date-item">
+                                <span class="d-num">07</span>
+                                <span class="d-week">금</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="date-item sat">
+                                <span class="d-num">08</span>
+                                <span class="d-week">토</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="date-item sun">
+                                <span class="d-num">09</span>
+                                <span class="d-week">일</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="date-item">
+                                <span class="d-num">10</span>
+                                <span class="d-week">월</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="date-item">
+                                <span class="d-num">11</span>
+                                <span class="d-week">화</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="date-item">
+                                <span class="d-num">12</span>
+                                <span class="d-week">수</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="date-item">
+                                <span class="d-num">13</span>
+                                <span class="d-week">목</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="date-item">
+                                <span class="d-num">14</span>
+                                <span class="d-week">금</span>
+                            </button>
+                        </li>
+                    </ul>
+                    <button class="date-arrow">&#8250;</button>
+                    <button class="date-cal">📅</button>
+                </div>
+
+
+                <div class="reserv-layout">
+                    <!-- 스텝바 -->
+                    <aside class="step-bar">
+                        <div class="step active">
+                            <div class="step-num">01</div>
+                            <span class="step-label">상영시간</span>
+                        </div>
+                        <div class="step">
+                            <div class="step-num">02</div>
+                            <span class="step-label">인원/좌석</span>
+                        </div>
+                        <div class="step">
+                            <div class="step-num">03</div>
+                            <span class="step-label">결제진행</span>
+                        </div>
+                        <div class="step">
+                            <div class="step-num">04</div>
+                            <span class="step-label">결제완료</span>
+                        </div>
+                    </aside>
+
+                    <!-- 영화목록 -->
+                    <div class="movie-panel">
+                        <div class="filter-tab">
+                            <button class="ftab active">전체</button>
+                            <button class="ftab">예매순</button>
+                            <button class="ftab">관객순</button>
+                            <button class="ftab">개봉예정작</button>
+                        </div>
+
+                        <ul class="movie-list">
+                            <li class="movie-wrap">
+                                <div class="age-badge age-12">12</div>
+                                <span class="movie-title">드래곤 길들이기</span>
+                                <button class="heart"><img src="./images/unlike-icon.png" alt="unlike"></button>
+                            </li>
+                            <li class="movie-wrap">
+                                <div class="age-badge age-15">15</div>
+                                <span class="movie-title">휴민트</span>
+                                <button class="heart"><img src="./images/unlike-icon.png" alt="unlike"></button>
+                            </li>
+                            <li class="movie-wrap active">
+                                <div class="age-badge age-12">12</div>
+                                <span class="movie-title">만약에 우리</span>
+                                <button class="heart"><img src="./images/like-icon.png" alt="unlike"></button>
+                            </li>
+                            <li class="movie-wrap">
+                                <div class="age-badge age-19">19</div>
+                                <span class="movie-title">시스터</span>
+                                <button class="heart"><img src="./images/unlike-icon.png" alt="unlike"></button>
+                            </li>
+                            <li class="movie-wrap active">
+                                <div class="age-badge age-15">15</div>
+                                <span class="movie-title">왕과 사는 남자</span>
+                                <button class="heart"><img src="./images/unlike-icon.png" alt="unlike"></button>
+                            </li>
+                            <li class="movie-wrap">
+                                <div class="age-badge age-15">15</div>
+                                <span class="movie-title">직장상사 길들이기</span>
+                                <button class="heart"><img src="./images/unlike-icon.png" alt="unlike"></button>
+                            </li>
+                            <li class="movie-wrap">
+                                <div class="age-badge age-all">ALL</div>
+                                <span class="movie-title">주토피아2</span>
+                                <button class="heart"><img src="./images/like-icon.png" alt="unlike"></button>
+                            </li>
+                            <li class="movie-wrap">
+                                <div class="age-badge age-12">12</div>
+                                <span class="movie-title">오늘 밤, 세계에서 이 사랑이 사라진다해도</span>
+                                <button class="heart"><img src="./images/unlike-icon.png" alt="unlike"></button>
+                            </li>
+                            <li class="movie-wrap">
+                                <div class="age-badge age-15">15</div>
+                                <span class="movie-title">아바타3: 불과 재</span>
+                                <button class="heart"><img src="./images/unlike-icon.png" alt="unlike"></button>
+                            </li>
+                        </ul>
+
+                        <!-- 선텍된 영화포스터 -->
+                        <div class="poster-wrap">
+                            <div class="poster-thumb">
+                                <div class="poster"><img src="./images/jy-sub/movie-theater/poster/poster-03.jpg"
+                                        alt="만약에 우리"></div>
+                                <button class="poster-remove">x</button>
+                            </div>
+                            <div class="poster-thumb">
+                                <div class="poster"><img src="./images/jy-sub/movie-theater/poster/poster-10.jpg"
+                                        alt="왕과 사는 남자"></div>
+                                <button class="poster-remove">x</button>
+                            </div>
+                            <button class="poster-add">+</button>
+                        </div>
+                    </div>
+
+                    <!-- 극장선택 -->
+                    <div class="theater-panel">
+                        <div class="filter-tab">
+                            <button class="ftab active">전체</button>
+                            <button class="ftab">스페셜관</button>
+                        </div>
+                        <div class="theater-body">
+                            <!-- 지역 -->
+                            <ul class="region-list">
+                                <li><button class="region-item active">서울</button></li>
+                                <li><button class="region-item">경기</button></li>
+                                <li><button class="region-item">인천</button></li>
+                                <li><button class="region-item">강원</button></li>
+                                <li><button class="region-item">대전/충청</button></li>
+                                <li><button class="region-item">대구</button></li>
+                                <li><button class="region-item">부산/울산</button></li>
+                                <li><button class="region-item">경상</button></li>
+                                <li><button class="region-item">광주/전라/제주</button></li>
+                            </ul>
+                            <!-- 극장 -->
+                            <ul class="cinema-list">
+                                <li><button class="cinema-item">강변</button></li>
+                                <li><button class="cinema-item">강변</button></li>
+                                <li><button class="cinema-item">건대입구</button></li>
+                                <li><button class="cinema-item">고덕강일</button></li>
+                                <li><button class="cinema-item">구로</button></li>
+                                <li><button class="cinema-item active">대학로</button></li>
+                                <li><button class="cinema-item">동대문</button></li>
+                                <li><button class="cinema-item">등촌</button></li>
+                                <li><button class="cinema-item">명동</button></li>
+                                <li><button class="cinema-item">미아</button></li>
+                                <li><button class="cinema-item">방학</button></li>
+                                <li><button class="cinema-item">불광</button></li>
+                                <li><button class="cinema-item">상봉</button></li>
+                                <li><button class="cinema-item">성신여대입구</button></li>
+                                <li><button class="cinema-item">수유</button></li>
+                                <li><button class="cinema-item">신촌아트레온</button></li>
+                                <li><button class="cinema-item">씨네드쉐프 압구정</button></li>
+                                <li><button class="cinema-item">씨네드쉐프 용산</button></li>
+                                <li><button class="cinema-item">압구정</button></li>
+                                <li><button class="cinema-item">여의도</button></li>
+                                <li><button class="cinema-item">연남</button></li>
+                                <li><button class="cinema-item">영등포 타임스퀘어</button></li>
+                                <li><button class="cinema-item">왕십리</button></li>
+                                <li><button class="cinema-item">용산아이파크몰</button></li>
+                                <li><button class="cinema-item">중계</button></li>
+                                <li><button class="cinema-item">천호</button></li>
+                                <li><button class="cinema-item">청담씨네시티</button></li>
+                                <li><button class="cinema-item">피카디리1958</button></li>
+                                <li><button class="cinema-item">홍대</button></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 시간표 -->
+                    <div class="time-table">
+                        <div class="tt-filter">
+                            <button class="ttab active">전체</button>
+                            <button class="ttab">오전</button>
+                            <button class="ttab">오후</button>
+                            <button class="ttab">18시 이후</button>
+                            <span class="ttab-div"></span>
+                            <button class="ttab">조조</button>
+                            <button class="ttab">심야</button>
+                            <button class="ttab">스페셜관</button>
+                        </div>
+
+                        <!-- 만약에 우리 -->
+                        <div class="tt-block">
+                            <div class="tt-head">
+                                <div class="age-badge age-12">12</div>
+                                <h4>만약에 우리</h4>
+                            </div>
+                            <p class="tt-format">2D</p>
+                            <div class="tt-cards">
+                                <div class="table-list-wrap">
+                                    <div class="clock">
+                                        <span class="icon">☀️</span>
+                                        <strong>08:30</strong>
+                                        <p>~ 10:42</p>
+                                    </div>
+                                    <div class="seat">
+                                        <span class="situation">132</span>
+                                        <span>/ 210석</span>
+                                    </div>
+                                    <div class="theater-info">
+                                        <span>2관</span>
+                                        <span>/</span>
+                                        <span>2D</span>
+                                    </div>
+                                </div>
+                                <div class="table-list-wrap">
+                                    <div class="clock">
+                                        <span class="icon">☀️</span>
+                                        <strong>10:00</strong>
+                                        <p>~ 12:12</p>
+                                    </div>
+                                    <div class="seat">
+                                        <span class="situation">88</span>
+                                        <span>/ 210석</span>
+                                    </div>
+                                    <div class="theater-info">
+                                        <span>3관</span>
+                                        <span>/</span>
+                                        <span>2D</span>
+                                    </div>
+                                </div>
+                                <div class="table-list-wrap selected">
+                                    <div class="clock">
+                                        <strong>13:20</strong>
+                                        <p>~ 15:32</p>
+                                    </div>
+                                    <div class="seat">
+                                        <span class="situation">175</span>
+                                        <span>/ 210석</span>
+                                    </div>
+                                    <div class="theater-info">
+                                        <span>2관</span>
+                                        <span>/</span>
+                                        <span>2D</span>
+                                    </div>
+                                </div>
+                                <div class="table-list-wrap">
+                                    <div class="clock">
+                                        <strong>15:45</strong>
+                                        <p>~ 17:57</p>
+                                    </div>
+                                    <div class="seat">
+                                        <span class="no-seat">매진</span>
+                                    </div>
+                                    <div class="theater-info">
+                                        <span>3관</span>
+                                        <span>/</span>
+                                        <span>2D</span>
+                                    </div>
+                                </div>
+                                <div class="table-list-wrap">
+                                    <div class="clock">
+                                        <strong>17:20</strong>
+                                        <p>~ 19:22</p>
+                                    </div>
+                                    <div class="seat">
+                                        <span class="warning">21</span>
+                                        <span>/ 210석</span>
+                                    </div>
+                                    <div class="theater-info">
+                                        <span>2관</span>
+                                        <span>/</span>
+                                        <span>2D</span>
+                                    </div>
+                                </div>
+                                <div class="table-list-wrap">
+                                    <div class="clock">
+                                        <strong>19:50</strong>
+                                        <p>~ 22:02</p>
+                                    </div>
+                                    <div class="seat">
+                                        <span class="situation">189</span>
+                                        <span>/ 210석</span>
+                                    </div>
+                                    <div class="theater-info">
+                                        <span>4관</span>
+                                        <span>/</span>
+                                        <span>2D</span>
+                                    </div>
+                                </div>
+                                <div class="table-list-wrap">
+                                    <div class="clock">
+                                        <span class="icon">🌙</span>
+                                        <strong>22:30</strong>
+                                        <p>~ 24:42</p>
+                                    </div>
+                                    <div class="seat">
+                                        <span class="situation">95</span>
+                                        <span>/ 210석</span>
+                                    </div>
+                                    <div class="theater-info">
+                                        <span>2관</span>
+                                        <span>/</span>
+                                        <span>2D</span>
+                                    </div>
+                                </div>
+                                <div class="table-list-wrap">
+                                    <div class="clock">
+                                        <span class="icon">🌙</span>
+                                        <strong>23:50</strong>
+                                        <p>~ 26:02</p>
+                                    </div>
+                                    <div class="seat">
+                                        <span class="warning">44</span>
+                                        <span>/ 210석</span>
+                                    </div>
+                                    <div class="theater-info">
+                                        <span>3관</span>
+                                        <span>/</span>
+                                        <span>2D</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p class="tt-format">LASER</p>
+                            <div class="tt-cards">
+                                <div class="table-list-wrap">
+                                    <div class="clock">
+                                        <span class="icon">☀️</span>
+                                        <strong>08:30</strong>
+                                        <p>~ 10:42</p>
+                                    </div>
+                                    <div class="seat">
+                                        <span class="situation">132</span>
+                                        <span>/ 180석</span>
+                                    </div>
+                                    <div class="theater-info">
+                                        <span>1관</span>
+                                        <span>/</span>
+                                        <span>LASER</span>
+                                    </div>
+                                </div>
+                                <div class="table-list-wrap">
+                                    <div class="clock">
+                                        <strong>14:00</strong>
+                                        <p>~ 16:12</p>
+                                    </div>
+                                    <div class="seat">
+                                        <span class="situation">110</span>
+                                        <span>/ 180석</span>
+                                    </div>
+                                    <div class="theater-info">
+                                        <span>1관</span>
+                                        <span>/</span>
+                                        <span>LASER</span>
+                                    </div>
+                                </div>
+                                <div class="table-list-wrap">
+                                    <div class="clock">
+                                        <strong>19:20</strong>
+                                        <p>~ 21:32</p>
+                                    </div>
+                                    <div class="seat">
+                                        <span class="no-seat">매진</span>
+                                    </div>
+                                    <div class="theater-info">
+                                        <span>1관</span>
+                                        <span>/</span>
+                                        <span>LASER</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 오세이사 -->
+                        <div class="tt-block">
+                            <div class="tt-head">
+                                <div class="age-badge age-12">12</div>
+                                <h4>오늘 밤, 세계에서 이 사랑이 사라진다해도</h4>
+                            </div>
+                            <p class="tt-format">2D</p>
+                            <div class="tt-cards">
+                                <div class="table-list-wrap">
+                                    <div class="clock">
+                                        <span class="icon">☀️</span>
+                                        <strong>08:30</strong>
+                                        <p>~ 10:42</p>
+                                    </div>
+                                    <div class="seat">
+                                        <span class="situation">132</span>
+                                        <span>/ 210석</span>
+                                    </div>
+                                    <div class="theater-info">
+                                        <span>2관</span>
+                                        <span>/</span>
+                                        <span>2D</span>
+                                    </div>
+                                </div>
+                                <div class="table-list-wrap">
+                                    <div class="clock">
+                                        <span class="icon">☀️</span>
+                                        <strong>10:00</strong>
+                                        <p>~ 12:12</p>
+                                    </div>
+                                    <div class="seat">
+                                        <span class="situation">88</span>
+                                        <span>/ 210석</span>
+                                    </div>
+                                    <div class="theater-info">
+                                        <span>3관</span>
+                                        <span>/</span>
+                                        <span>2D</span>
+                                    </div>
+                                </div>
+                                <div class="table-list-wrap">
+                                    <div class="clock">
+                                        <strong>13:20</strong>
+                                        <p>~ 15:32</p>
+                                    </div>
+                                    <div class="seat">
+                                        <span class="situation">175</span>
+                                        <span>/ 210석</span>
+                                    </div>
+                                    <div class="theater-info">
+                                        <span>2관</span>
+                                        <span>/</span>
+                                        <span>2D</span>
+                                    </div>
+                                </div>
+                                <div class="table-list-wrap">
+                                    <div class="clock">
+                                        <strong>15:45</strong>
+                                        <p>~ 17:57</p>
+                                    </div>
+                                    <div class="seat">
+                                        <span class="no-seat">매진</span>
+                                    </div>
+                                    <div class="theater-info">
+                                        <span>3관</span>
+                                        <span>/</span>
+                                        <span>2D</span>
+                                    </div>
+                                </div>
+                                <div class="table-list-wrap">
+                                    <div class="clock">
+                                        <strong>17:20</strong>
+                                        <p>~ 19:22</p>
+                                    </div>
+                                    <div class="seat">
+                                        <span class="warning">21</span>
+                                        <span>/ 210석</span>
+                                    </div>
+                                    <div class="theater-info">
+                                        <span>2관</span>
+                                        <span>/</span>
+                                        <span>2D</span>
+                                    </div>
+                                </div>
+                                <div class="table-list-wrap">
+                                    <div class="clock">
+                                        <strong>19:50</strong>
+                                        <p>~ 22:02</p>
+                                    </div>
+                                    <div class="seat">
+                                        <span class="situation">189</span>
+                                        <span>/ 210석</span>
+                                    </div>
+                                    <div class="theater-info">
+                                        <span>4관</span>
+                                        <span>/</span>
+                                        <span>2D</span>
+                                    </div>
+                                </div>
+                                <div class="table-list-wrap">
+                                    <div class="clock">
+                                        <span class="icon">🌙</span>
+                                        <strong>22:30</strong>
+                                        <p>~ 24:42</p>
+                                    </div>
+                                    <div class="seat">
+                                        <span class="situation">95</span>
+                                        <span>/ 210석</span>
+                                    </div>
+                                    <div class="theater-info">
+                                        <span>2관</span>
+                                        <span>/</span>
+                                        <span>2D</span>
+                                    </div>
+                                </div>
+                                <div class="table-list-wrap">
+                                    <div class="clock">
+                                        <span class="icon">🌙</span>
+                                        <strong>23:50</strong>
+                                        <p>~ 26:02</p>
+                                    </div>
+                                    <div class="seat">
+                                        <span class="warning">44</span>
+                                        <span>/ 210석</span>
+                                    </div>
+                                    <div class="theater-info">
+                                        <span>3관</span>
+                                        <span>/</span>
+                                        <span>2D</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 왕과 사는 남자 -->
+                        <div class="tt-block">
+                            <div class="tt-head">
+                                <div class="age-badge age-15">15</div>
+                                <h4>왕과 사는 남자</h4>
+                            </div>
+                            <p class="tt-format">2D</p>
+                            <div class="tt-cards">
+                                <div class="table-list-wrap">
+                                    <div class="clock">
+                                        <span class="icon">☀️</span>
+                                        <strong>08:30</strong>
+                                        <p>~ 10:42</p>
+                                    </div>
+                                    <div class="seat">
+                                        <span class="situation">132</span>
+                                        <span>/ 210석</span>
+                                    </div>
+                                    <div class="theater-info">
+                                        <span>2관</span>
+                                        <span>/</span>
+                                        <span>2D</span>
+                                    </div>
+                                </div>
+                                <div class="table-list-wrap">
+                                    <div class="clock">
+                                        <span class="icon">☀️</span>
+                                        <strong>10:00</strong>
+                                        <p>~ 12:12</p>
+                                    </div>
+                                    <div class="seat">
+                                        <span class="situation">88</span>
+                                        <span>/ 210석</span>
+                                    </div>
+                                    <div class="theater-info">
+                                        <span>3관</span>
+                                        <span>/</span>
+                                        <span>2D</span>
+                                    </div>
+                                </div>
+                                <div class="table-list-wrap">
+                                    <div class="clock">
+                                        <strong>13:20</strong>
+                                        <p>~ 15:32</p>
+                                    </div>
+                                    <div class="seat">
+                                        <span class="situation">175</span>
+                                        <span>/ 210석</span>
+                                    </div>
+                                    <div class="theater-info">
+                                        <span>2관</span>
+                                        <span>/</span>
+                                        <span>2D</span>
+                                    </div>
+                                </div>
+                                <div class="table-list-wrap">
+                                    <div class="clock">
+                                        <strong>15:45</strong>
+                                        <p>~ 17:57</p>
+                                    </div>
+                                    <div class="seat">
+                                        <span class="no-seat">매진</span>
+                                    </div>
+                                    <div class="theater-info">
+                                        <span>3관</span>
+                                        <span>/</span>
+                                        <span>2D</span>
+                                    </div>
+                                </div>
+                                <div class="table-list-wrap">
+                                    <div class="clock">
+                                        <strong>17:20</strong>
+                                        <p>~ 19:22</p>
+                                    </div>
+                                    <div class="seat">
+                                        <span class="warning">21</span>
+                                        <span>/ 210석</span>
+                                    </div>
+                                    <div class="theater-info">
+                                        <span>2관</span>
+                                        <span>/</span>
+                                        <span>2D</span>
+                                    </div>
+                                </div>
+                                <div class="table-list-wrap">
+                                    <div class="clock">
+                                        <strong>19:50</strong>
+                                        <p>~ 22:02</p>
+                                    </div>
+                                    <div class="seat">
+                                        <span class="situation">189</span>
+                                        <span>/ 210석</span>
+                                    </div>
+                                    <div class="theater-info">
+                                        <span>4관</span>
+                                        <span>/</span>
+                                        <span>2D</span>
+                                    </div>
+                                </div>
+                                <div class="table-list-wrap">
+                                    <div class="clock">
+                                        <span class="icon">🌙</span>
+                                        <strong>22:30</strong>
+                                        <p>~ 24:42</p>
+                                    </div>
+                                    <div class="seat">
+                                        <span class="situation">95</span>
+                                        <span>/ 210석</span>
+                                    </div>
+                                    <div class="theater-info">
+                                        <span>2관</span>
+                                        <span>/</span>
+                                        <span>2D</span>
+                                    </div>
+                                </div>
+                                <div class="table-list-wrap">
+                                    <div class="clock">
+                                        <span class="icon">🌙</span>
+                                        <strong>23:50</strong>
+                                        <p>~ 26:02</p>
+                                    </div>
+                                    <div class="seat">
+                                        <span class="warning">44</span>
+                                        <span>/ 210석</span>
+                                    </div>
+                                    <div class="theater-info">
+                                        <span>3관</span>
+                                        <span>/</span>
+                                        <span>2D</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p class="tt-format">LASER</p>
+                            <div class="tt-cards">
+                                <div class="table-list-wrap">
+                                    <div class="clock">
+                                        <span class="icon">☀️</span>
+                                        <strong>08:30</strong>
+                                        <p>~ 10:42</p>
+                                    </div>
+                                    <div class="seat">
+                                        <span class="situation">132</span>
+                                        <span>/ 180석</span>
+                                    </div>
+                                    <div class="theater-info">
+                                        <span>1관</span>
+                                        <span>/</span>
+                                        <span>LASER</span>
+                                    </div>
+                                </div>
+                                <div class="table-list-wrap">
+                                    <div class="clock">
+                                        <strong>14:00</strong>
+                                        <p>~ 16:12</p>
+                                    </div>
+                                    <div class="seat">
+                                        <span class="situation">110</span>
+                                        <span>/ 180석</span>
+                                    </div>
+                                    <div class="theater-info">
+                                        <span>1관</span>
+                                        <span>/</span>
+                                        <span>LASER</span>
+                                    </div>
+                                </div>
+                                <div class="table-list-wrap">
+                                    <div class="clock">
+                                        <strong>19:20</strong>
+                                        <p>~ 21:32</p>
+                                    </div>
+                                    <div class="seat">
+                                        <span class="no-seat">매진</span>
+                                    </div>
+                                    <div class="theater-info">
+                                        <span>1관</span>
+                                        <span>/</span>
+                                        <span>LASER</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- 푸터영역 -->
+    <footer>
+        <div class="inner">
+            <!-- VVV 여기 아래로 작업 VVV -->
+            <h2 class="footer-logo"><img src="./images/footer/footer-cgv-logo.png" alt="">
+            </h2>
+            <div class="footer-middle">
+                <address>
+                    <p>(04377)서울특별시 용산구 한강대로 23길 55, 아이파크몰 6층(한강로동)</p>
+                    <p>통신판매업신고번호 : 2017-서울용산-0662사업자정보확인</p>
+                    <p>사업자등록번호 : 104-81-45690</p>
+                    <p>호스팅사업자 : CJ올리브네트웍스</p>
+                    <p> 대표이메일 : cjcgvmaster@cj.net</p>
+                </address>
+                <ul class="qr-list">
+                    <li>
+                        <p>QR코드 찍고</p>
+                        <p>CGV 앱에서 자세히 보기</p>
+                        <P>QR코드를 스캔해보세요</P>
+                    </li>
+                    <li><img src="./images/footer/footer-qr.png" alt="CGV QR"></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <div class="f-inner-left">
+                    <select class="select-company">
+                        <optgroup label="CJ그룹">
+                            <option>CJ주식회사</option>
+                        </optgroup>
+                        <optgroup label="식품 & 식품서비스">
+                            <option>CJ제일제당</option>
+                            <option>CJ푸드빌</option>
+                            <option>CJ프레시웨이</option>
+                        </optgroup>
+                        <optgroup label="생명공학">
+                            <option>CJ제일제당 BIO사업부문</option>
+                            <option>CJ Feed&Care</option>
+                        </optgroup>
+                        <optgroup label="물류 & 신유통">
+                            <option>CJ대한통운</option>
+                            <option>CJ대한통운 건설부문</option>
+                            <option>CJ올리브영/option>
+                            <option>CJ올리브네트웍스</option>
+                            <option>CJ ENM 커머스부문</option>
+                        </optgroup>
+                        <optgroup label="엔터테인먼트 & 미디어">
+                            <option>CJ ENM 엔터테인먼트부문</option>
+                            <option>CJ CGV</option>
+                        </optgroup>
+                    </select>
+                    <ul class="bt-list">
+                        <li><a href="#">채용정보</a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">위치기반서비스 이용약관</a></li>
+                    </ul>
+                </div>
+                <ul class="sns-list">
+                    <li><a href="https://pf.kakao.com/_VXwbj/97906262"><img src="./images/footer/kakao.png"
+                                alt="카카오톡"></a></li>
+                    <li><a href="https://www.instagram.com/cgv_korea/?hl=ko"><img src="./images/footer/instagram.png"
+                                alt="인스타"></a></li>
+                    <li><a href="https://www.youtube.com/channel/UCmjUMtUw6wXLrsULdxuXWdg"><img
+                                src="./images/footer/youtube.png" alt="유튜브"></a></li>
+                    <li><a href="https://x.com/CGV_KOREA"><img src="./images/footer/X.png" alt="트위터"></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    </main>
+    <!-- 햄버거 오버레이 -->
+    <div class="ham-overlay"></div>
+
+    <!-- 햄버거 메뉴 패널 -->
+    <div class="ham-panel">
+        <!-- 닫기 버튼 -->
+        <button class="ham-close">
+            <img src="./images/ham-close.png" alt="닫기">
+        </button>
+        <nav class="ham-nav">
+            <ul class="ham-main">
+                <li>
+                    <span class="ham-main-title">영화</span>
+                    <ul class="ham-sub">
+                        <li><a href="#">현재상영작</a></li>
+                        <li><a href="#">상영예정작</a></li>
+                        <li><a href="#">CGV ONLY</a></li>
+                        <li><a href="#">아트하우스</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="ham-main-title">예매</span>
+                    <ul class="ham-sub">
+                        <li><a href="sub-quick-reserv.html">빠른예매</a></li>
+                        <li><a href="sub-movie-reserv.html">영화별예매</a></li>
+                        <li><a href="sub-theater-reserv.html">극장별예매</a></li>
+                        <li><a href="#">포토플레이</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="ham-main-title">매점</span>
+                    <ul class="ham-sub">
+                        <li><a href="sub-store.html">푸드</a></li>
+                        <li><a href="#">캐릭터굿즈</a></li>
+                        <li><a href="#">기프트샵</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="ham-main-title">이벤트</span>
+                    <ul class="ham-sub">
+                        <li><a href="#">SPECIAL</a></li>
+                        <li><a href="#">무대인사/시사회</a></li>
+                        <li><a href="sub-alliance.html">제휴</a></li>
+                        <li><a href="#">멤버쉽/클럽</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="ham-main-title">극장</span>
+                    <ul class="ham-sub">
+                        <li><a href="sub-all-CGV.html">전체 극장</a></li>
+                        <li><a href="#">특별관</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="ham-main-title">액티비티</span>
+                    <ul class="ham-sub">
+                        <li><a href="#">피커스</a></li>
+                        <li><a href="#">볼링펍</a></li>
+                        <li><a href="#">씨네드쉐프</a></li>
+                        <li><a href="#">미션브레이크</a></li>
+                        <li><a href="#">롤롤</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="ham-main-title">고객센터</span>
+                    <ul class="ham-sub">
+                        <li><a href="#">고객센터 안내</a></li>
+                        <li><a href="#">자주 찾는 질문</a></li>
+                        <li><a href="#">단체/대관문의</a></li>
+                        <li><a href="#">나의 문의내역</a></li>
+                        <li><a href="#">공지사항</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="ham-main-title">나의 정보 관리</span>
+                    <ul class="ham-sub">
+                        <li><a href="#">예약/결제내역</a></li>
+                        <li><a href="#">자주가는 CGV</a></li>
+                        <li><a href="#">보관함</a></li>
+                        <li><a href="#">내 차량번호 조회</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="situation-wrap">
+        <div class="situation-list">
+            <ul>
+                <li><strong>만약에 우리</strong></li>
+                <li>cgv 강남</li><span></span>
+                <li>2월 13일 · 수</li><span></span>
+                <li>15:45</li><span></span>
+                <li>성인 2명</li><span></span>
+                <li class="point">F13, F14</li>
+            </ul>
+        </div>
+        <div class="reserv-btn">
+            <button>결제하러가기</button>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            let hamBtns = document.querySelectorAll('.ham-btn a');
+            let closeBtn = document.querySelector('.ham-close');
+
+            hamBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    document.body.classList.add('active');
+                });
+            });
+
+            function closeHam() {
+                document.body.classList.remove('active');
+            }
+
+            closeBtn.addEventListener('click', closeHam);
+        });
+    </script>
+    <script>
+        const situationWrap = document.querySelector('.situation-wrap');
+        const footer = document.querySelector('footer'); // 푸터 선택자에 맞게 수정
+
+        window.addEventListener('scroll', () => {
+            const footerTop = footer.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+
+            if (footerTop <= windowHeight) {
+                // 푸터가 보이기 시작하면 fixed 해제
+                situationWrap.style.position = 'absolute';
+                situationWrap.style.bottom = 'auto';
+                situationWrap.style.top = (window.scrollY + footerTop - 80) + 'px';
+                // 100은 situation-wrap의 height
+            } else {
+                // 평상시엔 하단 고정
+                situationWrap.style.position = 'fixed';
+                situationWrap.style.bottom = '0';
+                situationWrap.style.top = 'auto';
+            }
+        });
+    </script>
+</body>
+
+</html>
