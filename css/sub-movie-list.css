@@ -132,6 +132,48 @@ section {
 }
 
 /* ^^^ 돈 땃쥐 더 탑 ^^^ */
+.tab-wrap {
+    position: absolute;
+    opacity: 0;
+}
+
+.tab-wrap.active {
+    position: relative;
+    opacity: 1;
+}
+
+
+.movie-list-wrap {
+    justify-content: space-between;
+
+}
+
+.m-button-list {
+    display: flex;
+    gap: 50px;
+    translate: 20px 50px;
+}
+
+.movie-list-wrap .m-button-list a {
+    font-size: var(--px20)
+}
+
+
+.movie-list-wrap .m-button-list .active a {
+    color: var(--main);
+
+    border-bottom: 1px solid var(--main);
+}
+
+.movie-list-wrap span {
+    padding-left: 40px;
+    color: #666768;
+}
+
+.m-button-list>li:hover {
+    color: var(--main)
+}
+
 form {
     position: relative;
     width: 300px;
