@@ -1107,7 +1107,7 @@ header {
 
 .slider-wrap {
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
     max-width: 1920px;
     width: 100%;
     margin: 0 auto;
@@ -1128,7 +1128,7 @@ header {
 .slider-wrap .next-button .left,
 .slider-wrap .next-button .right {
     position: absolute;
-    top: 50%;
+    bottom: 10
 }
 
 .slider-wrap .next-button .left {
@@ -1145,7 +1145,7 @@ header {
 
 .special-section .arrow-btn-wrap {
     position: absolute;
-    bottom: 150px;
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -1153,55 +1153,54 @@ header {
     z-index: 99999;
 }
 
+.wrap {
+    /* border: 1px solid red; */
+    position: relative;
+}
+
 .slider-wrap::before,
 .slider-wrap::after {
     content: "";
+    display: block;
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
-    width: 1950px;
-    height: 130px;
-    border-radius: 45%;
+    width: 110%;
+    height: 40%;
+    border-radius: 50%;
     background: rgba(17, 17, 17, 1);
     z-index: 99;
 }
 
 .slider-wrap::before {
-    top: 0;
+    transform: translateX(-50%) translateY(-60%);
 }
 
 .slider-wrap::after {
-    bottom: 76px;
+    transform: translateX(-50%) translateY(50%);
+    bottom: 0;
 }
 
-.theater-list {
-    position: relative;
-    display: flex;
-    gap: 36px;
+.theater-list .img-box {
+    width: 100%;
+    height: 480px;
+    /* 모든 슬라이드의 높이를 이 값으로 통일 (원하는 높이로 조절) */
     overflow: hidden;
-    padding-top: 60px;
-    width: calc(100% * 14 / 2);
-    margin-left: calc(-100% / 4);
-    z-index: 2;
-
-}
-
-.theater-list li {
     position: relative;
-    /* width: 100%; */
-    flex: 1;
-    /* padding: 0 10px; */
-    /* transform: translateX(-33%); */
+    border-radius: var(--radius);
+    /* 기존 곡률 유지 */
 }
 
 .theater-list li img {
-    max-width: none;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+
 }
 
 .theater-list .text-box {
     position: absolute;
-    bottom: 30%;
+    bottom: 15%;
     padding-left: 56px;
 }
 
@@ -1211,8 +1210,27 @@ header {
 }
 
 .theater-list .text-box .title {
-    font-size: 48px;
+    font-size: var(--px40);
     font-weight: 700;
+}
+
+.swiper-pagination {
+    bottom: 7px !important;
+    /* 곡선 가림막보다 위로 올리기 위해 위치 조정 */
+    z-index: 99999;
+    /* 가림막(99)보다 높게 설정 */
+}
+
+/* 불렛(동그라미) 색상 변경 (기본색이 안 보일 수 있음) */
+.swiper-pagination-bullet {
+    background: #fff !important;
+    opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--red-btn) !important;
+    /* CGV 레드 포인트 컬러 */
+    opacity: 1;
 }
 
 /* ------------------------------------------------------------------ */
