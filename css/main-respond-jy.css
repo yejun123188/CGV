@@ -2,19 +2,130 @@
 @media screen and (max-width:1280px) {
     .main-slider-wrap {
         padding-left: 0;
-        gap: 30px;
+        gap: 24px;
+        height: auto;
+        align-items: flex-start;
+    }
+
+    .main-slider-list {
+        width: 50%;
+        height: 440px;
+        position: relative;
+    }
+
+    .main-slider {
+        width: 100%;
+        height: 385px;
+    }
+
+    .slider {
+        width: 100%;
+        height: 100%;
+    }
+
+    .slider .banner {
+        min-width: 100%;
+        width: 100%;
+    }
+
+    .event-section .arrow-btn-wrap>.arrow-btn-left,
+    .event-section .arrow-btn-wrap>.arrow-btn-right {
+        display: none;
+    }
+
+    /* ★ page-list 200% 해제 */
+    .page-list {
+        width: 100%;
+        overflow: visible;
     }
 
     .page-list-wrap {
-        width: auto;
         flex: 1;
-        margin-left: 0;
+        margin-left: 40px;
+        min-width: 0;
+        overflow: visible;
+        display: flex;
+        flex-direction: column;
+        height: 440px;
+        justify-content: space-between;
+        padding-bottom: 8px;
+    }
+
+    .page2 {
+        display: none;
+    }
+
+    .page1 {
+        width: 100%;
+        gap: 24px;
+        margin-right: 0;
+        flex: 1;
+        justify-content: space-around;
+    }
+
+    .page1 li a {
+        gap: 14px;
+    }
+
+    /* ★ 말줄임 - 최고 우선순위 선택자 */
+    .event-section .page-list-wrap .page1 li a {
+        overflow: hidden;
+        min-width: 0;
+    }
+
+    .event-section .page-list-wrap .page1 li .text-box {
+        flex: 1;
+        min-width: 0;
         overflow: hidden;
     }
 
-    .text-box .title {
-        font-size: var(--14px);
-        margin-bottom: 10px;
+    .event-section .page-list-wrap .page1 li .text-box .title {
+        font-size: 0.875rem;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        display: block !important;
+        margin-bottom: 8px;
+        width: 100%;
+    }
+
+    .event-section .page-list-wrap .page1 li .text-box .desc {
+        font-size: 0.8rem;
+        line-height: 1.4;
+        display: -webkit-box !important;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden !important;
+        white-space: normal !important;
+    }
+
+    .thumb {
+        width: 180px;
+        height: 112px;
+        flex-shrink: 0;
+    }
+
+    /* ★ 페이저버튼 - flex-shrink:0 으로 찌그러짐 방지 */
+    .pager-btn {
+        flex-shrink: 0;
+        justify-content: center;
+        margin-top: 0;
+    }
+
+    .event-section .more-btn {
+        top: -26px;
+    }
+
+    .benefit-list {
+        gap: 16px;
+    }
+
+    .ad-banner-wrap {
+        height: 250px;
+    }
+
+    .ad-banner>strong {
+        font-size: 3em;
     }
 }
 
