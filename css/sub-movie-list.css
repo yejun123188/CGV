@@ -247,7 +247,7 @@ form>button img {
 
 .content>div .movie1 .img-box img {
     width: 287px;
-    /* height: 400px; */
+    height: 400px;
     border-radius: 10PX;
     z-index: 0;
 }
