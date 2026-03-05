@@ -36,6 +36,7 @@ section {
     max-width: 1700px;
     margin: 0 auto;
     padding: 0 50px;
+    background-color: rgba(255, 0, 0, 0.1);
 }
 
 /* 헤더영역 */
@@ -132,18 +133,29 @@ section {
 }
 
 /* ^^^ 돈 땃쥐 더 탑 ^^^ */
+
+
+
 .tab-wrap {
     position: absolute;
-    opacity: 0;
+
+
+    display: none;
 }
 
 .tab-wrap.active {
     position: relative;
-    opacity: 1;
+    display: block;
+}
+
+.movieList-sub-menu {
+    display: flex;
+    justify-content: space-between;
 }
 
 
 .movie-list-wrap {
+    display: flex;
     justify-content: space-between;
 
 }
@@ -151,7 +163,8 @@ section {
 .m-button-list {
     display: flex;
     gap: 50px;
-    translate: 20px 50px;
+    align-items: center;
+    /* translate: 20px 50px; */
 }
 
 .movie-list-wrap .m-button-list a {
@@ -175,15 +188,15 @@ section {
 }
 
 form {
-    position: relative;
+
     width: 300px;
     background: rgba(255, 255, 255, 0.2);
     display: flex;
-    align-items: center;
+
     border-radius: 28px;
     height: 40px;
     margin-top: 4px;
-    translate: 1218px;
+    /* translate: 1218px; */
 
 }
 
@@ -192,7 +205,7 @@ form>input {
     height: 100%;
     background: none;
     border: none;
-    margin-left: 18px;
+
     color: #fff;
 }
 
@@ -217,36 +230,43 @@ form>button img {
     padding: 20px;
 }
 
-.content>.list-wrap {
+.movie-list-tab-wrap {
+    margin: 30px 0 150px;
 
+}
+
+.movieList-sub-menu {
+    border: 1px solid green;
+}
+
+.content>.list-wrap {
+    /* height: 1500px; */
     display: grid;
     /* grid-template-columns: 200px 200px 200px; */
     /* grid-template-columns: repeat(3, 200px); */
     /* grid-template-columns: 1tr 1tr 1tr; */
     grid-template-columns: repeat(4, auto);
     /* 기기 디스플레이 맞게 숫자만 바꿔줌 - 계산해서 보임 - 2차원적 개념 플렉스와차이 */
-    gap: 30px;
+    gap: 100px;
     /* 위치는 바뀌지 않음 */
-    margin-top: 30px;
+    /* margin-top: 30px; */
     /* margin-left: 160px;
     margin-right: 160px; */
-    margin-bottom: 150px;
-
-
 }
 
 .content>div .movie1 {
     position: relative;
     /* padding: 30px; */
-    align-items: center;
+    /* align-items: center; */
     text-align: center;
-    width: 311px;
-    height: 558px;
-    margin-bottom: 55px;
+    /* width: 311px; */
+    /* height: 558px; */
+    /* margin-bottom: 55px; */
+    background: green;
 }
 
 .content>div .movie1 .img-box img {
-    width: 287px;
+    /* width: 287px; */
     /* height: 400px; */
     border-radius: 10PX;
     z-index: 0;
@@ -255,7 +275,7 @@ form>button img {
 .content>div .movie1 .img-box {
     position: relative;
     margin: 0 auto;
-    width: 287px;
+    /* width: 287px; */
     /* height: 441px; */
 }
 
@@ -285,15 +305,15 @@ form>button img {
 
 .content>div .movie1 .text-box .title {
     color: #fff;
-    display: flex;
-
     font-size: 25px;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
     margin-top: 5px;
+}
 
-
+.content>div .movie1 .text-box .title>p>a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .content>div .movie1 .sub-info .line {
@@ -360,6 +380,7 @@ form>button img {
 
 .mov-btn-wrap {
     display: flex;
+    justify-content: center;
     gap: 10px;
 }
 
