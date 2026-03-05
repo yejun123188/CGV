@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./css/sub-common.css">
     <!-- vvv css 이름 변경 후 경로 재수정 vvv -->
     <link rel="stylesheet" href="./css/sub-all-CGV.css">
+    <script defer src="./js/all-CGV.js"></script>
 </head>
 
 <body>
@@ -25,7 +26,10 @@
             </h1>
 
             <ul class="gnb-list">
-                <li><a href="#"><img src="./images/search.png" alt="검색"></a></li>
+                <form>
+                    <input type="text">
+                    <button><img src="./images/search.png" alt=""></button>
+                </form>
                 <li><a href="#"><img src="./images/ticket.png" alt="티켓"></a></li>
                 <li><a href="#"><img src="./images/user.png" alt="사용자"></a></li>
             </ul>
@@ -722,7 +726,7 @@
                 <li>
                     <span class="ham-main-title">영화</span>
                     <ul class="ham-sub">
-                        <li><a href="#">현재상영작</a></li>
+                        <li><a href="sub-movie-list.html">현재상영작</a></li>
                         <li><a href="#">상영예정작</a></li>
                         <li><a href="#">CGV ONLY</a></li>
                         <li><a href="#">아트하우스</a></li>
@@ -731,16 +735,16 @@
                 <li>
                     <span class="ham-main-title">예매</span>
                     <ul class="ham-sub">
-                        <li><a href="#">빠른예매</a></li>
-                        <li><a href="#">영화별예매</a></li>
-                        <li><a href="#">극장별예매</a></li>
+                        <li><a href="sub-quick-reserv.html">빠른예매</a></li>
+                        <li><a href="sub-movie-reserv.html">영화별예매</a></li>
+                        <li><a href="sub-theater-reserv.html">극장별예매</a></li>
                         <li><a href="#">포토플레이</a></li>
                     </ul>
                 </li>
                 <li>
                     <span class="ham-main-title">매점</span>
                     <ul class="ham-sub">
-                        <li><a href="#">푸드</a></li>
+                        <li><a href="sub-store.html">푸드</a></li>
                         <li><a href="#">캐릭터굿즈</a></li>
                         <li><a href="#">기프트샵</a></li>
                     </ul>
@@ -750,14 +754,14 @@
                     <ul class="ham-sub">
                         <li><a href="#">SPECIAL</a></li>
                         <li><a href="#">무대인사/시사회</a></li>
-                        <li><a href="#">제휴</a></li>
+                        <li><a href="sub-alliance.html">제휴</a></li>
                         <li><a href="#">멤버쉽/클럽</a></li>
                     </ul>
                 </li>
                 <li>
                     <span class="ham-main-title">극장</span>
                     <ul class="ham-sub">
-                        <li><a href="#">전체 극장</a></li>
+                        <li><a href="sub-all-CGV.html">전체 극장</a></li>
                         <li><a href="#">특별관</a></li>
                     </ul>
                 </li>

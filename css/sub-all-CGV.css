@@ -118,6 +118,10 @@
     width: 20px;
 }
 
+.all-cgv-wrap {
+    padding-top: 50px;
+}
+
 .all-cgv-wrap>.inner>div {
     margin-bottom: 80px;
 }
