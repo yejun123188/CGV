@@ -721,11 +721,11 @@ header {
 /* 혜택 / 이벤트 (주연) */
 /* 탭메뉴 */
 .event-section {
-    overflow: hidden;
+    overflow: visible;
 }
 
 .event-section .inner {
-    overflow: hidden;
+    overflow: visible;
 }
 
 .event-section .btn {
