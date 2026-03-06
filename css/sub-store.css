@@ -148,8 +148,62 @@ img {
     position: relative;
 }
 
-.product-title {
-    display: flex;
+.custom-select {
+    position: relative;
+    display: inline-block;
+    background-color: #323131;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.selected-value {
+    padding: 4px 30px 4px 10px;
+    background: url(../images/lyra-icon-arrow-forward-simple.png) no-repeat right 8px center;
+    white-space: nowrap;
+}
+
+.options {
+    position: absolute;
+    top: 100%;
+    background-color: #323131;
+    margin: 4px 0 0 0;
+    border-radius: 4px;
+    display: none;
+    z-index: 10;
+}
+
+.options.active {
+    display: block;
+    /* 클릭 시 노출 */
+}
+
+.option-item {
+    padding: 6px 10px;
+    white-space: nowrap;
+}
+
+.option-item:hover {
+    background-color: #444;
+    /* 마우스 올렸을 때 강조 */
+}
+
+
+.product-title select {
+
+
+
+    appearance: none;
+
+
+    background: url(../images/lyra-icon-arrow-forward-simple.png) no-repeat right 8px center;
+    background-color: #323131;
+    color: white;
+    /* 변수 대신 테스트용 색상 */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 
 }
 
