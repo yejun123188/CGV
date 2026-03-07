@@ -262,14 +262,14 @@ form>button img {
     width: 24px;
 }
 
-form:hover {
+header form:hover {
     width: 200px;
     background: rgba(255, 255, 255, 0.4);
     box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+}
 
-    form>input {
-        width: 24px;
-    }
+header form:hover>input {
+    width: 120px;
 }
 
 .gnb-list>li {
@@ -339,15 +339,12 @@ form:hover {
 /* ------------------------------------------------------------------ */
 /* 메인 비디오 (예준) */
 .main-visual-wrap {
-    padding: 0;
-}
-
-.main-visual-wrap {
     position: relative;
     width: 100%;
     height: 953px;
     overflow: hidden;
     margin-top: -170px;
+    padding: 0;
 }
 
 /* 배경 */
@@ -362,9 +359,14 @@ form:hover {
     transform: translate(-50%, -50%);
 }
 
+.main-video {
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
 .main-image {
     opacity: 0;
-    transition: 0.8s ease;
+    transition: opacity 1s ease;
 }
 
 .main-visual-wrap::after {
@@ -382,27 +384,30 @@ form:hover {
     inset: 0;
     display: flex;
     align-items: flex-end;
-    z-index: 9999;
+    z-index: 10;
+    transition: background 1s ease;
 }
 
 .visual-content {
     width: 100%;
     max-width: 1700px;
     margin: 0 auto;
-    padding: 0 50px 50px 50px;
-    color: #fff;
+    padding: 0 50px 50px;
+    transition: 1s ease;
 }
 
 .movie-logo {
-    width: clamp(240px, 21.875vw, 420px);
+    width: 420px;
     padding: 20px 0;
     margin-bottom: 10px;
+    animation: 3s ease;
 }
 
 /* 버튼 */
 .main-visual-wrap .mov-btn-wrap {
     display: flex;
     gap: 10px;
+    transition: 1s ease;
 }
 
 .main-visual-wrap .btn {
@@ -434,6 +439,102 @@ form:hover {
 
 .main-visual-wrap .view:hover {
     background-color: #FFFFFF;
+}
+
+/* 영상 종료 */
+.main-visual-wrap.active .main-video {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.main-visual-wrap.active .main-image {
+    opacity: 1;
+}
+
+.main-visual-wrap.active .visual-overlay {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.main-visual-wrap.active .visual-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    text-align: center;
+}
+
+
+.main-visual-wrap.active .movie-logo {
+    position: absolute;
+    top: 400px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 650px;
+    animation: 3s ease;
+    padding: 0 50px;
+}
+
+.main-visual-wrap.active .mov-btn-wrap {
+    justify-content: center;
+    position: absolute;
+    bottom: 70px;
+}
+
+.main-visual-wrap.active .reserv {
+    box-shadow: 0 0 20px rgba(127, 127, 127, 0.25);
+    background-color: #EE3123B3;
+}
+
+.main-visual-wrap.active .reserv:hover {
+    background-color: var(--main);
+}
+
+.scroll-arrow {
+    display: none;
+    margin-top: 20px;
+    text-align: center;
+    opacity: 0;
+    position: absolute;
+    bottom: 30px;
+}
+
+.scroll-arrow img {
+    width: 32px;
+    display: block;
+}
+
+.main-visual-wrap.active .scroll-arrow {
+    display: block;
+    opacity: 1;
+    animation: ArrowAni 0.8s infinite alternate;
+}
+
+@keyframes logoFade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes ArrowAni {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+
+    100% {
+        transform: translateY(15px);
+        opacity: 1;
+    }
 }
 
 /* ------------------------------------------------------------------ */
@@ -1554,6 +1655,22 @@ address p {
     height: 40px;
 }
 
+.ham-panel form {
+    position: absolute;
+    right: 50px;
+    top: 38px;
+}
+
+.ham-panel form:hover {
+    width: 200px;
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.ham-panel form:hover>input {
+    width: 120px;
+}
+
 body.active .ham-overlay {
     opacity: 1;
     pointer-events: auto;
@@ -1583,7 +1700,7 @@ body.active .ham-panel {
 
 .ham-main-title {
     display: inline-block;
-    width: 280PX;
+    width: 280px;
     font-size: var(--px24);
     font-weight: 700;
     color: #ffffff;

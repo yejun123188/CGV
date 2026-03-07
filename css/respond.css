@@ -1,0 +1,434 @@
+@media screen and (max-width: 1800px) {
+    .ham-panel {
+        top: 80px;
+        width: calc(100vw - 32px);
+        max-width: 1400px;
+    }
+
+    .ham-nav {
+        padding: 90px 56px 50px;
+    }
+
+    .ham-main {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 42px 36px;
+    }
+
+    .ham-main-title {
+        width: 100%;
+        font-size: 22px;
+        padding-top: 18px;
+    }
+
+    .ham-main-title::after {
+        margin-top: 16px;
+    }
+
+    .ham-sub {
+        margin-top: 16px;
+        gap: 12px;
+    }
+
+    .ham-sub a {
+        height: 26px;
+        line-height: 26px;
+        font-size: 18px;
+    }
+
+    .ham-close {
+        top: 28px;
+        left: 56px;
+    }
+
+    .ham-close img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .ham-panel form {
+        top: 28px;
+    }
+}
+
+@media screen and (max-width: 1550px) {
+    .header-spacer {
+        height: 80px;
+    }
+
+    .header-normal {
+        display: none;
+    }
+
+    .header-fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+
+    .header-wrap.active .header-fixed {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+
+    .header-f-inner {
+        height: 80px;
+        padding: 18px 0;
+        background: rgba(34, 34, 34, 0.95);
+        backdrop-filter: blur(20px);
+    }
+
+    .fixed-bar {
+        max-width: 100%;
+        padding: 0 30px;
+    }
+
+    .fixed-logo img {
+        width: 140px;
+    }
+
+    .main-visual-wrap {
+        margin-top: -80px;
+        height: 820px;
+    }
+
+    .main-visual-wrap.active .movie-logo {
+        width: 520px;
+        top: 340px;
+    }
+
+    .main-visual-wrap.active .mov-btn-wrap {
+        bottom: 60px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .fixed-bar {
+        padding: 0 20px;
+    }
+
+    .fixed-logo img {
+        width: 120px;
+    }
+
+    .gnb-list {
+        gap: 10px;
+    }
+
+    form {
+        width: 40px;
+        height: 40px;
+        padding: 8px;
+    }
+
+    .gnb-list>li {
+        width: 40px;
+        height: 40px;
+        padding: 8px;
+    }
+
+    .gnb-list>li img,
+    form>button img {
+        width: 20px;
+    }
+
+    .main-visual-wrap {
+        height: 720px;
+    }
+
+    .movie-logo {
+        width: 320px;
+    }
+
+    .main-visual-wrap.active .movie-logo {
+        width: 420px;
+        top: 300px;
+    }
+
+    .main-visual-wrap .btn {
+        height: 44px;
+        padding: 10px 22px;
+        font-size: 15px;
+    }
+
+    .ham-panel {
+        width: calc(100vw - 24px);
+        max-width: 1100px;
+    }
+
+    .ham-nav {
+        padding: 84px 40px 44px;
+    }
+
+    .ham-main {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 36px 28px;
+    }
+
+    .ham-main-title {
+        font-size: 20px;
+    }
+
+    .ham-main-title::after {
+        width: 28px;
+        height: 2px;
+        margin-top: 14px;
+    }
+
+    .ham-sub {
+        margin-top: 14px;
+        gap: 10px;
+    }
+
+    .ham-sub a {
+        height: 24px;
+        line-height: 24px;
+        font-size: 16px;
+    }
+
+    .ham-close {
+        top: 24px;
+        left: 40px;
+    }
+
+    .ham-close img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .ham-panel form {
+        top: 24px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header-spacer {
+        height: 64px;
+    }
+
+    .header-f-inner {
+        height: 64px;
+        padding: 12px 0;
+    }
+
+    .fixed-bar {
+        padding: 0 16px;
+        justify-content: space-between;
+    }
+
+    .fixed-bar .gnb-list {
+        display: none;
+    }
+
+    .fixed-bar .ham-btn {
+        position: static;
+        order: 1;
+    }
+
+    .fixed-bar .ham-btn a,
+    .fixed-bar .ham-btn img {
+        display: block;
+    }
+
+    .fixed-bar .ham-btn img {
+        width: 24px;
+    }
+
+    .fixed-logo {
+        position: static;
+        transform: none;
+        margin-left: auto;
+        order: 2;
+    }
+
+    .fixed-logo img {
+        width: 92px;
+    }
+
+    .main-visual-wrap {
+        margin-top: -64px;
+        height: 640px;
+    }
+
+    .visual-content {
+        padding: 0 20px 30px;
+    }
+
+    .movie-logo {
+        width: 260px;
+    }
+
+    .main-visual-wrap .mov-btn-wrap {
+        gap: 8px;
+    }
+
+    .main-visual-wrap .btn {
+        height: 42px;
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+
+    .scroll-arrow {
+        bottom: 20px;
+    }
+
+    .scroll-arrow img {
+        width: 24px;
+    }
+
+    .main-visual-wrap.active .visual-content {
+        padding: 0 20px;
+    }
+
+    .main-visual-wrap.active .movie-logo {
+        width: 300px;
+        top: 260px;
+    }
+
+    .main-visual-wrap.active .mov-btn-wrap {
+        bottom: 50px;
+    }
+
+    .ham-panel {
+        top: 64px;
+        width: calc(100vw - 16px);
+        max-width: none;
+        max-height: calc(100vh - 72px);
+        overflow-y: auto;
+    }
+
+    .ham-nav {
+        padding: 78px 24px 28px;
+    }
+
+    .ham-main {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 28px 18px;
+    }
+
+    .ham-main-title {
+        font-size: 18px;
+        padding-top: 12px;
+    }
+
+    .ham-main-title::after {
+        width: 24px;
+        height: 2px;
+        margin: 12px auto 0;
+    }
+
+    .ham-sub {
+        margin-top: 12px;
+        gap: 8px;
+    }
+
+    .ham-sub a {
+        height: 22px;
+        line-height: 22px;
+        font-size: 14px;
+    }
+
+    .ham-close {
+        top: 20px;
+        left: 24px;
+    }
+
+    .ham-close img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .ham-panel form {
+        top: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .fixed-bar {
+        padding: 0 12px;
+    }
+
+    .fixed-logo img {
+        width: 82px;
+    }
+
+    .fixed-bar .ham-btn img {
+        width: 22px;
+    }
+
+    .main-visual-wrap {
+        height: 540px;
+    }
+
+    .movie-logo {
+        width: 210px;
+    }
+
+    .main-visual-wrap.active .movie-logo {
+        width: 240px;
+        top: 220px;
+    }
+
+    .main-visual-wrap .btn {
+        height: 40px;
+        padding: 9px 14px;
+        font-size: 13px;
+    }
+
+    .ham-panel {
+        top: 64px;
+        width: calc(100vw - 12px);
+    }
+
+    .ham-nav {
+        padding: 74px 16px 22px;
+    }
+
+    .ham-main {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .ham-main>li {
+        text-align: left;
+    }
+
+    .ham-main-title {
+        display: inline-block;
+        width: auto;
+        font-size: 17px;
+        padding-top: 0;
+    }
+
+    .ham-main-title::after {
+        margin: 10px 0 0;
+    }
+
+    .ham-sub {
+        text-align: left;
+        margin-top: 12px;
+        gap: 8px;
+    }
+
+    .ham-sub a {
+        font-size: 14px;
+    }
+
+    .ham-close {
+        top: 18px;
+        left: 16px;
+    }
+
+    .ham-close img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .ham-panel form {
+        top: 18px;
+    }
+}
