@@ -751,11 +751,11 @@ header {
 
 /* 메인 */
 .main-slider-wrap {
-    height: 540px;
+    height: 600px;
     display: flex;
     gap: 68px;
     /* gap: 135px; */
-    justify-content: space-between;
+    justify-content: flex-start;
     margin-top: 45px;
     position: relative;
     padding-left: 100px;
@@ -847,17 +847,17 @@ header {
     position: relative;
     flex: 1;
     margin-left: 50px;
-    min-width: 0;
-    overflow: visible;
-    /* display: flex;
-    flex-direction: column; */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 60px;
 }
 
 .page-list {
     display: flex;
     width: 200%;
     transition: 0.5s;
-    overflow: hidden;
+    /* flex: 1; */
 }
 
 .page1,
@@ -865,11 +865,7 @@ header {
     display: flex;
     flex-direction: column;
     gap: 32px;
-    width: 0 0 50%;
-}
-
-.page1 {
-    margin-right: 30px;
+    width: 50%;
 }
 
 .page1 li a,
@@ -941,7 +937,7 @@ header {
     gap: 15px;
     font-size: var(--px12);
     font-weight: 500;
-    margin-top: 36px;
+    margin-top: 25px;
     /* flex-direction: column; */
 }
 
