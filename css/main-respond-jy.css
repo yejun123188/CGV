@@ -33,7 +33,6 @@
         display: none;
     }
 
-    /* ★ page-list 200% 해제 */
     .page-list {
         width: 100%;
         overflow: visible;
@@ -43,7 +42,7 @@
         flex: 1;
         margin-left: 40px;
         min-width: 0;
-        overflow: visible;
+        overflow: hidden;
         display: flex;
         flex-direction: column;
         height: 440px;
@@ -61,41 +60,49 @@
         margin-right: 0;
         flex: 1;
         justify-content: space-around;
+        min-width: 0;
     }
 
     .page1 li a {
         gap: 14px;
     }
 
-    .event-section .page-list-wrap .page1 li a {
-        overflow: hidden;
+    .event-section .page-wrap .page1 li {
         min-width: 0;
     }
 
+    .event-section .page-list-wrap .page1 li a {
+        overflow: hidden;
+        min-width: 0;
+        width: 100%;
+    }
+
     .event-section .page-list-wrap .page1 li .text-box {
-        flex: 1;
+        flex: 1 1 0;
         min-width: 0;
         overflow: hidden;
+        width: auto;
     }
 
     .event-section .page-list-wrap .page1 li .text-box .title {
         font-size: 0.875rem;
-        white-space: nowrap !important;
-        overflow: hidden !important;
-        text-overflow: ellipsis !important;
-        display: block !important;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        display: block;
         margin-bottom: 8px;
         width: 100%;
+        overflow: hidden;
     }
 
     .event-section .page-list-wrap .page1 li .text-box .desc {
         font-size: 0.8rem;
         line-height: 1.4;
-        display: -webkit-box !important;
+        display: -webkit-box;
         -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
         -webkit-line-clamp: 2;
-        overflow: hidden !important;
-        white-space: normal !important;
+        white-space: normal;
+        overflow: hidden;
     }
 
     .thumb {
@@ -107,7 +114,7 @@
     .pager-btn {
         flex-shrink: 0;
         justify-content: center;
-        margin-top: -10px;
+        margin-top: 0;
     }
 
     .event-section .more-btn {
