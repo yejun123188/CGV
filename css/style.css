@@ -722,6 +722,7 @@ header {
 /* 탭메뉴 */
 .event-section {
     overflow: visible;
+    padding-top: -60px;
 }
 
 .event-section .inner {
@@ -747,6 +748,10 @@ header {
 
 .event-section .btn.active {
     background: var(--red-btn);
+}
+
+.event-section .btn-wrap {
+    padding-top: 0 !important;
 }
 
 /* 메인 */
