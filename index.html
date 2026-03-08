@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script defer src="./js/main-notice.js"></script>
+    <script defer src="./js/main-movie.js"></script>
 </head>
 
 <body>
@@ -148,205 +149,789 @@
                 <!-- movie-section -->
                 <div class="movie-btn-wrap">
                     <ul class="m-button-list">
-                        <li><a href="#">NEW영화</a><span>|</span></li>
-                        <li><a href="#">박스오피스</a><span>|</span></li>
-                        <li><a href="#">개봉예정영화<span>|</span></a></li>
-                        <li><a href="#">관람객수</a></li>
+                        <li><a href="#" data-tab="new">NEW영화</a><span>|</span></li>
+                        <li><a href="#" data-tab="box">박스오피스</a><span>|</span></li>
+                        <li><a href="#" data-tab="soon">개봉예정영화</a><span>|</span></li>
+                        <li><a href="#" data-tab="people">관람객수</a></li>
                     </ul>
                     <div class="more-btn">
                         <a href="#">MORE ></a>
                     </div>
                 </div>
+                <!-- NEW영화 -->
                 <div class="movie-wrap">
-                    <ul class="movie-list">
-                        <li>
-                            <div class="poster-box">
-                                <div class="click">
-                                    <button class="heart-btn" aria-label="찜하기"></button>
-                                    <img src="./images/movie/poster-1.png" alt="">
-                                    <p class="rank">1</p>
-                                </div>
+                    <div class="movie-content active" data-content="new">
+                        <ul class="movie-list">
+                            <li>
+                                <div class="poster-box">
+                                    <div class="click">
+                                        <button class="heart-btn" aria-label="찜하기"></button>
+                                        <img src="./images/movie/poster-9.png" alt="">
+                                        <p class="rank">1</p>
+                                    </div>
 
-                                <div class="blind">
-                                    <div class="blind-1">
-                                        <p class="b-title">드래곤 길들이기</p>
-                                        <p class="genres">장르 : #액션 #모험 #판타지 #SF</p>
-                                    </div>
-                                    <div class="zulgeri">
-                                        <p>수백년간 지속되어온 바이킹과 드래곤의 전쟁.</p><br>
-                                        <p>드래곤을 없애는 것이 삶의 모든 목적인 바이킹들과</p>
-                                        <p> 다른 신념을 가진 ‘히컵’은
-                                            무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
-                                        <p> 다른 신념을 가진 ‘히컵’은
-                                            무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
-                                        <p> 다른 신념을 가진 ‘히컵’은
-                                            무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
-                                        <p> 다른 신념을 가진 ‘히컵’은
-                                            무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ticket-box">
-                                <img src="./images/movie/poster-ticket.png" alt="">
-                                <div class="text-box">
-                                    <div class="movie-title">
-                                        <p class="age-box one">12</p>
-                                        <h3>드래곤 길들이기</h3>
-                                    </div>
-                                    <div class="title-sub">
-                                        <img class="egg" src="./images/movie/egg1.png" alt="">
-                                        <p>95%</p>
-                                        <p>예매율 50.9%</p>
-                                        <p>누적 1000만</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mov-btn-wrap">
-                                <a href="#" class="btn reserv">예매하기</a>
-                                <a href="#" class="btn view">상세보기</a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="poster-box">
-                                <div class="click">
-                                    <button class="heart-btn" aria-label="찜하기"></button>
-                                    <img src="./images/movie/poster-2.png" alt="">
-                                    <p class="rank">2</p>
-                                </div>
+                                    <div class="blind">
+                                        <div class="blind-1">
+                                            <p class="b-title">시스터</p>
+                                            <p class="genres">장르 : #스릴러 #서스펜서 #드라마</p>
+                                        </div>
+                                        <div class="zulgeri">
+                                            <p>나는 오늘, 언니를 납치했다!</p><br>
+                                            <p>동생의 수술 비용을 마련하기 위해 거액의 돈이 필요한 ‘해란’(정지소)은</p>
+                                            <p> ‘태수’(이수혁)와 이복언니 ‘소진’(차주영)을 납치한다.</p>
+                                            <p> 눈 떠보니 낯선 공간에 감금된 ‘소진’.</p>
+                                            <p> ‘해란’과 ‘태수’는 부잣집 딸 ‘소진’의 몸값으로 10억 원을 요구한다.</p>
+                                            <p>납치범 ‘해란’이 이복동생이라는 사실을 알게 된 ‘소진’은
+                                                언니와 동생, 피해자와 가해자라는 위태로운 공조를 시작하고
+                                                무자비한 ‘태수’를 상대로 반격을 가하는데…
 
 
-                                <div class="blind">
-                                    <div class="blind-1">
-                                        <p class="b-title">주토피아</p>
-                                        <p class="genres">장르 : #애니메이션 #모험 #판타지 #SF</p>
-                                    </div>
-                                    <div class="zulgeri">
-                                        <p>수백년간 지속되어온 바이킹과 드래곤의 전쟁.</p><br>
-                                        <p>드래곤을 없애는 것이 삶의 모든 목적인 바이킹들과</p>
-                                        <p> 다른 신념을 가진 ‘히컵’은
-                                            무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
-                                        <p> 다른 신념을 가진 ‘히컵’은
-                                            무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
-                                        <p> 다른 신념을 가진 ‘히컵’은
-                                            무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
-                                        <p> 다른 신념을 가진 ‘히컵’은
-                                            무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+
+                                                하나씩 드러나는 진실, 끝이 없는 의심의 덫이 시작된다!</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="ticket-box">
-                                <img src="./images/movie/poster-ticket.png" alt="">
-                                <div class="text-box">
-                                    <div class="movie-title">
-                                        <p class="age-box two">ALL</p>
-                                        <h3>주토피아</h3>
-                                    </div>
-                                    <div class="title-sub">
-                                        <img class="egg" src="./images/movie/egg2.png" alt="">
-                                        <p>95%</p>
-                                        <p>예매율 50.9%</p>
-                                        <p>누적 1000만</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mov-btn-wrap">
-                                <a href="#" class="btn reserv">예매하기</a>
-                                <a href="#" class="btn view">상세보기</a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="poster-box">
-                                <div class="click">
-                                    <button class="heart-btn" aria-label="찜하기"></button>
-                                    <img src="./images/movie/poster-3.png" alt="">
-                                    <p class="rank">3</p>
-                                </div>
-                                <div class="blind">
-                                    <div class="blind-1">
-                                        <p class="b-title">국보</p>
-                                        <p class="genres">장르 : #드라마 #문학 #예술 #SF</p>
-                                    </div>
-                                    <div class="zulgeri">
-                                        <p>수백년간 지속되어온 바이킹과 드래곤의 전쟁.</p><br>
-                                        <p>드래곤을 없애는 것이 삶의 모든 목적인 바이킹들과</p>
-                                        <p> 다른 신념을 가진 ‘히컵’은
-                                            무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
-                                        <p> 다른 신념을 가진 ‘히컵’은
-                                            무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
-                                        <p> 다른 신념을 가진 ‘히컵’은
-                                            무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
-                                        <p> 다른 신념을 가진 ‘히컵’은
-                                            무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                <div class="ticket-box">
+                                    <img src="./images/movie/poster-ticket.png" alt="">
+                                    <div class="text-box">
+                                        <div class="movie-title">
+                                            <p class="age-box one">12</p>
+                                            <h3>시스터</h3>
+                                        </div>
+                                        <div class="title-sub">
+                                            <img class="egg" src="./images/movie/egg1.png" alt="">
+                                            <p>95%</p>
+                                            <p>예매율 50.9%</p>
+                                            <p>누적 1000만</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="ticket-box">
-                                <img src="./images/movie/poster-ticket.png" alt="">
-                                <div class="text-box">
-                                    <div class="movie-title">
-                                        <p class="age-box three">15</p>
-                                        <h3>국보</h3>
+                                <div class="mov-btn-wrap">
+                                    <a href="#" class="btn reserv">예매하기</a>
+                                    <a href="#" class="btn view">상세보기</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="poster-box">
+                                    <div class="click">
+                                        <button class="heart-btn" aria-label="찜하기"></button>
+                                        <img src="./images/movie/poster-1.png" alt="">
+                                        <p class="rank">2</p>
                                     </div>
-                                    <div class="title-sub">
-                                        <img class="egg" src="./images/movie/egg2.png" alt="">
-                                        <p>95%</p>
-                                        <p>예매율 50.9%</p>
-                                        <p>누적 1000만</p>
+
+
+                                    <div class="blind">
+                                        <div class="blind-1">
+                                            <p class="b-title">드래곤 길들이기</p>
+                                            <p class="genres">장르 : #애니메이션 #모험 #판타지 #SF</p>
+                                        </div>
+                                        <div class="zulgeri">
+                                            <p>수백년간 지속되어온 바이킹과 드래곤의 전쟁.</p><br>
+                                            <p>드래곤을 없애는 것이 삶의 모든 목적인 바이킹들과</p>
+                                            <p> 다른 신념을 가진 ‘히컵’은
+                                                무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                            <p> 다른 신념을 가진 ‘히컵’은
+                                                무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                            <p> 다른 신념을 가진 ‘히컵’은
+                                                무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                            <p> 다른 신념을 가진 ‘히컵’은
+                                                무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="mov-btn-wrap">
-                                <a href="#" class="btn reserv">예매하기</a>
-                                <a href="#" class="btn view">상세보기</a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="poster-box">
-                                <div class="click">
-                                    <button class="heart-btn" aria-label="찜하기"></button>
-                                    <img src="./images/movie/poster-4.png" alt="">
-                                    <p class="rank">4</p>
-                                </div>
-                                <div class="blind">
-                                    <div class="blind-1">
-                                        <p class="b-title">직장상사 길들이기</p>
-                                        <p class="genres">장르 : #액션 #모험 #판타지 #공포</p>
-                                    </div>
-                                    <div class="zulgeri">
-                                        <p>수백년간 지속되어온 바이킹과 드래곤의 전쟁.</p><br>
-                                        <p>드래곤을 없애는 것이 삶의 모든 목적인 바이킹들과</p>
-                                        <p> 다른 신념을 가진 ‘히컵’은
-                                            무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
-                                        <p> 다른 신념을 가진 ‘히컵’은
-                                            무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
-                                        <p> 다른 신념을 가진 ‘히컵’은
-                                            무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
-                                        <p> 다른 신념을 가진 ‘히컵’은
-                                            무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                <div class="ticket-box">
+                                    <img src="./images/movie/poster-ticket.png" alt="">
+                                    <div class="text-box">
+                                        <div class="movie-title">
+                                            <p class="age-box two">ALL</p>
+                                            <h3>주토피아</h3>
+                                        </div>
+                                        <div class="title-sub">
+                                            <img class="egg" src="./images/movie/egg2.png" alt="">
+                                            <p>95%</p>
+                                            <p>예매율 50.9%</p>
+                                            <p>누적 1000만</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="ticket-box">
-                                <img src="./images/movie/poster-ticket.png" alt="">
-                                <div class="text-box">
-                                    <div class="movie-title">
-                                        <p class="age-box four">19</p>
-                                        <h3>직장상사 길들이기</h3>
+                                <div class="mov-btn-wrap">
+                                    <a href="#" class="btn reserv">예매하기</a>
+                                    <a href="#" class="btn view">상세보기</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="poster-box">
+                                    <div class="click">
+                                        <button class="heart-btn" aria-label="찜하기"></button>
+                                        <img src="./images/movie/poster-3.png" alt="">
+                                        <p class="rank">3</p>
                                     </div>
-                                    <div class="title-sub">
-                                        <img class="egg" src="./images/movie/egg3.png" alt="">
-                                        <p>95%</p>
-                                        <p>예매율 50.9%</p>
-                                        <p>누적 1000만</p>
+                                    <div class="blind">
+                                        <div class="blind-1">
+                                            <p class="b-title">국보</p>
+                                            <p class="genres">장르 : #드라마 #문학 #예술 #SF</p>
+                                        </div>
+                                        <div class="zulgeri">
+                                            <p>수백년간 지속되어온 바이킹과 드래곤의 전쟁.</p><br>
+                                            <p>드래곤을 없애는 것이 삶의 모든 목적인 바이킹들과</p>
+                                            <p> 다른 신념을 가진 ‘히컵’은
+                                                무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                            <p> 다른 신념을 가진 ‘히컵’은
+                                                무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                            <p> 다른 신념을 가진 ‘히컵’은
+                                                무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                            <p> 다른 신념을 가진 ‘히컵’은
+                                                무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="mov-btn-wrap">
-                                <a href="#" class="btn reserv">예매하기</a>
-                                <a href="#" class="btn view">상세보기</a>
-                            </div>
-                        </li>
-                    </ul>
+                                <div class="ticket-box">
+                                    <img src="./images/movie/poster-ticket.png" alt="">
+                                    <div class="text-box">
+                                        <div class="movie-title">
+                                            <p class="age-box three">15</p>
+                                            <h3>국보</h3>
+                                        </div>
+                                        <div class="title-sub">
+                                            <img class="egg" src="./images/movie/egg2.png" alt="">
+                                            <p>95%</p>
+                                            <p>예매율 50.9%</p>
+                                            <p>누적 1000만</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mov-btn-wrap">
+                                    <a href="#" class="btn reserv">예매하기</a>
+                                    <a href="#" class="btn view">상세보기</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="poster-box">
+                                    <div class="click">
+                                        <button class="heart-btn" aria-label="찜하기"></button>
+                                        <img src="./images/movie/poster-7.png" alt="">
+                                        <p class="rank">4</p>
+                                    </div>
+                                    <div class="blind">
+                                        <div class="blind-1">
+                                            <p class="b-title">직장상사 길들이기</p>
+                                            <p class="genres">장르 : #액션 #모험 #판타지 #공포</p>
+                                        </div>
+                                        <div class="zulgeri">
+                                            <p>수백년간 지속되어온 바이킹과 드래곤의 전쟁.</p><br>
+                                            <p>드래곤을 없애는 것이 삶의 모든 목적인 바이킹들과</p>
+                                            <p> 다른 신념을 가진 ‘히컵’은
+                                                무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                            <p> 다른 신념을 가진 ‘히컵’은
+                                                무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                            <p> 다른 신념을 가진 ‘히컵’은
+                                                무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                            <p> 다른 신념을 가진 ‘히컵’은
+                                                무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ticket-box">
+                                    <img src="./images/movie/poster-ticket.png" alt="">
+                                    <div class="text-box">
+                                        <div class="movie-title">
+                                            <p class="age-box four">19</p>
+                                            <h3>직장상사 길들이기</h3>
+                                        </div>
+                                        <div class="title-sub">
+                                            <img class="egg" src="./images/movie/egg3.png" alt="">
+                                            <p>95%</p>
+                                            <p>예매율 50.9%</p>
+                                            <p>누적 1000만</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mov-btn-wrap">
+                                    <a href="#" class="btn reserv">예매하기</a>
+                                    <a href="#" class="btn view">상세보기</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- 박스오피스 -->
+                    <div class="movie-content" data-content="box">
+                        <ul class="movie-list">
+                            <li>
+                                <div class="poster-box">
+                                    <div class="click">
+                                        <button class="heart-btn" aria-label="찜하기"></button>
+                                        <img src="./images/movie/poster-10.png" alt="">
+                                        <p class="rank">1</p>
+                                    </div>
+
+                                    <div class="blind">
+                                        <div class="blind-1">
+                                            <p class="b-title">시스터</p>
+                                            <p class="genres">장르 : #액션 #모험 #판타지 #SF</p>
+                                        </div>
+                                        <div class="zulgeri">
+                                            <p>수백년간 지속되어온 바이킹과 드래곤의 전쟁.</p><br>
+                                            <p>드래곤을 없애는 것이 삶의 모든 목적인 바이킹들과</p>
+                                            <p> 다른 신념을 가진 ‘히컵’은
+                                                무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                            <p> 다른 신념을 가진 ‘히컵’은
+                                                무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                            <p> 다른 신념을 가진 ‘히컵’은
+                                                무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                            <p> 다른 신념을 가진 ‘히컵’은
+                                                무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ticket-box">
+                                    <img src="./images/movie/poster-ticket.png" alt="">
+                                    <div class="text-box">
+                                        <div class="movie-title">
+                                            <p class="age-box one">12</p>
+                                            <h3>시스터</h3>
+                                        </div>
+                                        <div class="title-sub">
+                                            <img class="egg" src="./images/movie/egg1.png" alt="">
+                                            <p>95%</p>
+                                            <p>예매율 50.9%</p>
+                                            <p>누적 1000만</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mov-btn-wrap">
+                                    <a href="#" class="btn reserv">예매하기</a>
+                                    <a href="#" class="btn view">상세보기</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="poster-box">
+                                    <div class="click">
+                                        <button class="heart-btn" aria-label="찜하기"></button>
+                                        <img src="./images/movie/poster-6.png" alt="">
+                                        <p class="rank">2</p>
+                                    </div>
+
+
+                                    <div class="blind">
+                                        <div class="blind-1">
+                                            <p class="b-title">주토피아</p>
+                                            <p class="genres">장르 : #애니메이션 #모험 #판타지 #SF</p>
+                                        </div>
+                                        <div class="zulgeri">
+                                            <p>수백년간 지속되어온 바이킹과 드래곤의 전쟁.</p><br>
+                                            <p>드래곤을 없애는 것이 삶의 모든 목적인 바이킹들과</p>
+                                            <p> 다른 신념을 가진 ‘히컵’은
+                                                무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                            <p> 다른 신념을 가진 ‘히컵’은
+                                                무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                            <p> 다른 신념을 가진 ‘히컵’은
+                                                무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                            <p> 다른 신념을 가진 ‘히컵’은
+                                                무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ticket-box">
+                                    <img src="./images/movie/poster-ticket.png" alt="">
+                                    <div class="text-box">
+                                        <div class="movie-title">
+                                            <p class="age-box two">ALL</p>
+                                            <h3>주토피아</h3>
+                                        </div>
+                                        <div class="title-sub">
+                                            <img class="egg" src="./images/movie/egg2.png" alt="">
+                                            <p>95%</p>
+                                            <p>예매율 50.9%</p>
+                                            <p>누적 1000만</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mov-btn-wrap">
+                                    <a href="#" class="btn reserv">예매하기</a>
+                                    <a href="#" class="btn view">상세보기</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="poster-box">
+                                    <div class="click">
+                                        <button class="heart-btn" aria-label="찜하기"></button>
+                                        <img src="./images/movie/poster-8.png" alt="">
+                                        <p class="rank">3</p>
+                                    </div>
+                                    <div class="blind">
+                                        <div class="blind-1">
+                                            <p class="b-title">국보</p>
+                                            <p class="genres">장르 : #드라마 #문학 #예술 #SF</p>
+                                        </div>
+                                        <div class="zulgeri">
+                                            <p>수백년간 지속되어온 바이킹과 드래곤의 전쟁.</p><br>
+                                            <p>드래곤을 없애는 것이 삶의 모든 목적인 바이킹들과</p>
+                                            <p> 다른 신념을 가진 ‘히컵’은
+                                                무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                            <p> 다른 신념을 가진 ‘히컵’은
+                                                무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                            <p> 다른 신념을 가진 ‘히컵’은
+                                                무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                            <p> 다른 신념을 가진 ‘히컵’은
+                                                무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ticket-box">
+                                    <img src="./images/movie/poster-ticket.png" alt="">
+                                    <div class="text-box">
+                                        <div class="movie-title">
+                                            <p class="age-box three">15</p>
+                                            <h3>국보</h3>
+                                        </div>
+                                        <div class="title-sub">
+                                            <img class="egg" src="./images/movie/egg2.png" alt="">
+                                            <p>95%</p>
+                                            <p>예매율 50.9%</p>
+                                            <p>누적 1000만</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mov-btn-wrap">
+                                    <a href="#" class="btn reserv">예매하기</a>
+                                    <a href="#" class="btn view">상세보기</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="poster-box">
+                                    <div class="click">
+                                        <button class="heart-btn" aria-label="찜하기"></button>
+                                        <img src="./images/movie/poster-4.png" alt="">
+                                        <p class="rank">4</p>
+                                    </div>
+                                    <div class="blind">
+                                        <div class="blind-1">
+                                            <p class="b-title">직장상사 길들이기</p>
+                                            <p class="genres">장르 : #액션 #모험 #판타지 #공포</p>
+                                        </div>
+                                        <div class="zulgeri">
+                                            <p>수백년간 지속되어온 바이킹과 드래곤의 전쟁.</p><br>
+                                            <p>드래곤을 없애는 것이 삶의 모든 목적인 바이킹들과</p>
+                                            <p> 다른 신념을 가진 ‘히컵’은
+                                                무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                            <p> 다른 신념을 가진 ‘히컵’은
+                                                무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                            <p> 다른 신념을 가진 ‘히컵’은
+                                                무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                            <p> 다른 신념을 가진 ‘히컵’은
+                                                무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ticket-box">
+                                    <img src="./images/movie/poster-ticket.png" alt="">
+                                    <div class="text-box">
+                                        <div class="movie-title">
+                                            <p class="age-box four">19</p>
+                                            <h3>직장상사 길들이기</h3>
+                                        </div>
+                                        <div class="title-sub">
+                                            <img class="egg" src="./images/movie/egg3.png" alt="">
+                                            <p>95%</p>
+                                            <p>예매율 50.9%</p>
+                                            <p>누적 1000만</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mov-btn-wrap">
+                                    <a href="#" class="btn reserv">예매하기</a>
+                                    <a href="#" class="btn view">상세보기</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- 개봉예정영화 -->
+                    <div class="movie-content" data-content="soon">
+                        <ul class="movie-list">
+                            <li>
+                                <div class="poster-box">
+                                    <div class="click">
+                                        <button class="heart-btn" aria-label="찜하기"></button>
+                                        <img src="./images/movie/poster-5.png" alt="">
+                                        <p class="rank">1</p>
+                                    </div>
+
+                                    <div class="blind">
+                                        <div class="blind-1">
+                                            <p class="b-title">드래곤 길들이기</p>
+                                            <p class="genres">장르 : #액션 #모험 #판타지 #SF</p>
+                                        </div>
+                                        <div class="zulgeri">
+                                            <p>수백년간 지속되어온 바이킹과 드래곤의 전쟁.</p><br>
+                                            <p>드래곤을 없애는 것이 삶의 모든 목적인 바이킹들과</p>
+                                            <p> 다른 신념을 가진 ‘히컵’은
+                                                무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                            <p> 다른 신념을 가진 ‘히컵’은
+                                                무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                            <p> 다른 신념을 가진 ‘히컵’은
+                                                무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                            <p> 다른 신념을 가진 ‘히컵’은
+                                                무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ticket-box">
+                                    <img src="./images/movie/poster-ticket.png" alt="">
+                                    <div class="text-box">
+                                        <div class="movie-title">
+                                            <p class="age-box one">12</p>
+                                            <h3>드래곤 길들이기</h3>
+                                        </div>
+                                        <div class="title-sub">
+                                            <img class="egg" src="./images/movie/egg1.png" alt="">
+                                            <p>95%</p>
+                                            <p>예매율 50.9%</p>
+                                            <p>누적 1000만</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mov-btn-wrap">
+                                    <a href="#" class="btn reserv">예매하기</a>
+                                    <a href="#" class="btn view">상세보기</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="poster-box">
+                                    <div class="click">
+                                        <button class="heart-btn" aria-label="찜하기"></button>
+                                        <img src="./images/movie/poster-9.png" alt="">
+                                        <p class="rank">2</p>
+                                    </div>
+
+
+                                    <div class="blind">
+                                        <div class="blind-1">
+                                            <p class="b-title">주토피아</p>
+                                            <p class="genres">장르 : #애니메이션 #모험 #판타지 #SF</p>
+                                        </div>
+                                        <div class="zulgeri">
+                                            <p>수백년간 지속되어온 바이킹과 드래곤의 전쟁.</p><br>
+                                            <p>드래곤을 없애는 것이 삶의 모든 목적인 바이킹들과</p>
+                                            <p> 다른 신념을 가진 ‘히컵’은
+                                                무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                            <p> 다른 신념을 가진 ‘히컵’은
+                                                무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                            <p> 다른 신념을 가진 ‘히컵’은
+                                                무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                            <p> 다른 신념을 가진 ‘히컵’은
+                                                무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ticket-box">
+                                    <img src="./images/movie/poster-ticket.png" alt="">
+                                    <div class="text-box">
+                                        <div class="movie-title">
+                                            <p class="age-box two">ALL</p>
+                                            <h3>주토피아</h3>
+                                        </div>
+                                        <div class="title-sub">
+                                            <img class="egg" src="./images/movie/egg2.png" alt="">
+                                            <p>95%</p>
+                                            <p>예매율 50.9%</p>
+                                            <p>누적 1000만</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mov-btn-wrap">
+                                    <a href="#" class="btn reserv">예매하기</a>
+                                    <a href="#" class="btn view">상세보기</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="poster-box">
+                                    <div class="click">
+                                        <button class="heart-btn" aria-label="찜하기"></button>
+                                        <img src="./images/movie/poster-3.png" alt="">
+                                        <p class="rank">3</p>
+                                    </div>
+                                    <div class="blind">
+                                        <div class="blind-1">
+                                            <p class="b-title">국보</p>
+                                            <p class="genres">장르 : #드라마 #문학 #예술 #SF</p>
+                                        </div>
+                                        <div class="zulgeri">
+                                            <p>수백년간 지속되어온 바이킹과 드래곤의 전쟁.</p><br>
+                                            <p>드래곤을 없애는 것이 삶의 모든 목적인 바이킹들과</p>
+                                            <p> 다른 신념을 가진 ‘히컵’은
+                                                무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                            <p> 다른 신념을 가진 ‘히컵’은
+                                                무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                            <p> 다른 신념을 가진 ‘히컵’은
+                                                무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                            <p> 다른 신념을 가진 ‘히컵’은
+                                                무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ticket-box">
+                                    <img src="./images/movie/poster-ticket.png" alt="">
+                                    <div class="text-box">
+                                        <div class="movie-title">
+                                            <p class="age-box three">15</p>
+                                            <h3>국보</h3>
+                                        </div>
+                                        <div class="title-sub">
+                                            <img class="egg" src="./images/movie/egg2.png" alt="">
+                                            <p>95%</p>
+                                            <p>예매율 50.9%</p>
+                                            <p>누적 1000만</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mov-btn-wrap">
+                                    <a href="#" class="btn reserv">예매하기</a>
+                                    <a href="#" class="btn view">상세보기</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="poster-box">
+                                    <div class="click">
+                                        <button class="heart-btn" aria-label="찜하기"></button>
+                                        <img src="./images/movie/poster-4.png" alt="">
+                                        <p class="rank">4</p>
+                                    </div>
+                                    <div class="blind">
+                                        <div class="blind-1">
+                                            <p class="b-title">직장상사 길들이기</p>
+                                            <p class="genres">장르 : #액션 #모험 #판타지 #공포</p>
+                                        </div>
+                                        <div class="zulgeri">
+                                            <p>수백년간 지속되어온 바이킹과 드래곤의 전쟁.</p><br>
+                                            <p>드래곤을 없애는 것이 삶의 모든 목적인 바이킹들과</p>
+                                            <p> 다른 신념을 가진 ‘히컵’은
+                                                무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                            <p> 다른 신념을 가진 ‘히컵’은
+                                                무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                            <p> 다른 신념을 가진 ‘히컵’은
+                                                무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                            <p> 다른 신념을 가진 ‘히컵’은
+                                                무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ticket-box">
+                                    <img src="./images/movie/poster-ticket.png" alt="">
+                                    <div class="text-box">
+                                        <div class="movie-title">
+                                            <p class="age-box four">19</p>
+                                            <h3>직장상사 길들이기</h3>
+                                        </div>
+                                        <div class="title-sub">
+                                            <img class="egg" src="./images/movie/egg3.png" alt="">
+                                            <p>95%</p>
+                                            <p>예매율 50.9%</p>
+                                            <p>누적 1000만</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mov-btn-wrap">
+                                    <a href="#" class="btn reserv">예매하기</a>
+                                    <a href="#" class="btn view">상세보기</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- 관람객수 -->
+                    <div class="movie-content" data-content="people">
+                        <ul class="movie-list">
+                            <li>
+                                <div class="poster-box">
+                                    <div class="click">
+                                        <button class="heart-btn" aria-label="찜하기"></button>
+                                        <img src="./images/movie/poster-10.png" alt="">
+                                        <p class="rank">1</p>
+                                    </div>
+
+                                    <div class="blind">
+                                        <div class="blind-1">
+                                            <p class="b-title">드래곤 길들이기</p>
+                                            <p class="genres">장르 : #액션 #모험 #판타지 #SF</p>
+                                        </div>
+                                        <div class="zulgeri">
+                                            <p>수백년간 지속되어온 바이킹과 드래곤의 전쟁.</p><br>
+                                            <p>드래곤을 없애는 것이 삶의 모든 목적인 바이킹들과</p>
+                                            <p> 다른 신념을 가진 ‘히컵’은
+                                                무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                            <p> 다른 신념을 가진 ‘히컵’은
+                                                무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                            <p> 다른 신념을 가진 ‘히컵’은
+                                                무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                            <p> 다른 신념을 가진 ‘히컵’은
+                                                무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ticket-box">
+                                    <img src="./images/movie/poster-ticket.png" alt="">
+                                    <div class="text-box">
+                                        <div class="movie-title">
+                                            <p class="age-box one">12</p>
+                                            <h3>드래곤 길들이기</h3>
+                                        </div>
+                                        <div class="title-sub">
+                                            <img class="egg" src="./images/movie/egg1.png" alt="">
+                                            <p>95%</p>
+                                            <p>예매율 50.9%</p>
+                                            <p>누적 1000만</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mov-btn-wrap">
+                                    <a href="#" class="btn reserv">예매하기</a>
+                                    <a href="#" class="btn view">상세보기</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="poster-box">
+                                    <div class="click">
+                                        <button class="heart-btn" aria-label="찜하기"></button>
+                                        <img src="./images/movie/poster-2.png" alt="">
+                                        <p class="rank">2</p>
+                                    </div>
+
+
+                                    <div class="blind">
+                                        <div class="blind-1">
+                                            <p class="b-title">주토피아</p>
+                                            <p class="genres">장르 : #애니메이션 #모험 #판타지 #SF</p>
+                                        </div>
+                                        <div class="zulgeri">
+                                            <p>수백년간 지속되어온 바이킹과 드래곤의 전쟁.</p><br>
+                                            <p>드래곤을 없애는 것이 삶의 모든 목적인 바이킹들과</p>
+                                            <p> 다른 신념을 가진 ‘히컵’은
+                                                무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                            <p> 다른 신념을 가진 ‘히컵’은
+                                                무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                            <p> 다른 신념을 가진 ‘히컵’은
+                                                무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                            <p> 다른 신념을 가진 ‘히컵’은
+                                                무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ticket-box">
+                                    <img src="./images/movie/poster-ticket.png" alt="">
+                                    <div class="text-box">
+                                        <div class="movie-title">
+                                            <p class="age-box two">ALL</p>
+                                            <h3>주토피아</h3>
+                                        </div>
+                                        <div class="title-sub">
+                                            <img class="egg" src="./images/movie/egg2.png" alt="">
+                                            <p>95%</p>
+                                            <p>예매율 50.9%</p>
+                                            <p>누적 1000만</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mov-btn-wrap">
+                                    <a href="#" class="btn reserv">예매하기</a>
+                                    <a href="#" class="btn view">상세보기</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="poster-box">
+                                    <div class="click">
+                                        <button class="heart-btn" aria-label="찜하기"></button>
+                                        <img src="./images/movie/poster-7.png" alt="">
+                                        <p class="rank">3</p>
+                                    </div>
+                                    <div class="blind">
+                                        <div class="blind-1">
+                                            <p class="b-title">국보</p>
+                                            <p class="genres">장르 : #드라마 #문학 #예술 #SF</p>
+                                        </div>
+                                        <div class="zulgeri">
+                                            <p>수백년간 지속되어온 바이킹과 드래곤의 전쟁.</p><br>
+                                            <p>드래곤을 없애는 것이 삶의 모든 목적인 바이킹들과</p>
+                                            <p> 다른 신념을 가진 ‘히컵’은
+                                                무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                            <p> 다른 신념을 가진 ‘히컵’은
+                                                무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                            <p> 다른 신념을 가진 ‘히컵’은
+                                                무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                            <p> 다른 신념을 가진 ‘히컵’은
+                                                무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ticket-box">
+                                    <img src="./images/movie/poster-ticket.png" alt="">
+                                    <div class="text-box">
+                                        <div class="movie-title">
+                                            <p class="age-box three">15</p>
+                                            <h3>국보</h3>
+                                        </div>
+                                        <div class="title-sub">
+                                            <img class="egg" src="./images/movie/egg2.png" alt="">
+                                            <p>95%</p>
+                                            <p>예매율 50.9%</p>
+                                            <p>누적 1000만</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mov-btn-wrap">
+                                    <a href="#" class="btn reserv">예매하기</a>
+                                    <a href="#" class="btn view">상세보기</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="poster-box">
+                                    <div class="click">
+                                        <button class="heart-btn" aria-label="찜하기"></button>
+                                        <img src="./images/movie/poster-4.png" alt="">
+                                        <p class="rank">4</p>
+                                    </div>
+                                    <div class="blind">
+                                        <div class="blind-1">
+                                            <p class="b-title">직장상사 길들이기</p>
+                                            <p class="genres">장르 : #액션 #모험 #판타지 #공포</p>
+                                        </div>
+                                        <div class="zulgeri">
+                                            <p>수백년간 지속되어온 바이킹과 드래곤의 전쟁.</p><br>
+                                            <p>드래곤을 없애는 것이 삶의 모든 목적인 바이킹들과</p>
+                                            <p> 다른 신념을 가진 ‘히컵’은
+                                                무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                            <p> 다른 신념을 가진 ‘히컵’은
+                                                무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                            <p> 다른 신념을 가진 ‘히컵’은
+                                                무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                            <p> 다른 신념을 가진 ‘히컵’은
+                                                무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ticket-box">
+                                    <img src="./images/movie/poster-ticket.png" alt="">
+                                    <div class="text-box">
+                                        <div class="movie-title">
+                                            <p class="age-box four">19</p>
+                                            <h3>직장상사 길들이기</h3>
+                                        </div>
+                                        <div class="title-sub">
+                                            <img class="egg" src="./images/movie/egg3.png" alt="">
+                                            <p>95%</p>
+                                            <p>예매율 50.9%</p>
+                                            <p>누적 1000만</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mov-btn-wrap">
+                                    <a href="#" class="btn reserv">예매하기</a>
+                                    <a href="#" class="btn view">상세보기</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
