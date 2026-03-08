@@ -147,6 +147,7 @@ const eventData = {
 let currentCat = "special";
 let mainIdx = 0;
 let subPageIdx = 0;
+let autoSlideTimer = null;
 
 const slider = document.querySelector('.slider');
 const pageList = document.querySelector('.page-list');
@@ -157,33 +158,32 @@ const totalNum = document.querySelector('.total-num');
 function renderContent(cat) {
     const data = eventData[cat];
     if (!data) return;
-    slider.style.width = `${data.main.length * 100}%`;
-    const pagerBtnWrap = document.querySelector('.pager-btn');
-    const totalPages = data.sub.length;
-
-    currNum.innerText = "1";
-    totalNum.innerText = totalPages;
-
-
-    pagerBtnWrap.style.display = totalPages > 1 ? 'flex' : 'none';
 
     mainIdx = 0;
     subPageIdx = 0;
 
-    // 1. 공백 제거된 translateX
-    slider.style.transform = "translateX(0)";
-    pageList.style.transform = "translateX(0)";
+    const pagerBtnWrap = document.querySelector('.pager-btn');
+    const totalPages = data.sub.length;
+    pagerBtnWrap.style.display = totalPages > 1 ? 'flex' : 'none';
 
-    // 2. 좌측 메인 슬라이더 (이미지 경로 따옴표 확인)
-    slider.innerHTML = data.main.map(src =>
+    const clonedSrcs = [...data.main, data.main[0]];
+    const totalSlides = clonedSrcs.length;
+
+    slider.style.transition = 'none';
+    slider.style.transform = 'translateX(0)';
+    slider.innerHTML = clonedSrcs.map(src =>
         `<div class="banner"><a href="#"><img src="${src}" alt=""></a></div>`
     ).join('');
-    slider.style.width = `${data.main.length * 100}%`;
+    slider.style.width = `${totalSlides * 100}%`;
 
-    // 3. 인디케이터
-    indicators.innerHTML = data.main.map((_, i) => `<span class="${i === 0 ? 'active' : ''}"></span>`).join('');
+    // 인디케이터
+    indicators.innerHTML = data.main.map((_, i) =>
+        `<span class="${i === 0 ? 'active' : ''}"></span>`
+    ).join('');
 
-    // 4. 우측 서브 리스트
+    // 서브 리스트
+    pageList.style.transition = 'none';
+    pageList.style.transform = 'translateX(0)';
     pageList.innerHTML = data.sub.map((page, idx) => `
         <ul class="page${idx + 1}">
             ${page.map(item => `
@@ -200,54 +200,80 @@ function renderContent(cat) {
     ).join('');
 
     pageList.querySelectorAll('ul').forEach(ul => {
-        ul.style.width = `${100 / data.sub.length}%`;
+        ul.style.width = `${100 / totalPages}%`;
     });
-
-    // 5. 페이지 리스트 전체 너비 동적 계산
-    pageList.style.width = `${data.sub.length * 100}%`;
+    pageList.style.width = `${totalPages * 100}%`;
     pageList.style.display = 'flex';
     pageList.style.flexWrap = 'nowrap';
 
-    // 6. 페이징 숫자 업데이트
     currNum.innerText = "1";
-    totalNum.innerText = data.sub.length;
+    totalNum.innerText = totalPages;
+
+    startAutoSlide();
 }
 
-// 탭메뉴 클릭
+function updateMainslider() {
+    const realLength = eventData[currentCat].main.length;
+    const totalSlides = realLength + 1;
+
+    slider.style.transition = 'transform 0.5s ease';
+    const move = (100 / totalSlides) * mainIdx;
+    slider.style.transform = `translateX(-${move}%)`;
+
+    const dotIdx = mainIdx % realLength;
+    indicators.querySelectorAll('span').forEach((dot, i) =>
+        dot.classList.toggle('active', i === dotIdx)
+    );
+
+    // 클론(마지막)에 도달하면 0.5초 후 조용히 1번으로 순간이동
+    if (mainIdx === realLength) {
+        setTimeout(() => {
+            slider.style.transition = 'none';
+            mainIdx = 0;
+            slider.style.transform = 'translateX(0)';
+        }, 500);
+    }
+}
+
+function startAutoSlide() {
+    clearInterval(autoSlideTimer);
+    autoSlideTimer = setInterval(() => {
+        const realLength = eventData[currentCat].main.length;
+        mainIdx = mainIdx + 1;
+        if (mainIdx > realLength) mainIdx = 1;
+        updateMainslider();
+    }, 3000);
+}
+
+// 탭메뉴
 document.querySelectorAll('.btn-wrap .btn').forEach(btn => {
     btn.addEventListener('click', function () {
-        const activeBtn = document.querySelector('.btn-wrap .btn.active');
-        if (activeBtn) activeBtn.classList.remove('active');
+        document.querySelector('.btn-wrap .btn.active')?.classList.remove('active');
         this.classList.add('active');
         currentCat = this.dataset.category;
         renderContent(currentCat);
     });
 });
 
-// 메인 슬라이더 화살표
+// 화살표
 document.querySelector('.arrow-btn-right').onclick = (e) => {
     e.preventDefault();
-    const limit = eventData[currentCat].main.length;
-    mainIdx = (mainIdx + 1) % limit;
+    const realLength = eventData[currentCat].main.length;
+    mainIdx = mainIdx + 1;
+    if (mainIdx > realLength) mainIdx = 1;
     updateMainslider();
     startAutoSlide();
 };
 
 document.querySelector('.arrow-btn-left').onclick = (e) => {
     e.preventDefault();
-    const limit = eventData[currentCat].main.length;
-    mainIdx = (mainIdx - 1 + limit) % limit;
+    const realLength = eventData[currentCat].main.length;
+    mainIdx = (mainIdx - 1 + realLength) % realLength;
     updateMainslider();
+    startAutoSlide();
 };
 
-function updateMainslider() {
-    const move = (100 / eventData[currentCat].main.length) * mainIdx;
-    slider.style.transform = `translateX(-${move}%)`;
-    const dots = indicators.querySelectorAll('span');
-    dots.forEach((dot, i) => dot.classList.toggle('active', i === mainIdx));
-}
-
-// 우측 페이지 페이징
+// 서브 페이징
 document.querySelector('.pager-btn .right-btn').onclick = (e) => {
     e.preventDefault();
     const limit = eventData[currentCat].sub.length;
@@ -263,6 +289,7 @@ document.querySelector('.pager-btn .left-btn').onclick = (e) => {
 
 function updateSubPage() {
     const totalPages = eventData[currentCat].sub.length;
+    pageList.style.transition = 'transform 0.5s ease';
     const move = (100 / totalPages) * subPageIdx;
     pageList.style.transform = `translateX(-${move}%)`;
     currNum.innerText = subPageIdx + 1;
