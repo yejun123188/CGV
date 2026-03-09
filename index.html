@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/footer-notice-respond.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/respond.css">
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script defer src="./js/main-notice.js"></script>
 </head>
@@ -42,7 +43,7 @@
                             <ul class="main-menu">
                                 <li><a href="#">영 화</a>
                                     <ul class="sub-menu">
-                                        <li><a href="#">현재상영작</a></li>
+                                        <li><a href="sub-movie-list.html">현재상영작</a></li>
                                         <li><a href="#">상영예정작</a></li>
                                         <li><a href="#">CGV ONLY</a></li>
                                         <li><a href="#">아트하우스</a></li>
@@ -80,7 +81,10 @@
                             </ul>
                         </nav>
                         <ul class="gnb-list">
-                            <li><a href="#"><img src="./images/search.png" alt="검색"></a></li>
+                            <form>
+                                <input type="text">
+                                <button><img src="./images/search.png" alt=""></button>
+                            </form>
                             <li><a href="#"><img src="./images/ticket.png" alt="티켓"></a></li>
                             <li><a href="#"><img src="./images/user.png" alt="사용자"></a></li>
                         </ul>
@@ -99,7 +103,10 @@
                         </h1>
 
                         <ul class="gnb-list">
-                            <li><a href="#"><img src="./images/search.png" alt="검색"></a></li>
+                            <form>
+                                <input type="text">
+                                <button><img src="./images/search.png" alt=""></button>
+                            </form>
                             <li><a href="#"><img src="./images/ticket.png" alt="티켓"></a></li>
                             <li><a href="#"><img src="./images/user.png" alt="사용자"></a></li>
                         </ul>
@@ -127,6 +134,9 @@
                     <div class="mov-btn-wrap">
                         <a href="#" class="btn reserv">예매하기</a>
                         <a href="#" class="btn view">상세보기</a>
+                    </div>
+                    <div class="scroll-arrow">
+                        <img src="./images/D-arrow.png" alt="스크롤 화살표">
                     </div>
                 </div>
             </div>
@@ -819,12 +829,16 @@
         <button class="ham-close">
             <img src="./images/ham-close.png" alt="닫기">
         </button>
+        <form>
+            <input type="text">
+            <button><img src="./images/search.png" alt=""></button>
+        </form>
         <nav class="ham-nav">
             <ul class="ham-main">
                 <li>
                     <span class="ham-main-title">영화</span>
                     <ul class="ham-sub">
-                        <li><a href="#">현재상영작</a></li>
+                        <li><a href="sub-movie-list.html">현재상영작</a></li>
                         <li><a href="#">상영예정작</a></li>
                         <li><a href="#">CGV ONLY</a></li>
                         <li><a href="#">아트하우스</a></li>
@@ -918,6 +932,13 @@
             }
 
             closeBtn.addEventListener('click', closeHam);
+
+            let visualWrap = document.querySelector('.main-visual-wrap');
+            let mainVideo = document.querySelector('.main-video');
+
+            mainVideo.addEventListener('ended', () => {
+                visualWrap.classList.add('active');
+            });
         });
     </script>
 </body>
