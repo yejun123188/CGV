@@ -1389,7 +1389,7 @@ header form:hover>input {
     background-color: var(--Hblk-btn);
 }
 
-.btn-wrap {
+.special-section .btn-wrap {
     display: flex;
     gap: 10px;
     padding-top: 60px;
