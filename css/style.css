@@ -1126,14 +1126,14 @@ form:hover {
     background-color: var(--Hblk-btn);
 }
 
-.btn-wrap {
+.special-section .btn-wrap {
     display: flex;
     gap: 10px;
     padding-top: 60px;
     /* padding-left: 157px; */
 }
 
-.btn-wrap button {
+.special-section .btn-wrap button {
     border: none;
     width: auto;
     padding: 0 23px;
@@ -1145,12 +1145,12 @@ form:hover {
     font-size: 16px;
 }
 
-.btn-wrap button:hover {
+.special-section .btn-wrap button:hover {
     background: rgba(238, 49, 35, 0.5);
     color: var(--mian-text);
 }
 
-.btn-wrap .active {
+.special-section .btn-wrap .active {
     background: rgba(238, 49, 35, 0.5);
     color: var(--mian-text);
 }
