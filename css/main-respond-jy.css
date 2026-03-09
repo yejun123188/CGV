@@ -19,13 +19,8 @@
     }
 
     .slider {
-        width: 100%;
+        /* width: 100%; */
         height: 100%;
-    }
-
-    .slider .banner {
-        min-width: 100%;
-        width: 100%;
     }
 
     .event-section .arrow-btn-wrap>.arrow-btn-left,
@@ -34,7 +29,7 @@
     }
 
     .page-list {
-        width: 100%;
+        /* width: 100%; */
         overflow: visible;
     }
 
@@ -50,11 +45,7 @@
         padding-bottom: 8px;
     }
 
-    .page2 {
-        display: none;
-    }
-
-    .page1 {
+    .page-item {
         width: 100%;
         gap: 24px;
         margin-right: 0;
@@ -63,28 +54,28 @@
         min-width: 0;
     }
 
-    .page1 li a {
+    .page-item li a {
         gap: 14px;
     }
 
-    .event-section .page-wrap .page1 li {
+    .event-section .page-wrap .page-item li {
         min-width: 0;
     }
 
-    .event-section .page-list-wrap .page1 li a {
+    .event-section .page-list-wrap .page-item li a {
         overflow: hidden;
         min-width: 0;
         width: 100%;
     }
 
-    .event-section .page-list-wrap .page1 li .text-box {
+    .event-section .page-list-wrap .page-item li .text-box {
         flex: 1 1 0;
         min-width: 0;
         overflow: hidden;
         width: auto;
     }
 
-    .event-section .page-list-wrap .page1 li .text-box .title {
+    .event-section .page-list-wrap .page-item li .text-box .title {
         font-size: 0.875rem;
         white-space: nowrap;
         text-overflow: ellipsis;
@@ -94,7 +85,7 @@
         overflow: hidden;
     }
 
-    .event-section .page-list-wrap .page1 li .text-box .desc {
+    .event-section .page-list-wrap .page-item li .text-box .desc {
         font-size: 0.8rem;
         line-height: 1.4;
         display: -webkit-box;
@@ -184,16 +175,10 @@
     }
 
     .page-list {
-        width: 100%;
-        display: block;
+        overflow: visible;
     }
 
-    .page2 {
-        display: none;
-    }
-
-    .page1,
-    .page2 {
+    .page-item {
         width: 100%;
         flex: unset;
         gap: 16px;
@@ -201,17 +186,12 @@
         margin-right: 0;
     }
 
-    .page1 li a,
-    .page2 li a {
-        gap: 14px;
-    }
-
-    .page1 li a {
+    .page-item li a {
         gap: 14px;
         justify-content: center;
     }
 
-    .event-section .page-list-wrap .page2 li a {
+    .event-section .page-list-wrap .page-item li a {
         overflow: hidden;
         min-width: 0;
     }
@@ -383,5 +363,14 @@
 
     .ad-banner-wrap>.inner>img {
         display: none;
+    }
+
+    .page-list-wrap {
+        overflow: hidden;
+    }
+
+    .pager-btn {
+        flex-shrink: 0;
+        margin-top: 8px;
     }
 }

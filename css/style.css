@@ -857,11 +857,14 @@ header {
 .page-list-wrap {
     position: relative;
     flex: 1;
+    width: 0;
+    min-width: 0;
     margin-left: 50px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    padding-bottom: 60px;
+    justify-content: space-between;
+    padding-bottom: 0;
 }
 
 .page-list {
@@ -872,21 +875,23 @@ header {
 }
 
 .page-list ul {
-    width: 50%;
+    flex-shrink: 0;
 }
 
 .page1,
-.page2 {
+.page2,
+.page-item {
     display: flex;
     flex-direction: column;
     gap: 32px;
 }
 
 .page1 li a,
-.page2 li a {
+.page2 li a,
+.page-item li a {
     display: flex;
     align-items: center;
-    gap: 38px;
+    gap: 24px;
 }
 
 .thumb {
@@ -905,6 +910,8 @@ header {
 
 .text-box {
     overflow: hidden;
+    flex: 1;
+    min-width: 0;
 }
 
 .text-box .title {

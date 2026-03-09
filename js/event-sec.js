@@ -176,6 +176,12 @@ function renderContent(cat) {
     ).join('');
     slider.style.width = `${totalSlides * 100}%`;
 
+    const bannerWidth = 100 / totalSlides;
+    slider.querySelectorAll('.banner').forEach(b => {
+        b.style.width = `${bannerWidth}%`;
+        b.style.minWidth = `${bannerWidth}%`;
+    });
+
     // 인디케이터
     indicators.innerHTML = data.main.map((_, i) =>
         `<span class="${i === 0 ? 'active' : ''}"></span>`
@@ -185,7 +191,7 @@ function renderContent(cat) {
     pageList.style.transition = 'none';
     pageList.style.transform = 'translateX(0)';
     pageList.innerHTML = data.sub.map((page, idx) => `
-        <ul class="page${idx + 1}">
+        <ul class="page-item">
             ${page.map(item => `
                 <li>
                     <a href="#">
@@ -199,8 +205,12 @@ function renderContent(cat) {
         </ul>`
     ).join('');
 
+    const pageListWrap = document.querySelector('.page-list-wrap');
+    const wrapPx = pageListWrap.offsetWidth;
     pageList.querySelectorAll('ul').forEach(ul => {
-        ul.style.width = `${100 / totalPages}%`;
+        ul.style.width = `${wrapPx}px `;
+        ul.style.display = 'flex';
+        ul.style.flexDirection = 'column'
     });
     pageList.style.width = `${totalPages * 100}%`;
     pageList.style.display = 'flex';
@@ -288,10 +298,10 @@ document.querySelector('.pager-btn .left-btn').onclick = (e) => {
 };
 
 function updateSubPage() {
-    const totalPages = eventData[currentCat].sub.length;
+    const pageListWrap = document.querySelector('.page-list-wrap');
+    const wrapPx = pageListWrap.offsetWidth;
     pageList.style.transition = 'transform 0.5s ease';
-    const move = (100 / totalPages) * subPageIdx;
-    pageList.style.transform = `translateX(-${move}%)`;
+    pageList.style.transform = `translateX(-${wrapPx * subPageIdx}px)`;
     currNum.innerText = subPageIdx + 1;
 }
 
