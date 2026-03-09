@@ -573,6 +573,21 @@ header form:hover>input {
 
 }
 
+/* 텝콘텐츠 */
+.movie-content {
+    display: none;
+}
+
+.movie-content.active {
+    display: block;
+}
+
+.m-button-list a.active {
+    color: var(--main);
+
+}
+
+/* 위에 탭콘텐츠 */
 .movie-btn-wrap .m-button-list a {
     font-size: var(--px20)
 }
@@ -665,6 +680,9 @@ header form:hover>input {
     transition: filter 0.3s ease;
 }
 
+
+
+
 .poster-box .click:hover {
     filter: blur(8px) brightness(50%);
 
@@ -739,6 +757,13 @@ header form:hover>input {
 .movie-list img {
     display: block;
     width: 100%;
+}
+
+/* 이미지깨짐방지 */
+.poster-box img,
+.ticket-box img {
+    width: 100%;
+    height: auto;
 }
 
 .ticket-box {
@@ -867,6 +892,143 @@ header form:hover>input {
 .chart-section .view:hover {
     background-color: var(--Hblk-btn);
 }
+
+
+@media screen and (max-width:1280px) {
+
+    .section-header>.section-title {
+        font-size: 28px;
+    }
+
+    .section-header>.sub-title {
+        font-size: 28px;
+    }
+
+    .m-button-list {
+        gap: 30px;
+    }
+
+    .m-button-list a {
+        font-size: 18px;
+    }
+
+    .movie-list {
+        flex-wrap: wrap;
+    }
+
+    .movie-list li {
+        width: calc((100% - 80px) / 2);
+    }
+
+    .ticket-box .text-box .movie-title {
+        font-size: 20px;
+    }
+
+    .title-sub p {
+        font-size: 14px;
+    }
+
+}
+
+@media screen and (max-width:768px) {
+
+    .inner {
+        padding: 0 20px;
+    }
+
+    .section-header {
+        flex-direction: column;
+        gap: 5px;
+        margin-bottom: 30px;
+    }
+
+    .section-header>.section-title {
+        font-size: 24px;
+    }
+
+    .section-header>.sub-title {
+        font-size: 20px;
+    }
+
+    .movie-btn-wrap {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .m-button-list {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .m-button-list a {
+        font-size: 16px;
+    }
+
+    .movie-list {
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .movie-list li {
+        width: calc((100% - 16px) / 2);
+    }
+
+    .ticket-box .text-box .movie-title {
+        font-size: 18px;
+    }
+
+    .title-sub {
+        gap: 4px;
+    }
+
+    .title-sub p {
+        font-size: 13px;
+    }
+
+    .mov-btn-wrap .btn {
+        padding: 10px 18px;
+        height: 40px;
+        font-size: 14px;
+    }
+
+}
+
+@media screen and (max-width:480px) {
+
+    .movie-list li {
+        width: 100%;
+    }
+
+    .m-button-list {
+        gap: 10px;
+    }
+
+    .m-button-list a {
+        font-size: 14px;
+    }
+
+    .ticket-box .text-box .movie-title {
+        font-size: 16px;
+    }
+
+    .title-sub p {
+        font-size: 12px;
+    }
+
+    .mov-btn-wrap {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .mov-btn-wrap .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+}
+
+
 
 /* ------------------------------------------------------------------ */
 /* 혜택 / 이벤트 (주연) */
