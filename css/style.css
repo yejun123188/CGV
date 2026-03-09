@@ -530,11 +530,11 @@ form:hover {
 }
 
 .movie-list {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
-    justify-content: space-between;
-    position: relative;
 }
+
 
 .poster-box {
     position: relative;
@@ -793,139 +793,167 @@ form:hover {
 }
 
 
-@media screen and (max-width:1280px) {
+/* @media(max-width:1280px) {
+    .movie-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
 
-    .section-header>.section-title {
+    .movieNone {
+        display: none;
+    }
+
+    .chart-section>.section-header .section-title {
         font-size: 28px;
     }
 
-    .section-header>.sub-title {
+    .chart-section>.section-header .sub-title {
         font-size: 28px;
     }
 
-    .m-button-list {
+    .chart-section .movie-btn-wrap .m-button-list {
         gap: 30px;
     }
 
-    .m-button-list a {
+    .chart-section .movie-btn-wrap .m-button-list a {
         font-size: 18px;
     }
 
-    .movie-list {
-        flex-wrap: wrap;
-    }
-
-    .movie-list li {
-        width: calc((100% - 80px) / 2);
-    }
-
-    .ticket-box .text-box .movie-title {
+    .chart-section .movie-wrap .ticket-box .text-box .movie-title {
         font-size: 20px;
+
     }
 
-    .title-sub p {
+    .chart-section .movie-wrap .title-sub p {
         font-size: 14px;
+
     }
+
+
 
 }
 
-@media screen and (max-width:768px) {
-
-    .inner {
-        padding: 0 20px;
+@media(max-width:768px) {
+    .movie-list {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .section-header {
+    .movieNone {
+        display: block;
+
+    }
+
+    .chart-section>.section-header {
         flex-direction: column;
         gap: 5px;
         margin-bottom: 30px;
     }
 
-    .section-header>.section-title {
+    .chart-section>.section-header .section-title {
         font-size: 24px;
     }
 
-    .section-header>.sub-title {
+    .chart-section>.section-header .sub-title {
         font-size: 20px;
     }
 
-    .movie-btn-wrap {
+    .chart-section .movie-btn-wrap {
         flex-direction: column;
         align-items: flex-start;
         gap: 15px;
     }
 
-    .m-button-list {
+    .chart-section .movie-btn-wrap .m-button-list {
         flex-wrap: wrap;
         gap: 15px;
     }
 
-    .m-button-list a {
+    .chart-section .movie-btn-wrap .m-button-list a {
         font-size: 16px;
     }
 
-    .movie-list {
+    .chart-section .movie-wrap .movie-list {
         flex-wrap: wrap;
         gap: 16px;
     }
 
-    .movie-list li {
-        width: calc((100% - 16px) / 2);
-    }
-
-    .ticket-box .text-box .movie-title {
+    .chart-section .movie-wrap .movie-list .ticket-box .text-box .movie-title {
         font-size: 18px;
     }
 
-    .title-sub {
+    .chart-section .movie-wrap .movie-list .title-sub {
         gap: 4px;
     }
 
-    .title-sub p {
+    .chart-section .movie-wrap .movie-list .title-sub p {
         font-size: 13px;
     }
 
-    .mov-btn-wrap .btn {
+    .chart-section .movie-wrap .movie-list .mov-btn-wrap .btn {
         padding: 10px 18px;
         height: 40px;
         font-size: 14px;
     }
 
+    .movie-list .ticket-box .title-sub {
+        display: none;
+    }
+
 }
+
+
 
 @media screen and (max-width:480px) {
 
+
+
     .movie-list li {
+        width: calc((100% - 40px) / 4);
+    }
+
+    .movieNone {
+        display: block;
+
+    } */
+
+/* .chart-section .movie-btn-wrap .m-button-list {
         width: 100%;
+    } */
+
+
+/* .chart-section .movie-btn-wrap .m-button-list {
+        gap: 5px;
+        width: 100px;
     }
 
-    .m-button-list {
-        gap: 10px;
+    .chart-section .movie-btn-wrap .m-button-list a {
+        font-size: 10px;
     }
 
-    .m-button-list a {
-        font-size: 14px;
-    }
-
-    .ticket-box .text-box .movie-title {
+    .chart-section .movie-wrap .movie-content .ticket-box .text-box .movie-title {
         font-size: 16px;
     }
 
-    .title-sub p {
+
+
+    .chart-section .movie-wrap .movie-content .title-sub p {
         font-size: 12px;
     }
 
-    .mov-btn-wrap {
+    .chart-section .movie-wrap .movie-content .mov-btn-wrap {
         flex-direction: column;
         gap: 6px;
     }
 
-    .mov-btn-wrap .btn {
+    .chart-section .movie-wrap .movie-content .mov-btn-wrap .btn {
         width: 100%;
         text-align: center;
     }
 
-}
+    .movie-list .ticket-box .title-sub {
+        display: none;
+    }
+
+} */
 
 
 
