@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./css/sub-store.css">
     <link rel="stylesheet" href="./css/sub-store-respond.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
 </head>
 
 <body>
@@ -114,15 +115,17 @@
                 </div>
 
                 <div class="product-wrap">
-                    <div class="product-title">
-                        <select>
-                            <option value="">추천순</option>
-                            <option value="">가격 높은 순</option>
-                            <option value="">가격 낮은 순</option>
-                            <option value="">판매순</option>
-                        </select>
+                    <div class="custom-select">
+                        <div class="selected-value">추천순</div>
 
+                        <ul class="options">
+                            <li class="option-item">추천순</li>
+                            <li class="option-item">가격 높은 순</li>
+                            <li class="option-item">가격 낮은 순</li>
+                            <li class="option-item">판매순</li>
+                        </ul>
                     </div>
+
                     <h3>COMBO</h3>
                     <div class="grid-wrap">
                         <div class="box-wrap">
@@ -510,6 +513,32 @@
 
             observer: true,
             observeParents: true,
+        });
+    </script>
+    <script>
+        let selectBox = document.querySelector('.custom-select');
+        let selectedValue = document.querySelector('.selected-value');
+        let optionsList = document.querySelector('.options');
+        let optionItems = document.querySelectorAll('.option-item');
+
+        // 1. 클릭하면 목록 열고 닫기
+        selectBox.addEventListener('click', () => {
+            optionsList.classList.toggle('active');
+        });
+
+        // 2. 항목 선택 시 텍스트 바꾸기
+        optionItems.forEach(item => {
+            item.addEventListener('click', () => {
+                selectedValue.innerText = item.innerText;
+                // 선택 후 목록 닫기
+            });
+        });
+
+        // 3. 외부 클릭 시 닫기
+        window.addEventListener('click', (e) => {
+            if (!selectBox.contains(e.target)) {
+                optionsList.classList.remove('active');
+            }
         });
     </script>
 </body>
