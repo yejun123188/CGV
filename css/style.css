@@ -1227,14 +1227,14 @@ header form:hover>input {
     background-color: var(--Hblk-btn);
 }
 
-.btn-wrap {
+.special-section .btn-wrap {
     display: flex;
     gap: 10px;
     padding-top: 60px;
     /* padding-left: 157px; */
 }
 
-.btn-wrap button {
+.special-section .btn-wrap button {
     border: none;
     width: auto;
     padding: 0 23px;
@@ -1246,17 +1246,17 @@ header form:hover>input {
     font-size: 16px;
 }
 
-.btn-wrap button:hover {
+.special-section .btn-wrap button:hover {
     background: rgba(238, 49, 35, 0.5);
     color: var(--mian-text);
 }
 
-.btn-wrap .active {
+.special-section .btn-wrap .active {
     background: rgba(238, 49, 35, 0.5);
     color: var(--mian-text);
 }
 
-.slider-wrap {
+.special-section .slider-wrap {
     position: relative;
     /* overflow: hidden; */
     max-width: 1920px;
@@ -1265,34 +1265,8 @@ header form:hover>input {
 
 }
 
-.slider-wrap .next-button {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 1100px;
-    transform: translate(-50%, -50%);
-    display: block;
-    z-index: 10;
-    pointer-events: none;
-}
 
-.slider-wrap .next-button .left,
-.slider-wrap .next-button .right {
-    position: absolute;
-    bottom: 10
-}
 
-.slider-wrap .next-button .left {
-    left: -10px;
-}
-
-.slider-wrap .next-button .right {
-    right: 20px;
-}
-
-.slider-wrap .next-button a {
-    pointer-events: auto;
-}
 
 .special-section .arrow-btn-wrap {
     position: absolute;
@@ -1304,8 +1278,7 @@ header form:hover>input {
     z-index: 99999;
 }
 
-.wrap {
-    /* border: 1px solid red; */
+.special-section .wrap {
     position: relative;
 }
 
@@ -1322,16 +1295,16 @@ header form:hover>input {
     z-index: 99;
 }
 
-.slider-wrap::before {
+.special-section .slider-wrap::before {
     transform: translateX(-50%) translateY(-60%);
 }
 
-.slider-wrap::after {
+.special-section .slider-wrap::after {
     transform: translateX(-50%) translateY(50%);
     bottom: 0;
 }
 
-.theater-list .img-box {
+.special-section .theater-list .img-box {
     width: 100%;
     height: 480px;
     /* 모든 슬라이드의 높이를 이 값으로 통일 (원하는 높이로 조절) */
@@ -1341,7 +1314,7 @@ header form:hover>input {
     /* 기존 곡률 유지 */
 }
 
-.theater-list li img {
+.special-section .theater-list li img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -1349,18 +1322,18 @@ header form:hover>input {
 
 }
 
-.theater-list .text-box {
+.special-section .theater-list .text-box {
     position: absolute;
     bottom: 15%;
     padding-left: 56px;
 }
 
-.theater-list .text-box p {
+.special-section .theater-list .text-box p {
     font-size: var(--px16);
     font-weight: 600;
 }
 
-.theater-list .text-box .title {
+.special-section .theater-list .text-box .title {
     font-size: var(--px40);
     font-weight: 700;
 }
@@ -1373,12 +1346,12 @@ header form:hover>input {
 }
 
 /* 불렛(동그라미) 색상 변경 (기본색이 안 보일 수 있음) */
-.swiper-pagination-bullet {
+.special-section .swiper-pagination-bullet {
     background: #fff !important;
     opacity: 0.5;
 }
 
-.swiper-pagination-bullet-active {
+.special-section .swiper-pagination-bullet-active {
     background: var(--red-btn) !important;
     /* CGV 레드 포인트 컬러 */
     opacity: 1;
@@ -1550,7 +1523,7 @@ address p {
     padding-top: 30px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
 
 }
 
@@ -1587,7 +1560,7 @@ address p {
     border-radius: 40%;
 }
 
-.sns-list img {
+footer .sns-list img {
     width: 20px;
 }
 
