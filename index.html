@@ -951,11 +951,11 @@
                 <!-- VVV 여기 아래로 작업 VVV -->
                 <!-- 탭메뉴 -->
                 <div class="btn-wrap">
-                    <button class="btn active">special</button>
-                    <button class="btn">영화 / 극장</button>
-                    <button class="btn">제휴</button>
-                    <button class="btn">멤버십</button>
-                    <button class="btn">지난 이벤트</button>
+                    <button class="btn active" data-category="special">special</button>
+                    <button class="btn" data-category="movie">영화 / 극장</button>
+                    <button class="btn" data-category="benefit">제휴</button>
+                    <button class="btn" data-category="membership">멤버십</button>
+                    <button class="btn" data-category="last">지난 이벤트</button>
                 </div>
 
                 <!-- 메인(좌측) -->
@@ -1088,9 +1088,9 @@
                         </div>
                         <!-- pager-btn -->
                         <div class="pager-btn">
-                            <div class="left-btn"><a href="#"><img src="./images/left-arrow.png" alt=""></a></div>
+                            <div class="left-btn"><button><img src="./images/left-arrow.png" alt=""></button></div>
                             <span class="curr-num">1</span> / <span class="total-num">2</span>
-                            <div class="right-btn"><a href="#"><img src="./images/right-arrow.png" alt=""></a></div>
+                            <div class="right-btn"><button><img src="./images/right-arrow.png" alt=""></button></div>
                         </div>
                     </div>
 
@@ -1526,6 +1526,7 @@
             });
         });
     </script>
+    <script src="./js/event-sec.js"></script>
 </body>
 
 </html>
