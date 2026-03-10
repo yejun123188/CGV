@@ -187,6 +187,14 @@ function renderContent(cat) {
         `<span class="${i === 0 ? 'active' : ''}"></span>`
     ).join('');
 
+    indicators.querySelectorAll('span').forEach((dot, i) => {
+        dot.addEventListener('click', () => {
+            mainIdx = i;
+            updateMainslider();
+            startAutoSlide();
+        });
+    });
+
     // 서브 리스트
     pageList.style.transition = 'none';
     pageList.style.transform = 'translateX(0)';
@@ -307,3 +315,64 @@ function updateSubPage() {
 
 // 첫 실행
 renderContent("special");
+
+const mainSlider = document.querySelector('.main-slider');
+
+let dragStartX = 0;
+let isDragging = false;
+
+function onDragStart(x) {
+    if (window.innerHTML > 1280) return;
+    dragStartX = x;
+    isDragging = true;
+    clearInterval(autoSlideTimer);
+}
+
+function onDragEnd(x) {
+    if (!isDragging) return;
+    isDragging = false;
+
+    const diff = dragStartX - x;
+    const threshold = 50;
+
+    if (Math.abs(diff) >= threshold) {
+        const realLength = eventData[currentCat].main.length;
+        if (diff > 0) {
+            mainIdx = mainIdx + 1;
+            if (mainIdx > realLength) mainIdx = 1;
+        } else {
+            mainIdx = (mainIdx - 1 + realLength) % realLength;
+        }
+        updateMainslider();
+    }
+    startAutoSlide();
+}
+
+// 터치이벤트
+mainSlider.addEventListener('touchstart', e => onDragStart(e.touches[0].clientX), { passive: true });
+mainSlider.addEventListener('touched', e => onDragEnd(e.changedTouches[0].clientX));
+
+// 마우스 이벤트
+mainSlider.addEventListener('mousedown', e => {
+    onDragStart(e.clientX);
+    mainSlider.style.cursor = 'garbbing';
+});
+mainSlider.addEventListener('mouseup', e => {
+    onDragEnd(e.clientX);
+    mainSlider.style.cursor = 'grab';
+});
+mainSlider.addEventListener('mouseleave', e => {
+    if (isDragging) {
+        isDragging = false;
+        mainSlider.style.cursor = 'grab';
+        startAutoSlide();
+    }
+});
+
+mainSlider.addEventListener('dragstrat', e => e.preventDefault());
+
+function updateCursor() {
+    mainSlider.style.cursor = window.innerWidth <= 1280 ? 'grab' : '';
+}
+updateCursor();
+window.addEventListener('resize', updateCursor);

@@ -1314,7 +1314,7 @@ header form:hover>input {
 
 /* 광고배너 */
 .ad-banner-wrap {
-    /* height: 257px; */
+    height: 300px;
     /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#c88dfb+0,a290fe+100 */
     background: linear-gradient(to bottom, rgba(200, 141, 251, 1) 0%, rgb(114, 91, 231) 100%);
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
@@ -1341,18 +1341,19 @@ header form:hover>input {
 }
 
 .ad-banner p {
-    font-size: var(--px32);
+    font-size: clamp(1rem, 1.8vw, var(--px32));
     font-weight: 400;
     margin: 0;
     color: #35007f;
+    white-space: nowrap;
 }
 
 .ad-banner>strong {
-    font-size: 4.2em;
+    font-size: clamp(2rem, 3.5vw, 4.2em);
     line-height: 1.2;
     color: var(--mian-text);
-    font-family: "YeogiOttaeJalnan"
-
+    font-family: "YeogiOttaeJalnan";
+    white-space: nowrap;
 }
 
 .ad-banner .btn {
