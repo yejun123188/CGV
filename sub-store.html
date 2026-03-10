@@ -12,27 +12,12 @@
     <link rel="stylesheet" href="./css/sub-store.css">
     <link rel="stylesheet" href="./css/sub-store-respond.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <script src="./js/header-footer.js"></script>
 </head>
 
 <body>
     <!-- header -->
-    <header class="sub-header">
-        <div class="fixed-bar">
-            <div class="ham-btn">
-                <a href="#"><img src="./images/ham.png" alt="햄버거"></a>
-            </div>
-
-            <h1 class="fixed-logo">
-                <a href="index.html"><img src="./images/fixed-header-logo.png" alt="CGV 고정로고"></a>
-            </h1>
-
-            <ul class="gnb-list">
-                <li><a href="#"><img src="./images/search.png" alt="검색"></a></li>
-                <li><a href="#"><img src="./images/ticket.png" alt="티켓"></a></li>
-                <li><a href="#"><img src="./images/user.png" alt="사용자"></a></li>
-            </ul>
-        </div>
-    </header>
+    <div id="header"></div>
     <main>
         <div class="page-section">
             <div class="page-inner">
@@ -114,15 +99,17 @@
                 </div>
 
                 <div class="product-wrap">
-                    <div class="product-title">
-                        <select>
-                            <option value="">추천순</option>
-                            <option value="">가격 높은 순</option>
-                            <option value="">가격 낮은 순</option>
-                            <option value="">판매순</option>
-                        </select>
+                    <div class="custom-select">
+                        <div class="selected-value">추천순</div>
 
+                        <ul class="options">
+                            <li class="option-item">추천순</li>
+                            <li class="option-item">가격 높은 순</li>
+                            <li class="option-item">가격 낮은 순</li>
+                            <li class="option-item">판매순</li>
+                        </ul>
                     </div>
+
                     <h3>COMBO</h3>
                     <div class="grid-wrap">
                         <div class="box-wrap">
@@ -299,160 +286,8 @@
         </section>
     </main>
     <!-- 푸터영역 -->
-    <footer>
-        <div class="inner">
-            <!-- VVV 여기 아래로 작업 VVV -->
-            <h2 class="footer-logo"><img src="./images/footer/footer-cgv-logo.png" alt="">
-            </h2>
-            <div class="footer-middle">
-                <address>
-                    <p>(04377)서울특별시 용산구 한강대로 23길 55, 아이파크몰 6층(한강로동)</p>
-                    <p>통신판매업신고번호 : 2017-서울용산-0662사업자정보확인</p>
-                    <p>사업자등록번호 : 104-81-45690</p>
-                    <p>호스팅사업자 : CJ올리브네트웍스</p>
-                    <p> 대표이메일 : cjcgvmaster@cj.net</p>
-                </address>
-                <ul class="qr-list">
-                    <li>
-                        <p>QR코드 찍고</p>
-                        <p>CGV 앱에서 자세히 보기</p>
-                        <P>QR코드를 스캔해보세요</P>
-                    </li>
-                    <li><img src="./images/footer/footer-qr.png" alt="CGV QR"></li>
-                </ul>
-            </div>
-            <div class="footer-bottom">
-                <div class="f-inner-left">
-                    <select class="select-company">
-                        <optgroup label="CJ그룹">
-                            <option>CJ주식회사</option>
-                        </optgroup>
-                        <optgroup label="식품 & 식품서비스">
-                            <option>CJ제일제당</option>
-                            <option>CJ푸드빌</option>
-                            <option>CJ프레시웨이</option>
-                        </optgroup>
-                        <optgroup label="생명공학">
-                            <option>CJ제일제당 BIO사업부문</option>
-                            <option>CJ Feed&Care</option>
-                        </optgroup>
-                        <optgroup label="물류 & 신유통">
-                            <option>CJ대한통운</option>
-                            <option>CJ대한통운 건설부문</option>
-                            <option>CJ올리브영/option>
-                            <option>CJ올리브네트웍스</option>
-                            <option>CJ ENM 커머스부문</option>
-                        </optgroup>
-                        <optgroup label="엔터테인먼트 & 미디어">
-                            <option>CJ ENM 엔터테인먼트부문</option>
-                            <option>CJ CGV</option>
-                        </optgroup>
-                    </select>
-                    <ul class="bt-list">
-                        <li><a href="#">채용정보</a></li>
-                        <li><a href="#">이용약관</a></li>
-                        <li><a href="#">개인정보처리방침</a></li>
-                        <li><a href="#">위치기반서비스 이용약관</a></li>
-                    </ul>
-                </div>
-                <ul class="sns-list">
-                    <li><a href="https://pf.kakao.com/_VXwbj/97906262"><img src="./images/footer/kakao.png"
-                                alt="카카오톡"></a></li>
-                    <li><a href="https://www.instagram.com/cgv_korea/?hl=ko"><img src="./images/footer/instagram.png"
-                                alt="인스타"></a></li>
-                    <li><a href="https://www.youtube.com/channel/UCmjUMtUw6wXLrsULdxuXWdg"><img
-                                src="./images/footer/youtube.png" alt="유튜브"></a></li>
-                    <li><a href="https://x.com/CGV_KOREA"><img src="./images/footer/X.png" alt="트위터"></a></li>
-                </ul>
-            </div>
-        </div>
-    </footer>
-    </main>
-    <!-- 햄버거 오버레이 -->
-    <div class="ham-overlay"></div>
+    <footer id="footer"></footer>
 
-    <!-- 햄버거 메뉴 패널 -->
-    <div class="ham-panel">
-        <!-- 닫기 버튼 -->
-        <button class="ham-close">
-            <img src="./images/ham-close.png" alt="닫기">
-        </button>
-        <nav class="ham-nav">
-            <ul class="ham-main">
-                <li>
-                    <span class="ham-main-title">영화</span>
-                    <ul class="ham-sub">
-                        <li><a href="#">현재상영작</a></li>
-                        <li><a href="#">상영예정작</a></li>
-                        <li><a href="#">CGV ONLY</a></li>
-                        <li><a href="#">아트하우스</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <span class="ham-main-title">예매</span>
-                    <ul class="ham-sub">
-                        <li><a href="sub-quick-reserv.html">빠른예매</a></li>
-                        <li><a href="sub-movie-reserv.html">영화별예매</a></li>
-                        <li><a href="sub-theater-reserv.html">극장별예매</a></li>
-                        <li><a href="#">포토플레이</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <span class="ham-main-title">매점</span>
-                    <ul class="ham-sub">
-                        <li><a href="sub-store.html">푸드</a></li>
-                        <li><a href="#">캐릭터굿즈</a></li>
-                        <li><a href="#">기프트샵</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <span class="ham-main-title">이벤트</span>
-                    <ul class="ham-sub">
-                        <li><a href="#">SPECIAL</a></li>
-                        <li><a href="#">무대인사/시사회</a></li>
-                        <li><a href="sub-alliance.html">제휴</a></li>
-                        <li><a href="#">멤버쉽/클럽</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <span class="ham-main-title">극장</span>
-                    <ul class="ham-sub">
-                        <li><a href="sub-all-CGV.html">전체 극장</a></li>
-                        <li><a href="#">특별관</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <span class="ham-main-title">액티비티</span>
-                    <ul class="ham-sub">
-                        <li><a href="#">피커스</a></li>
-                        <li><a href="#">볼링펍</a></li>
-                        <li><a href="#">씨네드쉐프</a></li>
-                        <li><a href="#">미션브레이크</a></li>
-                        <li><a href="#">롤롤</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <span class="ham-main-title">고객센터</span>
-                    <ul class="ham-sub">
-                        <li><a href="#">고객센터 안내</a></li>
-                        <li><a href="#">자주 찾는 질문</a></li>
-                        <li><a href="#">단체/대관문의</a></li>
-                        <li><a href="#">나의 문의내역</a></li>
-                        <li><a href="#">공지사항</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <span class="ham-main-title">나의 정보 관리</span>
-                    <ul class="ham-sub">
-                        <li><a href="#">예약/결제내역</a></li>
-                        <li><a href="#">자주가는 CGV</a></li>
-                        <li><a href="#">보관함</a></li>
-                        <li><a href="#">내 차량번호 조회</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-    </div>
     <!-- Swiper JS -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -510,6 +345,32 @@
 
             observer: true,
             observeParents: true,
+        });
+    </script>
+    <script>
+        let selectBox = document.querySelector('.custom-select');
+        let selectedValue = document.querySelector('.selected-value');
+        let optionsList = document.querySelector('.options');
+        let optionItems = document.querySelectorAll('.option-item');
+
+        // 1. 클릭하면 목록 열고 닫기
+        selectBox.addEventListener('click', () => {
+            optionsList.classList.toggle('active');
+        });
+
+        // 2. 항목 선택 시 텍스트 바꾸기
+        optionItems.forEach(item => {
+            item.addEventListener('click', () => {
+                selectedValue.innerText = item.innerText;
+                // 선택 후 목록 닫기
+            });
+        });
+
+        // 3. 외부 클릭 시 닫기
+        window.addEventListener('click', (e) => {
+            if (!selectBox.contains(e.target)) {
+                optionsList.classList.remove('active');
+            }
         });
     </script>
 </body>
