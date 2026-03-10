@@ -68,11 +68,16 @@
         width: 100%;
     }
 
+    .event-section .page-list-wrap .page-item li .thumb {
+        width: 180px;
+        flex-shrink: 0;
+    }
+
     .event-section .page-list-wrap .page-item li .text-box {
         flex: 1 1 0;
         min-width: 0;
         overflow: hidden;
-        width: auto;
+        width: 0;
     }
 
     .event-section .page-list-wrap .page-item li .text-box .title {
