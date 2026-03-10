@@ -1,0 +1,2680 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>깊이 빠져 보다, CGV</title>
+    <link rel="icon" href="./images/favicon.ico">
+    <link rel="stylesheet" href="./css/pretendard-font.css">
+    <link rel="stylesheet" href="./css/sub-common.css">
+    <!-- vvv css 이름 변경 후 경로 재수정 vvv -->
+    <link rel="stylesheet" href="./css/sub-movie-list.css">
+    <script src="./js/header-footer.js"></script>
+</head>
+
+<body>
+    <!-- header -->
+    <div id="header"></div>
+    <main>
+        <div class="page-section">
+            <div class="page-inner">
+                <div class="page-wrap">
+                    <h2>현재상영작</h2>
+                    <div class="location">
+                        <span><a href="index.html">홈</a></span>
+                        <span>></span>
+                        <span>영화</span>
+                        <span>></span>
+                        <span>현재상영작</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section>
+
+            <div class="inner">
+                <!-- VVV 여기 아래로 작업 VVV -->
+                <!-- ☆[[ 현재상영작,개봉예정작,cgv only,아트하우스 ]] => 다 고정순위 없어서 추가한 리스트정렬 탭메뉴입니다!!!!!!!!!!! -->
+                <div class="movieList-sub-menu">
+                    <div class="movie-list-wrap">
+                        <ul class="m-button-list">
+                            <li class="active"><a href="#">개봉일순</a><span>|</span></li>
+                            <li><a href="#">예매순</a><span>|</span></li>
+                            <li><a href="#">추천순</a></li>
+                        </ul>
+                    </div>
+
+                    <form>
+                        <input type="text" placeholder="영화검색">
+                        <button><img src="./images/search.png" alt=""></button>
+                    </form>
+
+
+                </div>
+                <div class="movie-list-tab-wrap">
+                    <div class="content tab1 tab-wrap active">
+                        <div class="list-wrap">
+                            <div class="movie1 box1">
+                                <div class="img-box">
+                                    <a href=""><img src="./images/movie porster/footer-poster-08.jpg" alt="">
+                                        <p>1</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href="">
+                                                <img src="./images/icon-movieList/sub-age-19.png"
+                                                    alt=""><span>시스터</span>
+
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/fri-agg.svg" alt="">예매율 96%
+                                            <span class="line"></span> <span class="cust">누적관람객 1.2M</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">10K</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view">상세보기</a>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="movie1 box2">
+                                <div class="img-box">
+
+                                    <a href=""><img src="./images/movie porster/footer-poster-42.jpg" alt="">
+
+
+                                        <p>2</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-12.png" alt=""><span>두
+                                                    피아노를 위한 콘체르토</span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/none-agg.svg" alt="">예매율 34%
+                                            <span class="line"></span> <span class="cust">누적관람객 12K</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">3400</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="movie1 box3">
+                                <div class="img-box">
+
+                                    <a href="">
+                                        <img src="./images/movie porster/footer-poster-32.jpg" alt="">
+
+                                        <p>3</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-19.png"
+                                                    alt=""><span>에반게리온 신극장판 : Q</span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/nomal-agg.svg" alt="">예매율 33.3%
+                                            <span class="line"></span> <span class="cust">누적관람객 9.8K</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">203</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="movie1 box4">
+                                <div class="img-box">
+
+                                    <a href="">
+                                        <img src="./images/movie porster/footer-poster-69.jpg" alt="">
+
+                                        <p>4</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-15.png"
+                                                    alt=""><span>왕과 사는
+                                                    남자</span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/fri-agg.svg" alt="">예매율 88%
+                                            <span class="line"></span> <span class="cust">누적관람객 2M</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">5.6K</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="movie1 box5">
+                                <div class="img-box">
+
+                                    <a href="">
+                                        <img src="./images/movie porster/footer-poster-03.jpg" alt="">
+
+                                        <p>5</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-12.png"
+                                                    alt=""><span>아바타</span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/nomal-agg.svg" alt="">예매율 73%
+                                            <span class="line"></span> <span class="cust">누적관람객 5.4M</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">3.1K</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="movie1 box6">
+                                <div class="img-box">
+
+                                    <a href="">
+                                        <img src="./images/movie porster/footer-poster-94.jpg" alt="">
+
+                                        <p>6</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-15.png"
+                                                    alt=""><span>몬테크리스토 백작</span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/best-agg.svg" alt="">예매율 12.4%
+                                            <span class="line"></span> <span class="cust">누적관람객 1.5K</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">180</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="movie1 box7">
+                                <div class="img-box">
+
+                                    <a href="">
+                                        <img src="./images/movie porster/footer-poster-04.jpg" alt="">
+
+                                        <p>7</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-all.png"
+                                                    alt=""><span>여행과
+                                                    나날</span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/fri-agg.svg" alt="">예매율 12.5%
+                                            <span class="line"></span> <span class="cust">누적관람객 320명</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">98</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+                            <div class="movie1 box8">
+                                <div class="img-box">
+
+                                    <a href="">
+                                        <img src="./images/movie porster/footer-poster-95.jpg" alt="">
+
+                                        <p>8</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-12.png"
+                                                    alt=""><span>휴민트</span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/best-agg.svg" alt="">예매율 0.8%
+                                            <span class="line"></span> <span class="cust">누적관람객 203명</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">450</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="movie1 box9">
+                                <div class="img-box">
+
+                                    <a href="">
+                                        <img src="./images/movie porster/footer-poster-05.jpg" alt="">
+
+                                        <p>9</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-15.png"
+                                                    alt=""><span>만약에
+                                                    우리</span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/nomal-agg.svg" alt="">예매율 45%
+                                            <span class="line"></span> <span class="cust">누적관람객 3K</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">790</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="movie1 box10">
+                                <div class="img-box">
+
+                                    <a href="">
+                                        <img src="./images/movie porster/footer-poster-75.jpg" alt="">
+
+                                        <p>10</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-12.png"
+                                                    alt=""><span>호퍼스</span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/best-agg.svg" alt="">예매율 68%
+                                            <span class="line"></span> <span class="cust">누적관람객 40K</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">6.7K</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="movie1 box11">
+                                <div class="img-box">
+
+                                    <a href="">
+                                        <img src="./images/movie porster/footer-poster-45.jpg" alt="">
+
+                                        <p>11</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-all.png"
+                                                    alt=""><span>리틀
+                                                    아멜리</span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/fri-agg.svg" alt="">예매율 67.3%
+                                            <span class="line"></span> <span class="cust">누적관람객 1.2K</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">940</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="movie1 box12">
+                                <div class="img-box">
+
+                                    <a href="">
+                                        <img src="./images/movie porster/footer-poster-77.jpg" alt="">
+
+                                        <p>12</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-15.png"
+                                                    alt=""><span>우리는
+                                                    매일매일</span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/none-agg.svg" alt="">예매율 45%
+                                            <span class="line"></span> <span class="cust">누적관람객 600명</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">450</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="movie1 box">
+                                <div class="img-box">
+
+                                    <a href="">
+                                        <img src="./images/movie porster/footer-poster-93.jpg" alt="">
+
+                                        <p>13</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-15.png"
+                                                    alt=""><span>녹나무의
+                                                    파수꾼</span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/fri-agg.svg" alt="">예매율 23%
+                                            <span class="line"></span> <span class="cust">누적관람객 30K</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">400</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="movie1">
+                                <div class="img-box">
+
+                                    <a href="">
+                                        <img src="./images/movie porster/footer-poster-100.jpg" alt="">
+
+                                        <p>14</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-12.png"
+                                                    alt=""><span>모래그릇</span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/best-agg.svg" alt="">예매율 60%
+                                            <span class="line"></span> <span class="cust">누적관람객 1.9M</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">3.4K</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="movie1">
+                                <div class="img-box">
+
+                                    <a href="">
+                                        <img src="./images/movie porster/footer-poster-66.jpg" alt="">
+
+                                        <p>15</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-all.png"
+                                                    alt=""><span>아르코</span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/fri-agg.svg" alt="">예매율 8.3%
+                                            <span class="line"></span> <span class="cust">누적관람객 4.6M</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">4.7K</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="movie1">
+                                <div class="img-box">
+
+                                    <a href="">
+                                        <img src="./images/movie porster/footer-poster-09.jpg" alt="">
+
+                                        <p>16</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-19.png"
+                                                    alt=""><span>하우스메이트</span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/nomal-agg.svg" alt="">예매율 45%
+                                            <span class="line"></span> <span class="cust">누적관람객 1K</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">9870</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="movie1">
+                                <div class="img-box">
+
+                                    <a href="">
+                                        <img src="./images/movie porster/footer-poster-10.jpg" alt="">
+
+                                        <p>17</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-12.png"
+                                                    alt=""><span>오늘 밤,
+                                                    세계에서 이 사랑이 사라진다 해도</span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/best-agg.svg" alt="">예매율 69.6%
+                                            <span class="line"></span> <span class="cust">누적관람객 1.3M</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">3.4K</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="movie1">
+                                <div class="img-box">
+
+                                    <a href="">
+                                        <img src="./images/movie porster/footer-poster-11.jpg" alt="">
+
+                                        <p>18</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-19.png"
+                                                    alt=""><span>직장상사
+                                                    길들이기</span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/best-agg.svg" alt="">예매율 67%
+                                            <span class="line"></span> <span class="cust">누적관람객 6M</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">8643</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="movie1">
+                                <div class="img-box">
+
+                                    <a href="">
+                                        <img src="./images/movie porster/footer-poster-12.jpg" alt="">
+
+                                        <p>19</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-all.png"
+                                                    alt=""><span>신비아파트
+                                                    : 한번더, 소환! </span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/nomal-agg.svg" alt="">예매율 69%
+                                            <span class="line"></span> <span class="cust">누적관람객 3.2M</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">533</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="movie1">
+                                <div class="img-box">
+
+                                    <a href="">
+                                        <img src="./images/movie porster/footer-poster-14.jpg" alt="">
+
+                                        <p>20</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-12.png"
+                                                    alt=""><span>시라트</span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/fri-agg.svg" alt="">예매율 30%
+                                            <span class="line"></span> <span class="cust">누적관람객 3K</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">300</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+                            <div class="movie1">
+                                <div class="img-box">
+
+                                    <a href="">
+                                        <img src="./images/movie porster/footer-poster-15.jpg" alt="">
+
+                                        <p>21</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-all.png"
+                                                    alt=""><span>주토피아2</span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/fri-agg.svg" alt="">예매율 70.3%
+                                            <span class="line"></span> <span class="cust">누적관람객 9M</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">5.8K</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="movie1">
+                                <div class="img-box">
+
+                                    <a href="">
+                                        <img src="./images/movie porster/footer-poster-16.jpg" alt="">
+
+                                        <p>22</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-19.png"
+                                                    alt=""><span>프라이메이트</span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/best-agg.svg" alt="">예매율 15%
+                                            <span class="line"></span> <span class="cust">누적관람객 1.2M</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">1.8k</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+
+
+
+                                </div>
+
+                            </div>
+                            <div class="movie1">
+                                <div class="img-box">
+
+                                    <a href="">
+                                        <img src="./images/movie porster/footer-poster-88.jpg" alt="">
+
+                                        <p>23</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-15.png"
+                                                    alt=""><span>콜드
+                                                    미트</span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/best-agg.svg" alt="">예매율 30%
+                                            <span class="line"></span> <span class="cust">누적관람객 3.2K</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">2.4K</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+
+
+
+                                </div>
+
+                            </div>
+
+                            <div class="movie1">
+                                <div class="img-box">
+
+                                    <a href="">
+                                        <img src="./images/movie porster/footer-poster-99.jpg" alt="">
+
+                                        <p>24</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-12.png"
+                                                    alt=""><span>넘버원</span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/fri-agg.svg" alt="">예매율 12.5%
+                                            <span class="line"></span> <span class="cust">누적관람객 1.2M</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">3020</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+
+
+
+                                </div>
+
+                            </div>
+
+
+
+
+
+
+
+                        </div>
+
+                    </div>
+
+                    <div class="content tab2 tab-wrap">
+                        <div class="list-wrap">
+                            <div class="movie1">
+                                <div class="img-box">
+
+                                    <a href=""><img src="./images/movie porster/footer-poster-09.jpg" alt="">
+
+
+                                        <p>1</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p><a href=""> <img src="./images/icon-movieList/sub-age-19.png"
+                                                    alt=""><span>하우스메이트</span>
+
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/fri-agg.svg" alt="">예매율 96%
+                                            <span class="line"></span> <span class="cust">누적관람객 1.2M</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">10K</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view">상세보기</a>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="movie1">
+                                <div class="img-box">
+
+                                    <a href=""><img src="./images/movie porster/footer-poster-78.jpg" alt="">
+
+                                        <p>2</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-12.png"
+                                                    alt=""><span>프로젝트 헤일메리</span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/none-agg.svg" alt="">예매율 34%
+                                            <span class="line"></span> <span class="cust">누적관람객 12K</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">3400</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="movie1">
+                                <div class="img-box">
+
+                                    <a href="">
+                                        <img src="./images/movie porster/footer-poster-29.jpg" alt="">
+
+                                        <p>3</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-all.png"
+                                                    alt=""><span>세계의 주인</span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/nomal-agg.svg" alt="">예매율 33.3%
+                                            <span class="line"></span> <span class="cust">누적관람객 9.8K</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">203</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="movie1">
+                                <div class="img-box">
+
+                                    <a href="">
+                                        <img src="./images/movie porster/footer-poster-19.jpg" alt="">
+
+                                        <p>4</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-15.png"
+                                                    alt=""><span>주토피아2</span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/fri-agg.svg" alt="">예매율 88%
+                                            <span class="line"></span> <span class="cust">누적관람객 2M</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">5.6K</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="movie1">
+                                <div class="img-box">
+
+                                    <a href="">
+                                        <img src="./images/movie porster/footer-poster-03.jpg" alt="">
+
+                                        <p>5</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-12.png"
+                                                    alt=""><span>아바타</span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/nomal-agg.svg" alt="">예매율 73%
+                                            <span class="line"></span> <span class="cust">누적관람객 5.4M</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">3.1K</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="movie1">
+                                <div class="img-box">
+
+                                    <a href="">
+                                        <img src="./images/movie porster/footer-poster-94.jpg" alt="">
+
+                                        <p>6</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-15.png"
+                                                    alt=""><span>몬테크리스토 백작</span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/best-agg.svg" alt="">예매율 12.4%
+                                            <span class="line"></span> <span class="cust">누적관람객 1.5K</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">180</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="movie1">
+                                <div class="img-box">
+
+                                    <a href="">
+                                        <img src="./images/movie porster/footer-poster-04.jpg" alt="">
+
+                                        <p>7</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-all.png"
+                                                    alt=""><span>여행과
+                                                    나날</span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/fri-agg.svg" alt="">예매율 12.5%
+                                            <span class="line"></span> <span class="cust">누적관람객 320명</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">98</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+                            <div class="movie1">
+                                <div class="img-box">
+
+                                    <a href="">
+                                        <img src="./images/movie porster/footer-poster-68.jpg" alt="">
+
+                                        <p>8</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-12.png"
+                                                    alt=""><span>스쿨아이돌동호회</span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/best-agg.svg" alt="">예매율 0.8%
+                                            <span class="line"></span> <span class="cust">누적관람객 203명</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">450</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="movie1">
+                                <div class="img-box">
+
+                                    <a href="">
+                                        <img src="./images/movie porster/footer-poster-05.jpg" alt="">
+
+                                        <p>9</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-15.png"
+                                                    alt=""><span>만약에
+                                                    우리</span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/nomal-agg.svg" alt="">예매율 45%
+                                            <span class="line"></span> <span class="cust">누적관람객 3K</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">790</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="movie1">
+                                <div class="img-box">
+
+                                    <a href="">
+                                        <img src="./images/movie porster/footer-poster-75.jpg" alt="">
+
+                                        <p>10</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-12.png"
+                                                    alt=""><span>호퍼스</span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/best-agg.svg" alt="">예매율 68%
+                                            <span class="line"></span> <span class="cust">누적관람객 40K</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">6.7K</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="movie1">
+                                <div class="img-box">
+
+                                    <a href="">
+                                        <img src="./images/movie porster/footer-poster-45.jpg" alt="">
+
+                                        <p>11</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-all.png"
+                                                    alt=""><span>리틀
+                                                    아멜리</span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/fri-agg.svg" alt="">예매율 67.3%
+                                            <span class="line"></span> <span class="cust">누적관람객 1.2K</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">940</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="movie1">
+                                <div class="img-box">
+
+                                    <a href="">
+                                        <img src="./images/movie porster/footer-poster-77.jpg" alt="">
+
+                                        <p>12</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-15.png"
+                                                    alt=""><span>우리는
+                                                    매일매일</span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/none-agg.svg" alt="">예매율 45%
+                                            <span class="line"></span> <span class="cust">누적관람객 600명</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">450</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="movie1">
+                                <div class="img-box">
+
+                                    <a href="">
+                                        <img src="./images/movie porster/footer-poster-93.jpg" alt="">
+
+                                        <p>13</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-15.png"
+                                                    alt=""><span>녹나무의
+                                                    파수꾼</span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/fri-agg.svg" alt="">예매율 23%
+                                            <span class="line"></span> <span class="cust">누적관람객 30K</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">400</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="movie1">
+                                <div class="img-box">
+
+                                    <a href="">
+                                        <img src="./images/movie porster/footer-poster-100.jpg" alt="">
+
+                                        <p>14</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-12.png"
+                                                    alt=""><span>모래그릇</span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/best-agg.svg" alt="">예매율 60%
+                                            <span class="line"></span> <span class="cust">누적관람객 1.9M</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">3.4K</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="movie1">
+                                <div class="img-box">
+
+                                    <a href="">
+                                        <img src="./images/movie porster/footer-poster-66.jpg" alt="">
+
+                                        <p>15</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-all.png"
+                                                    alt=""><span>아르코</span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/fri-agg.svg" alt="">예매율 8.3%
+                                            <span class="line"></span> <span class="cust">누적관람객 4.6M</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">4.7K</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="movie1">
+                                <div class="img-box">
+
+                                    <a href="">
+                                        <img src="./images/movie porster/footer-poster-09.jpg" alt="">
+
+                                        <p>16</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-19.png"
+                                                    alt=""><span>하우스메이트</span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/nomal-agg.svg" alt="">예매율 45%
+                                            <span class="line"></span> <span class="cust">누적관람객 1K</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">9870</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="movie1">
+                                <div class="img-box">
+
+                                    <a href="">
+                                        <img src="./images/movie porster/footer-poster-10.jpg" alt="">
+
+                                        <p>17</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-12.png"
+                                                    alt=""><span>오늘 밤,
+                                                    세계에서 이 사랑이 사라진다 해도</span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/best-agg.svg" alt="">예매율 69.6%
+                                            <span class="line"></span> <span class="cust">누적관람객 1.3M</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">3.4K</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="movie1">
+                                <div class="img-box">
+
+                                    <a href="">
+                                        <img src="./images/movie porster/footer-poster-11.jpg" alt="">
+
+                                        <p>18</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-19.png"
+                                                    alt=""><span>직장상사
+                                                    길들이기</span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/best-agg.svg" alt="">예매율 67%
+                                            <span class="line"></span> <span class="cust">누적관람객 6M</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">8643</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="movie1">
+                                <div class="img-box">
+
+                                    <a href="">
+                                        <img src="./images/movie porster/footer-poster-12.jpg" alt="">
+
+                                        <p>19</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-all.png"
+                                                    alt=""><span>신비아파트
+                                                    : 한번더, 소환! </span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/nomal-agg.svg" alt="">예매율 69%
+                                            <span class="line"></span> <span class="cust">누적관람객 3.2M</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">533</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="movie1">
+                                <div class="img-box">
+
+                                    <a href="">
+                                        <img src="./images/movie porster/footer-poster-14.jpg" alt="">
+
+                                        <p>20</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-12.png"
+                                                    alt=""><span>시라트</span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/fri-agg.svg" alt="">예매율 30%
+                                            <span class="line"></span> <span class="cust">누적관람객 3K</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">300</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+                            <div class="movie1">
+                                <div class="img-box">
+
+                                    <a href="">
+                                        <img src="./images/movie porster/footer-poster-15.jpg" alt="">
+
+                                        <p>21</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-all.png"
+                                                    alt=""><span>주토피아2</span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/fri-agg.svg" alt="">예매율 70.3%
+                                            <span class="line"></span> <span class="cust">누적관람객 9M</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">5.8K</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="movie1">
+                                <div class="img-box">
+
+                                    <a href="">
+                                        <img src="./images/movie porster/footer-poster-16.jpg" alt="">
+
+                                        <p>22</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-19.png"
+                                                    alt=""><span>프라이메이트</span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/best-agg.svg" alt="">예매율 15%
+                                            <span class="line"></span> <span class="cust">누적관람객 1.2M</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">1.8k</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+
+
+
+                                </div>
+
+                            </div>
+                            <div class="movie1">
+                                <div class="img-box">
+
+                                    <a href="">
+                                        <img src="./images/movie porster/footer-poster-88.jpg" alt="">
+
+                                        <p>23</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-15.png"
+                                                    alt=""><span>콜드
+                                                    미트</span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/best-agg.svg" alt="">예매율 30%
+                                            <span class="line"></span> <span class="cust">누적관람객 3.2K</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">2.4K</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+
+
+
+                                </div>
+
+                            </div>
+
+                            <div class="movie1">
+                                <div class="img-box">
+
+                                    <a href="">
+                                        <img src="./images/movie porster/footer-poster-99.jpg" alt="">
+
+                                        <p>24</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-12.png"
+                                                    alt=""><span>넘버원</span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/fri-agg.svg" alt="">예매율 12.5%
+                                            <span class="line"></span> <span class="cust">누적관람객 1.2M</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">3020</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+
+
+
+                                </div>
+
+                            </div>
+
+
+
+
+
+
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="content tab3 tab-wrap">
+                        <div class="list-wrap">
+                            <div class="movie1">
+                                <div class="img-box">
+
+                                    <a href=""><img src="./images/movie porster/footer-poster-18.jpg" alt="">
+
+
+                                        <p>1</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p><a href=""> <img src="./images/icon-movieList/sub-age-19.png"
+                                                    alt=""><span>프로젝트Y</span>
+
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/fri-agg.svg" alt="">예매율 96%
+                                            <span class="line"></span> <span class="cust">누적관람객 1.2M</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">10K</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view">상세보기</a>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="movie1">
+                                <div class="img-box">
+
+                                    <a href=""><img src="./images/movie porster/footer-poster-48.jpg" alt="">
+
+                                        <p>2</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-12.png"
+                                                    alt=""><span>731</span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/none-agg.svg" alt="">예매율 34%
+                                            <span class="line"></span> <span class="cust">누적관람객 12K</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">3400</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="movie1">
+                                <div class="img-box">
+
+                                    <a href="">
+                                        <img src="./images/movie porster/footer-poster-22.jpg" alt="">
+
+                                        <p>3</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-all.png"
+                                                    alt=""><span>타년타일</span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/nomal-agg.svg" alt="">예매율 33.3%
+                                            <span class="line"></span> <span class="cust">누적관람객 9.8K</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">203</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="movie1">
+                                <div class="img-box">
+
+                                    <a href="">
+                                        <img src="./images/movie porster/footer-poster-35.jpg" alt="">
+
+                                        <p>4</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-15.png"
+                                                    alt=""><span>하양영화 특별판</span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/fri-agg.svg" alt="">예매율 88%
+                                            <span class="line"></span> <span class="cust">누적관람객 2M</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">5.6K</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="movie1">
+                                <div class="img-box">
+
+                                    <a href="">
+                                        <img src="./images/movie porster/footer-poster-03.jpg" alt="">
+
+                                        <p>5</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-12.png"
+                                                    alt=""><span>아바타</span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/nomal-agg.svg" alt="">예매율 73%
+                                            <span class="line"></span> <span class="cust">누적관람객 5.4M</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">3.1K</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="movie1">
+                                <div class="img-box">
+
+                                    <a href="">
+                                        <img src="./images/movie porster/footer-poster-94.jpg" alt="">
+
+                                        <p>6</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-15.png"
+                                                    alt=""><span>몬테크리스토 백작</span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/best-agg.svg" alt="">예매율 12.4%
+                                            <span class="line"></span> <span class="cust">누적관람객 1.5K</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">180</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="movie1">
+                                <div class="img-box">
+
+                                    <a href="">
+                                        <img src="./images/movie porster/footer-poster-04.jpg" alt="">
+
+                                        <p>7</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-all.png"
+                                                    alt=""><span>여행과
+                                                    나날</span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/fri-agg.svg" alt="">예매율 12.5%
+                                            <span class="line"></span> <span class="cust">누적관람객 320명</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">98</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+                            <div class="movie1">
+                                <div class="img-box">
+
+                                    <a href="">
+                                        <img src="./images/movie porster/footer-poster-68.jpg" alt="">
+
+                                        <p>8</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-12.png"
+                                                    alt=""><span>스쿨아이돌동호회</span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/best-agg.svg" alt="">예매율 0.8%
+                                            <span class="line"></span> <span class="cust">누적관람객 203명</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">450</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="movie1">
+                                <div class="img-box">
+
+                                    <a href="">
+                                        <img src="./images/movie porster/footer-poster-05.jpg" alt="">
+
+                                        <p>9</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-15.png"
+                                                    alt=""><span>만약에
+                                                    우리</span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/nomal-agg.svg" alt="">예매율 45%
+                                            <span class="line"></span> <span class="cust">누적관람객 3K</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">790</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="movie1">
+                                <div class="img-box">
+
+                                    <a href="">
+                                        <img src="./images/movie porster/footer-poster-75.jpg" alt="">
+
+                                        <p>10</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-12.png"
+                                                    alt=""><span>호퍼스</span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/best-agg.svg" alt="">예매율 68%
+                                            <span class="line"></span> <span class="cust">누적관람객 40K</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">6.7K</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="movie1">
+                                <div class="img-box">
+
+                                    <a href="">
+                                        <img src="./images/movie porster/footer-poster-45.jpg" alt="">
+
+                                        <p>11</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-all.png"
+                                                    alt=""><span>리틀
+                                                    아멜리</span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/fri-agg.svg" alt="">예매율 67.3%
+                                            <span class="line"></span> <span class="cust">누적관람객 1.2K</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">940</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="movie1">
+                                <div class="img-box">
+
+                                    <a href="">
+                                        <img src="./images/movie porster/footer-poster-77.jpg" alt="">
+
+                                        <p>12</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-15.png"
+                                                    alt=""><span>우리는
+                                                    매일매일</span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/none-agg.svg" alt="">예매율 45%
+                                            <span class="line"></span> <span class="cust">누적관람객 600명</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">450</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="movie1">
+                                <div class="img-box">
+
+                                    <a href="">
+                                        <img src="./images/movie porster/footer-poster-93.jpg" alt="">
+
+                                        <p>13</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-15.png"
+                                                    alt=""><span>녹나무의
+                                                    파수꾼</span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/fri-agg.svg" alt="">예매율 23%
+                                            <span class="line"></span> <span class="cust">누적관람객 30K</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">400</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="movie1">
+                                <div class="img-box">
+
+                                    <a href="">
+                                        <img src="./images/movie porster/footer-poster-100.jpg" alt="">
+
+                                        <p>14</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-12.png"
+                                                    alt=""><span>모래그릇</span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/best-agg.svg" alt="">예매율 60%
+                                            <span class="line"></span> <span class="cust">누적관람객 1.9M</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">3.4K</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="movie1">
+                                <div class="img-box">
+
+                                    <a href="">
+                                        <img src="./images/movie porster/footer-poster-66.jpg" alt="">
+
+                                        <p>15</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-all.png"
+                                                    alt=""><span>아르코</span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/fri-agg.svg" alt="">예매율 8.3%
+                                            <span class="line"></span> <span class="cust">누적관람객 4.6M</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">4.7K</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="movie1">
+                                <div class="img-box">
+
+                                    <a href="">
+                                        <img src="./images/movie porster/footer-poster-09.jpg" alt="">
+
+                                        <p>16</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-19.png"
+                                                    alt=""><span>하우스메이트</span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/nomal-agg.svg" alt="">예매율 45%
+                                            <span class="line"></span> <span class="cust">누적관람객 1K</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">9870</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="movie1">
+                                <div class="img-box">
+
+                                    <a href="">
+                                        <img src="./images/movie porster/footer-poster-10.jpg" alt="">
+
+                                        <p>17</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-12.png"
+                                                    alt=""><span>오늘 밤,
+                                                    세계에서 이 사랑이 사라진다 해도</span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/best-agg.svg" alt="">예매율 69.6%
+                                            <span class="line"></span> <span class="cust">누적관람객 1.3M</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">3.4K</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="movie1">
+                                <div class="img-box">
+
+                                    <a href="">
+                                        <img src="./images/movie porster/footer-poster-11.jpg" alt="">
+
+                                        <p>18</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-19.png"
+                                                    alt=""><span>직장상사
+                                                    길들이기</span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/best-agg.svg" alt="">예매율 67%
+                                            <span class="line"></span> <span class="cust">누적관람객 6M</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">8643</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="movie1">
+                                <div class="img-box">
+
+                                    <a href="">
+                                        <img src="./images/movie porster/footer-poster-12.jpg" alt="">
+
+                                        <p>19</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-all.png"
+                                                    alt=""><span>신비아파트
+                                                    : 한번더, 소환! </span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/nomal-agg.svg" alt="">예매율 69%
+                                            <span class="line"></span> <span class="cust">누적관람객 3.2M</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">533</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="movie1">
+                                <div class="img-box">
+
+                                    <a href="">
+                                        <img src="./images/movie porster/footer-poster-14.jpg" alt="">
+
+                                        <p>20</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-12.png"
+                                                    alt=""><span>시라트</span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/fri-agg.svg" alt="">예매율 30%
+                                            <span class="line"></span> <span class="cust">누적관람객 3K</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">300</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+                            <div class="movie1">
+                                <div class="img-box">
+
+                                    <a href="">
+                                        <img src="./images/movie porster/footer-poster-15.jpg" alt="">
+
+                                        <p>21</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-all.png"
+                                                    alt=""><span>주토피아2</span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/fri-agg.svg" alt="">예매율 70.3%
+                                            <span class="line"></span> <span class="cust">누적관람객 9M</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">5.8K</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="movie1">
+                                <div class="img-box">
+
+                                    <a href="">
+                                        <img src="./images/movie porster/footer-poster-16.jpg" alt="">
+
+                                        <p>22</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-19.png"
+                                                    alt=""><span>프라이메이트</span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/best-agg.svg" alt="">예매율 15%
+                                            <span class="line"></span> <span class="cust">누적관람객 1.2M</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">1.8k</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+
+
+
+                                </div>
+
+                            </div>
+                            <div class="movie1">
+                                <div class="img-box">
+
+                                    <a href="">
+                                        <img src="./images/movie porster/footer-poster-88.jpg" alt="">
+
+                                        <p>23</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-15.png"
+                                                    alt=""><span>콜드
+                                                    미트</span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/best-agg.svg" alt="">예매율 30%
+                                            <span class="line"></span> <span class="cust">누적관람객 3.2K</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">2.4K</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+
+
+
+                                </div>
+
+                            </div>
+
+                            <div class="movie1">
+                                <div class="img-box">
+
+                                    <a href="">
+                                        <img src="./images/movie porster/footer-poster-99.jpg" alt="">
+
+                                        <p>24</p>
+                                    </a>
+                                </div>
+                                <div class="text-box">
+                                    <div class="title">
+                                        <p>
+                                            <a href=""> <img src="./images/icon-movieList/sub-age-12.png"
+                                                    alt=""><span>넘버원</span>
+
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="sub-info">
+                                        <p><img src="./images/icon-movieList/fri-agg.svg" alt="">예매율 12.5%
+                                            <span class="line"></span> <span class="cust">누적관람객 1.2M</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mov-btn-wrap"> <a href="" class="btn view heart-btn"><img
+                                                src="./images/icon-movieList/heart-02.png" alt=""> <span
+                                                class="like-count">3020</span></a>
+                                        <a href="#" class="btn reserv">예매하기</a>
+                                        <a href="#" class="btn view heart-btn">상세보기</a>
+                                    </div>
+
+
+
+                                </div>
+
+                            </div>
+
+
+
+
+
+
+
+                        </div>
+
+                    </div>
+                </div>
+        </section>
+    </main>
+    <!-- 푸터영역 -->
+    <footer id="footer"></footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            let hamBtns = document.querySelectorAll('.ham-btn a');
+            let closeBtn = document.querySelector('.ham-close');
+
+            hamBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    document.body.classList.add('active');
+                });
+            });
+
+            function closeHam() {
+                document.body.classList.remove('active');
+            }
+
+            closeBtn.addEventListener('click', closeHam);
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            document.addEventListener("click", (e) => {
+
+                // 하트 버튼만 잡기
+                const btn = e.target.closest(".heart-btn");
+                if (!btn) return;
+
+                // (중요) a 태그 기본 이동 막기 → 탭이 바뀌거나 #으로 튕기는 거 방지
+                e.preventDefault();
+
+                const img = btn.querySelector("img");
+                const countEl = btn.querySelector(".like-count");
+                if (!img || !countEl) return;
+
+                let text = countEl.textContent.trim();
+
+                const liked = btn.classList.toggle("liked");
+
+                // 이미지 토글
+                img.src = liked
+                    ? "./images/icon-movieList/heart-01.png"
+                    : "./images/icon-movieList/heart-02.png";
+
+                // k 포함되면 숫자 변경 안함
+                if (text.includes("k") || text.includes("K")) return;
+
+                // 숫자만 추출 (콤마/공백/문자 있어도 안전)
+                let count = parseInt(text.replace(/[^\d]/g, ""), 10);
+                if (isNaN(count)) return;
+
+                count = liked ? count + 1 : count - 1;
+                countEl.textContent = count;
+
+            });
+
+        });
+
+
+
+
+        // =============================================================================================
+
+
+
+
+        // tab-title-list>li를 저장
+        let tabTitles = document.querySelectorAll(".m-button-list>li"
+        );
+        // tab-content를 저장
+        let tabContents = document.querySelectorAll(".movie-list-tab-wrap>div");
+        console.log(tabContents);
+        // 이벤트 줄 버튼 찾기 /밖안요소 포이치 => 안에요소전부선택 포이치
+        tabTitles.forEach((tab, id) => {
+            console.log(tabTitles);
+            tab.addEventListener("click", () => {
+                tabTitles.forEach((t, i) => {
+                    t.classList.remove("active");
+                    tabContents[i].classList.remove("active");
+                })
+                tab.classList.add("active");
+                tabContents[id].classList.add("active");
+
+            })
+        })
+
+    </script>
+</body>
+
+</html>
