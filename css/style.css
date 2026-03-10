@@ -1415,7 +1415,7 @@ header form:hover>input {
     display: flex;
     gap: 10px;
     padding-top: 60px;
-    
+
 }
 
 .special-section .btn-wrap button {
@@ -1594,6 +1594,11 @@ header form:hover>input {
     padding: 35px 0;
 }
 
+.notice-list {
+    max-width: 1700px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
 
 .notice-section .top-list {
     /* padding: 34px 0; */
@@ -1602,8 +1607,6 @@ header form:hover>input {
     justify-content: space-between;
     position: relative;
 }
-
-
 
 .notice-section .top-list::before {
     top: 0;
