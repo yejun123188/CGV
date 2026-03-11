@@ -631,11 +631,11 @@ header form:hover>input {
 }
 
 .movie-list {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
-    justify-content: space-between;
-    position: relative;
 }
+
 
 .poster-box {
     position: relative;
@@ -694,10 +694,16 @@ header form:hover>input {
 }
 
 .poster-box .blind {
+    display: none;
     position: absolute;
-    top: 90px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: #ffffff;
     pointer-events: none;
+    width: 100%;
+    padding: 1.2rem;
+    /* background: green; */
 }
 
 .movie-title {
@@ -716,7 +722,7 @@ header form:hover>input {
     text-align: center;
 }
 
-.movie-title .one {
+/* .movie-title .one {
     background-color: rgba(211, 151, 54, 80);
 
 }
@@ -737,7 +743,7 @@ header form:hover>input {
     background-color: rgba(202, 73, 73, 80);
     ;
 
-}
+} */
 
 .text-box .title-sub::before {
     content: "";
@@ -768,14 +774,20 @@ header form:hover>input {
 
 .ticket-box {
     position: relative;
+    background-color: red;
+    background: url(../images/movie/poster-ticket.png) no-repeat;
+    border-radius: 0 0 30px 30px;
+    overflow: hidden;
+    padding: 2rem;
+    background-size: 100%;
 
 }
 
 .ticket-box .text-box {
-    position: absolute;
-    bottom: 25%;
+    /* position: absolute; */
+    /* bottom: 25%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%); */
     width: 100%;
     ;
 }
@@ -808,24 +820,18 @@ header form:hover>input {
 }
 
 .poster-box .blind {
-    display: none;
+    /* display: none; */
     flex-direction: column;
     /* gap: 20px; */
     justify-content: left;
 }
 
-.poster-box .blind p {
-    padding: 0 30px;
-    /* text-align: center */
-    /* font-weight: 100;
-    font-size: 12px; */
-}
 
 .blind .blind-1 {
     text-align: left;
-    width: 350px;
+    /* width: 350px; */
     /* text-align: center; */
-    transform: translate(20px, 8px);
+    /* transform: translate(20px, 8px); */
 
 
 }
@@ -841,22 +847,28 @@ header form:hover>input {
 }
 
 .blind .zulgeri {
+    margin-top: 2rem;
     text-align: left;
     letter-spacing: 2;
 
     font-weight: 100;
-    padding-top: 30px;
-    padding-left: 30px;
-    transform: translate(-10px, 8px);
-    width: 350px;
+    /* padding-top: 30px;
+    padding-left: 30px; */
+
+    /* transform: translate(-10px, 8px); */
+    /* width: 350px; */
     display: -webkit-box;
     /* 방향설정 세로방향 */
     -webkit-box-orient: vertical;
     /* 줄수 장하기 */
-    -webkit-line-clamp: 11;
+    -webkit-line-clamp: 9;
     overflow: hidden;
     /* 줄을 변경될 경우 단어를 묶어서 */
     word-break: keep-all;
+}
+
+.blind .zulgeri p {
+    display: inline;
 }
 
 .chart-section .mov-btn-wrap {
@@ -893,8 +905,99 @@ header form:hover>input {
     background-color: var(--Hblk-btn);
 }
 
+@media screen and (max-width:1900px) {
+    .ticket-box {
+        position: relative;
+        background-color: red;
+        background: url(../images/movie/poster-ticket.png) no-repeat;
+        border-radius: 0 0 30px 30px;
+        overflow: hidden;
+        background-size: 100%;
 
-@media screen and (max-width:1280px) {
+    }
+
+
+}
+
+
+
+
+@media screen and (max-width:1288px) {
+
+    .ticket-box {
+        position: relative;
+        background-color: red;
+        background: url(../images/movie/poster-ticket.png) no-repeat;
+        border-radius: 0 0 30px 30px;
+        /* padding: 1rem; */
+        overflow: hidden;
+        background-size: 100%;
+
+    }
+
+    .ticket-box .movie-title h3 {
+        font-size: var(--px24);
+    }
+
+    .ticket-box .title-sub p {
+        display: none;
+    }
+
+    .ticket-box .title-sub .egg {
+        display: none;
+    }
+
+    .chart-section .inner {
+        max-width: 1280px;
+        /* min-width: 798px; */
+        /* 더 이상 줄어들지 않게 */
+        margin: auto;
+        padding: 0 20px;
+    }
+
+    .movie-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    /* ✅ 3개 정렬 */
+    .movie-list li {
+        width: calc((100% - 40px) / 3);
+        flex-shrink: 0;
+        /* 카드 찌그러짐 방지 */
+    }
+
+    /* ✅ 마지막 li.movieNone 숨기기 */
+    .movie-list li.movieNone {
+        display: none;
+    }
+
+    .chart-section .inner {
+        max-width: 1280px;
+        /* min-width: 798px; */
+        /* 더 이상 줄어들지 않게 */
+        margin: auto;
+        padding: 0 20px;
+    }
+
+    .movie-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    /* ✅ 3개 정렬 */
+    .movie-list li {
+        width: calc((100% - 40px) / 3);
+        flex-shrink: 0;
+        /* 카드 찌그러짐 방지 */
+    }
+
+    /* ✅ 마지막 li.movieNone 숨기기 */
+    .movie-list li.movieNone {
+        display: none;
+    }
 
     .section-header>.section-title {
         font-size: 28px;
@@ -916,10 +1019,6 @@ header form:hover>input {
         flex-wrap: wrap;
     }
 
-    .movie-list li {
-        width: calc((100% - 80px) / 2);
-    }
-
     .ticket-box .text-box .movie-title {
         font-size: 20px;
     }
@@ -930,7 +1029,94 @@ header form:hover>input {
 
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:1420px) {
+
+
+    .ticket-box {
+        position: relative;
+        background-color: red;
+        background: url(../images/movie/poster-ticket.png) no-repeat;
+        border-radius: 0 0 30px 30px;
+        overflow: hidden;
+        padding: 1rem;
+        background-size: 100%;
+    }
+
+    .ticket-box .title-sub {
+        display: none;
+    }
+}
+
+@media screen and (max-width:912px) {
+    .ticket-box {
+        position: relative;
+        background-color: red;
+        background: url(../images/movie/poster-ticket.png) no-repeat;
+        border-radius: 0 0 30px 30px;
+        padding: 2rem;
+        overflow: hidden;
+        background-size: 100%;
+
+    }
+
+    .ticket-box .movie-title h3 {
+        font-size: 24px;
+    }
+
+}
+
+@media screen and (max-width:850px) {
+
+
+    .ticket-box {
+        position: relative;
+        background-color: red;
+        background: url(../images/movie/poster-ticket.png) no-repeat;
+        border-radius: 0 0 30px 30px;
+
+        overflow: hidden;
+        background-size: 100%;
+
+    }
+
+    .blind .zulgeri {
+        /* margin-top: 2rem; */
+        text-align: left;
+        letter-spacing: 2;
+
+        font-weight: 100;
+        /* padding-top: 30px;
+    padding-left: 30px; */
+
+        /* transform: translate(-10px, 8px); */
+        /* width: 350px; */
+        display: -webkit-box;
+        /* 방향설정 세로방향 */
+        -webkit-box-orient: vertical;
+        /* 줄수 장하기 */
+        -webkit-line-clamp: 5;
+        overflow: hidden;
+        /* 줄을 변경될 경우 단어를 묶어서 */
+        word-break: keep-all;
+    }
+
+    .movie-list {
+        min-width: 0;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .ticket-box .movie-title h3 {
+        font-size: var(--px20);
+    }
+
+    .movie-list li {
+        width: 50%;
+    }
+
+    .movie-list li.movieNone {
+        display: block;
+    }
 
     .inner {
         padding: 0 20px;
@@ -958,7 +1144,11 @@ header form:hover>input {
 
     .m-button-list {
         flex-wrap: wrap;
-        gap: 15px;
+        gap: 20px;
+    }
+
+    .m-button-list li {
+        font-size: 12px;
     }
 
     .m-button-list a {
@@ -979,6 +1169,10 @@ header form:hover>input {
     }
 
     .title-sub {
+        display: none;
+    }
+
+    .title-sub {
         gap: 4px;
     }
 
@@ -994,10 +1188,85 @@ header form:hover>input {
 
 }
 
+@media screen and (max-width:544px) {
+    .ticket-box {
+        position: relative;
+        background-color: red;
+        background: url(../images/movie/poster-ticket.png) no-repeat;
+        border-radius: 0 0 30px 30px;
+        padding: 1rem;
+        overflow: hidden;
+        background-size: 100%;
+
+    }
+
+    .ticket-box .movie-title h3 {
+        font-size: 20px;
+    }
+
+}
+
+
 @media screen and (max-width:480px) {
 
-    .movie-list li {
+    .inner {
+        min-width: 480px
+    }
+
+    .ticket-box {
+        position: relative;
+        background-color: red;
+        background: url(../images/movie/poster-ticket.png) no-repeat;
+        border-radius: 0 0 30px 30px;
+        padding: 1rem;
+        overflow: hidden;
+        background-size: 100%;
+
+    }
+
+    .blind .zulgeri {
+        margin-top: 2rem;
+        text-align: left;
+        letter-spacing: 2;
+
+        font-weight: 100;
+        /* padding-top: 30px;
+    padding-left: 30px; */
+
+        /* transform: translate(-10px, 8px); */
+        /* width: 350px; */
+        display: -webkit-box;
+        /* 방향설정 세로방향 */
+        -webkit-box-orient: vertical;
+        /* 줄수 장하기 */
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        /* 줄을 변경될 경우 단어를 묶어서 */
+        word-break: keep-all;
+    }
+
+    .ticket-box .movie-title h3 {
+        font-size: 15px;
+
+    }
+
+    .chart-section .inner {
+        max-width: 480px;
+        min-width: 0;
         width: 100%;
+        padding: 0 16px;
+        box-sizing: border-box;
+    }
+
+    .movie-list {
+        min-width: 0;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+
+    .title-sub {
+        display: none;
     }
 
     .m-button-list {
@@ -1012,10 +1281,6 @@ header form:hover>input {
         font-size: 16px;
     }
 
-    .title-sub p {
-        font-size: 12px;
-    }
-
     .mov-btn-wrap {
         flex-direction: column;
         gap: 6px;
@@ -1026,8 +1291,151 @@ header form:hover>input {
         text-align: center;
     }
 
+
 }
 
+@media screen and (max-width:430px) {
+    .ticket-box .text-box .movie-title {
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .ticket-box .age-box {
+        width: 25px;
+    }
+
+    .m-button-list {
+        gap: 20px;
+    }
+
+    .m-button-list li {
+
+        font-size: 8.4px;
+    }
+
+    .more-btn a {
+        font-size: 10px;
+    }
+
+    .poster-box .rank {
+        font-size: 35px;
+
+    }
+
+    .blind .blind-1 p {
+        font-size: 18px;
+    }
+
+    .blind .blind-1 .genres {
+        font-size: 10px;
+    }
+
+    .blind .zulgeri p {
+        font-size: 12px;
+
+    }
+
+    .blind .zulgeri {
+        /* margin-top: 2rem; */
+        text-align: left;
+        /* letter-spacing: 2; */
+
+        font-weight: 100;
+        /* padding-top: 30px;
+        padding-left: 30px; */
+
+        /* transform: translate(-10px, 8px); */
+        /* width: 350px; */
+        display: -webkit-box;
+        /* 방향설정 세로방향 */
+        -webkit-box-orient: vertical;
+        /* 줄수 장하기 */
+        -webkit-line-clamp: 5;
+        overflow: hidden;
+        /* 줄을 변경될 경우 단어를 묶어서 */
+        word-break: keep-all;
+
+
+    }
+}
+
+@media screen and (max-width:370px) {
+
+    .ticket-box .movie-title h3 {
+        font-size: 13px;
+    }
+
+    .ticket-box .text-box .movie-title {
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .ticket-box .age-box {
+        display: flex;
+        justify-content: center;
+
+        width: 20%
+    }
+
+    .m-button-list {}
+
+    .m-button-list li {
+
+        font-size: 8px;
+    }
+
+    .more-btn a {
+        font-size: 10px;
+    }
+
+    .poster-box .rank {
+        font-size: 35px;
+
+    }
+
+    .more-btn a {
+        font-size: 9px;
+    }
+
+    .blind .blind-1 p {
+        font-size: 18px;
+    }
+
+    .blind .blind-1 .genres {
+        font-size: 10px;
+    }
+
+    .blind .zulgeri p {
+        font-size: 12px;
+
+    }
+
+    .blind .zulgeri {
+        /* margin-top: 2rem; */
+        text-align: left;
+        /* letter-spacing: 2; */
+
+        font-weight: 100;
+        /* padding-top: 30px;
+        padding-left: 30px; */
+
+        /* transform: translate(-10px, 8px); */
+        /* width: 350px; */
+        display: -webkit-box;
+        /* 방향설정 세로방향 */
+        -webkit-box-orient: vertical;
+        /* 줄수 장하기 */
+        -webkit-line-clamp: 5;
+        overflow: hidden;
+        /* 줄을 변경될 경우 단어를 묶어서 */
+        word-break: keep-all;
+
+
+    }
+
+}
 
 
 /* ------------------------------------------------------------------ */
