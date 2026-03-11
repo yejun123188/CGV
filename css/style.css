@@ -712,6 +712,11 @@ header form:hover>input {
     align-items: center;
 }
 
+.movie-title h3 {
+    white-space: nowrap;
+
+}
+
 .movie-title .age-box {
     font-size: var(--px14);
     width: 25px;
@@ -720,17 +725,6 @@ header form:hover>input {
     font-weight: 900;
     border-radius: 5px;
     text-align: center;
-}
-
-.text-box .title-sub::before {
-    content: "";
-    display: block;
-    top: 65%;
-    left: 18%;
-    width: 15px;
-    height: 16px;
-    position: absolute;
-    background: url(../images/movie/에그지수.png);
 }
 
 .movie-list li {
@@ -754,34 +748,38 @@ header form:hover>input {
     background-color: red;
     background: url(../images/movie/poster-ticket.png) no-repeat;
     border-radius: 0 0 30px 30px;
-    overflow: hidden;
-    padding: 2rem;
+    height: 120px;
     background-size: 100%;
 
 }
 
 .ticket-box .text-box {
-    width: 100%;
-    ;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .ticket-box .text-box .movie-title {
     font-size: var(--px24);
-    padding-bottom: 19px;
     display: flex;
     justify-content: center;
 }
 
 .ticket-box .text-box .title-sub {
     display: flex;
+    gap: 10px;
+    width: 100%;
     justify-content: center;
-    gap: 3px;
-
 }
 
 .ticket-box .text-box .title-sub p {
     font-size: var(--px16);
-    margin-right: 7px;
+    white-space: nowrap;
+
 }
 
 /* 무비섹션 - 줄거리 호버 */
@@ -845,6 +843,8 @@ header form:hover>input {
     border-radius: var(--radius);
     line-height: 24px;
     transition: all 0.3s ease;
+    white-space: nowrap;
+
 }
 
 .chart-section .reserv {
@@ -863,602 +863,69 @@ header form:hover>input {
     background-color: var(--Hblk-btn);
 }
 
-/* 
-@media screen and (max-width:1900px) {
-    .ticket-box {
-        position: relative;
-        background-color: red;
-        background: url(../images/movie/poster-ticket.png) no-repeat;
-        border-radius: 0 0 30px 30px;
-        overflow: hidden;
-        background-size: 100%;
-
-    }
-
-
-}
-
-@media screen and (max-width:1299px) {
-
-
-
-    .ticket-box .movie-title h3 {
-        font-size: var(--px16);
-    }
-
-    .ticket-box .title-sub p {
+@media screen and (max-width:1450px) {
+    .ticket-box .text-box .title-sub p:last-child {
         display: none;
     }
-
-    .ticket-box .title-sub .egg {
-        display: none;
-    }
-
-
 }
-
-
- */
-
-
-
 
 
 @media screen and (max-width:1280px) {
 
-    .ticket-box {
-        position: relative;
-        background-color: red;
-        background: url(../images/movie/poster-ticket.png) no-repeat;
-        border-radius: 0 0 30px 30px;
-        overflow: hidden;
-        background-size: 100%;
-
-    }
-
-    .ticket-box .movie-title h3 {
-        font-size: var(--px24);
-    }
-
-    .ticket-box .title-sub p {
+    .movieNone {
         display: none;
-    }
-
-    .ticket-box .title-sub .egg {
-        display: none;
-    }
-
-    .chart-section .inner {
-        max-width: 1280px;
-        margin: auto;
-        padding: 0 20px;
     }
 
     .movie-list {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
+        grid-template-columns: repeat(3, 1fr);
     }
 
-    .movie-list li {
-        width: calc((100% - 40px) / 3);
-        flex-shrink: 0;
+    .movie-title h3 {
+        font-size: 24px;
     }
+}
 
-    .movie-list li.movieNone {
-        display: none;
-    }
-
-    .section-header>.section-title {
-        font-size: 28px;
-    }
-
-    .section-header>.sub-title {
-        font-size: 28px;
-    }
+@media screen and (max-width:1000px) {
 
     .m-button-list {
+        display: flex;
         gap: 30px;
     }
 
-    .m-button-list a {
-        font-size: 18px;
+    .movie-btn-wrap span {
+        padding-left: 30px;
     }
 
-    .movie-list {
-        flex-wrap: wrap;
+    .movie-btn-wrap .m-button-list a {
+        font-size: var(--px16)
     }
 
-    .ticket-box .text-box .movie-title {
-        font-size: 20px;
+    .ticket-box .text-box {
+        top: 40%;
     }
 
-    .title-sub p {
-        font-size: 14px;
-    }
-
-}
-
-/* 
-@media screen and (max-width:1420px) {
-
-
-    .ticket-box {
-        position: relative;
-        background-color: red;
-        background: url(../images/movie/poster-ticket.png) no-repeat;
-        border-radius: 0 0 30px 30px;
-        overflow: hidden;
-        padding: 1rem;
-        background-size: 100%;
-    }
-
-    .ticket-box .title-sub {
-        display: none;
+    .movie-title h3 {
+        font-size: 22px;
     }
 }
 
-@media screen and (max-width:912px) {
-    .ticket-box {
-        position: relative;
-        background-color: red;
-        background: url(../images/movie/poster-ticket.png) no-repeat;
-        border-radius: 0 0 30px 30px;
-        padding: 2rem;
-        overflow: hidden;
-        background-size: 100%;
+@media screen and (max-width:768px) {
 
+    .ticket-box .text-box {
+        top: 50%;
     }
 
-    .ticket-box .movie-title h3 {
-        font-size: 24px;
-    }
-
-}
-
-@media screen and (max-width:850px) {
-
-
-    .ticket-box {
-        position: relative;
-        background-color: red;
-        background: url(../images/movie/poster-ticket.png) no-repeat;
-        border-radius: 0 0 30px 30px;
-
-        overflow: hidden;
-        background-size: 100%;
-
-    }
-
-    .blind .zulgeri {
-        text-align: left;
-        letter-spacing: 2;
-        font-weight: 100;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 5;
-        overflow: hidden;
-        word-break: keep-all;
-    }
-
-    .movie-list {
-        min-width: 0;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-
-    .ticket-box .movie-title h3 {
-        font-size: var(--px20);
-    }
-
-    .movie-list li {
-        width: 50%;
-    }
-
-    .movie-list li.movieNone {
+    .movieNone {
         display: block;
     }
 
-    .inner {
-        padding: 0 20px;
-    }
-
-    .section-header {
-        flex-direction: column;
-        gap: 5px;
-        margin-bottom: 30px;
-    }
-
-    .section-header>.section-title {
-        font-size: 24px;
-    }
-
-    .section-header>.sub-title {
-        font-size: 20px;
-    }
-
-    .movie-btn-wrap {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
-    }
-
-    .m-button-list {
-        flex-wrap: wrap;
-        gap: 20px;
-    }
-
-    .m-button-list li {
-        font-size: 12px;
-    }
-
-    .m-button-list a {
-        font-size: 16px;
-    }
-
     .movie-list {
-        flex-wrap: wrap;
-        gap: 16px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
     }
-
-    .movie-list li {
-        width: calc((100% - 16px) / 2);
-    }
-
-    .ticket-box .text-box .movie-title {
-        font-size: 18px;
-    }
-
-    .title-sub {
-        display: none;
-    }
-
-    .title-sub {
-        gap: 4px;
-    }
-
-    .title-sub p {
-        font-size: 13px;
-    }
-
-    .mov-btn-wrap .btn {
-        padding: 10px 18px;
-        height: 40px;
-        font-size: 14px;
-    }
-
 }
 
-@media screen and (max-width:544px) {
-    .ticket-box {
-        position: relative;
-        background-color: red;
-        background: url(../images/movie/poster-ticket.png) no-repeat;
-        border-radius: 0 0 30px 30px;
-        padding: 1rem;
-        overflow: hidden;
-        background-size: 100%;
-
-    }
-
-    .ticket-box .movie-title h3 {
-        font-size: 20px;
-    }
-
-} */
-
-
-@media screen and (max-width:760px) {
-
-    .inner {
-        min-width: 480px
-    }
-
-    .ticket-box {
-        position: relative;
-        background-color: red;
-        background: url(../images/movie/poster-ticket.png) no-repeat;
-        border-radius: 0 0 30px 30px;
-        padding: 1rem;
-        overflow: hidden;
-        background-size: 100%;
-
-    }
-
-    .blind .zulgeri {
-        margin-top: 2rem;
-        text-align: left;
-        letter-spacing: 2;
-        font-weight: 100;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 2;
-        overflow: hidden;
-        word-break: keep-all;
-    }
-
-    .ticket-box .movie-title h3 {
-        font-size: 15px;
-
-    }
-
-    .chart-section .inner {
-        max-width: 480px;
-        min-width: 0;
-        width: 100%;
-        padding: 0 16px;
-        box-sizing: border-box;
-    }
-
-    .movie-list {
-        min-width: 0;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-
-
-    .title-sub {
-        display: none;
-    }
-
-    .m-button-list {
-        gap: 10px;
-    }
-
-    .m-button-list a {
-        font-size: 14px;
-    }
-
-    .ticket-box .text-box .movie-title {
-        font-size: 16px;
-    }
-
-    .mov-btn-wrap {
-        flex-direction: column;
-        gap: 6px;
-    }
-
-    .mov-btn-wrap .btn {
-        width: 100%;
-        text-align: center;
-    }
-
-
-}
-
-/* @media screen and (max-width:430px) {
-    .ticket-box .text-box .movie-title {
-        font-size: 20px;
-        display: flex;
-        justify-content: center;
-    }
-
-    .ticket-box .age-box {
-        width: 25px;
-    }
-
-    .m-button-list {
-        gap: 20px;
-    }
-
-    .m-button-list li {
-
-        font-size: 8.4px;
-    }
-
-    .more-btn a {
-        font-size: 10px;
-    }
-
-    .poster-box .rank {
-        font-size: 35px;
-
-    }
-
-    .blind .blind-1 p {
-        font-size: 18px;
-    }
-
-    .blind .blind-1 .genres {
-        font-size: 10px;
-    }
-
-    .blind .zulgeri p {
-        font-size: 12px;
-
-    }
-
-    .blind .zulgeri {
-        text-align: left;
-        font-weight: 100;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 5;
-        overflow: hidden;
-        word-break: keep-all;
-    }
-} */
-
-/* @media screen and (max-width:370px) {
-
-    .ticket-box .movie-title h3 {
-        font-size: 13px;
-    }
-
-    .ticket-box .text-box .movie-title {
-        font-size: 20px;
-        display: flex;
-        justify-content: center;
-    }
-
-    .ticket-box .age-box {
-        display: flex;
-        justify-content: center;
-        width: 20%
-    }
-
-    .m-button-list li {
-        font-size: 8px;
-    }
-
-    .more-btn a {
-        font-size: 10px;
-    }
-
-    .poster-box .rank {
-        font-size: 35px;
-    }
-
-    .more-btn a {
-        font-size: 9px;
-    }
-
-    .blind .blind-1 p {
-        font-size: 18px;
-    }
-
-    .blind .blind-1 .genres {
-        font-size: 10px;
-    }
-
-    .blind .zulgeri p {
-        font-size: 12px;
-    }
-
-    .blind .zulgeri {
-        text-align: left;
-        font-weight: 100;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 5;
-        overflow: hidden;
-        word-break: keep-all;
-    }
-} */
-
-
-/* ================= 390px 이하 고정 - 더 이상 찌그러지지 않음 ================= */
-@media screen and (max-width: 480px) {
-
-    /* 전체 최소 너비 고정 */
-    .chart-section .inner,
-    .chart-section {
-        min-width: 390px;
-        overflow-x: hidden;
-    }
-
-    /* inner 고정 너비 */
-    .chart-section .inner {
-        width: 390px;
-        padding: 0 16px;
-        box-sizing: border-box;
-    }
-
-    /* 480px에서 min-width: 480px 덮어쓰기 */
-    .inner {
-        min-width: 390px;
-    }
-
-    /* 영화 리스트 고정 2열 유지 */
-    .movie-list {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        min-width: 0;
-    }
-
-    .movie-list li {
-        width: calc((100% - 10px) / 2);
-        flex-shrink: 0;
-    }
-
-    /* 탭 버튼 */
-    .m-button-list {
-        gap: 12px;
-        flex-wrap: wrap;
-    }
-
-    .m-button-list li {
-        font-size: 8px;
-    }
-
-    .m-button-list a {
-        font-size: 13px;
-    }
-
-    /* 더보기 버튼 */
-    .more-btn a {
-        font-size: 9px;
-    }
-
-    /* 랭킹 숫자 */
-    .poster-box .rank {
-        font-size: 28px;
-        left: 10px;
-    }
-
-    /* 티켓박스 */
-    .ticket-box {
-        padding: 0.8rem;
-    }
-
-    .ticket-box .movie-title h3 {
-        font-size: 13px;
-    }
-
-    .ticket-box .text-box .movie-title {
-        font-size: 14px;
-        padding-bottom: 10px;
-    }
-
-    .ticket-box .age-box {
-        width: 18px;
-        height: 18px;
-        font-size: 10px;
-        line-height: 18px;
-    }
-
-    /* 예매/상세 버튼 */
-    .mov-btn-wrap {
-        flex-direction: column;
-        gap: 5px;
-    }
-
-    .mov-btn-wrap .btn {
-        width: 100%;
-        text-align: center;
-        font-size: 12px;
-        height: 36px;
-        padding: 6px 10px;
-    }
-
-    /* 줄거리 호버 */
-    .blind .blind-1 p {
-        font-size: 15px;
-    }
-
-    .blind .blind-1 .genres {
-        font-size: 9px;
-    }
-
-    .blind .zulgeri p {
-        font-size: 11px;
-    }
-
-    .blind .zulgeri {
-        margin-top: 1rem;
-        -webkit-line-clamp: 4;
-    }
-
-    /* 섹션 헤더 */
-    .section-header>.section-title {
-        font-size: 20px;
-    }
-
-    .section-header>.sub-title {
-        font-size: 16px;
-    }
-}
+@media screen and (max-width:480px) {}
 
 /* ------------------------------------------------------------------ */
 /* 혜택 / 이벤트 (주연) */
