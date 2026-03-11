@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGV</title>
+    <link rel="icon" href="./images/favicon.ico">
+    <link rel="stylesheet" href="./css/pretendard-font.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <!-- vvv css 이름 변경 후 경로 재수정 vvv -->
+    <link rel="stylesheet" href="./css/sub-movie-More.css.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script defer src="js/sub-movie-More.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/header-footer.js"></script>
+</head>
+
+<body>
+    <!-- header -->
+    <div id="header"></div>
+    <main>
+        <section class="main-hero">
+            <!-- 배경 전용 레이어 -->
+            <div class="bg-slide bg1 active"></div>
+            <div class="bg-slide bg2"></div>
+
+            <!-- 어두운 오버레이 -->
+            <div class="hero-dim"></div>
+
+            <!-- 실제 내용물 -->
+            <div class="hero-inner">
+                <div class="hero-poster intro-poster">
+                    <img src="./images/movie-more/main/slide1img.jpg" alt="시스터 포스터">
+                </div>
+
+                <div class="hero-info intro-info">
+                    <h2>시스터</h2>
+
+
+                    <div class="format-list">
+                        <span>4DX</span>
+                        <span>DOLBY ATMOS</span>
+                        <span>IMAX</span>
+                        <span>SCREENX</span>
+                    </div>
+
+                    <div class="movie-meta">
+                        <span>2026.01.29</span>
+                        <span>ㆍ</span>
+                        <span>150분</span>
+                        <span>ㆍ</span>
+                        <span>15세 관람가</span>
+                        <span>ㆍ</span>
+                        <span>1000만</span>
+                    </div>
+
+                    <div class="movie-sub">
+                        <span class="egg"><img src="./images/movie-more/main/nomal-agg.svg"
+                                alt=""><strong>95%</strong></span>
+                        <span>박스오피스 1위</span>
+                    </div>
+
+                    <div class="tag-list">
+                        <span>#액션</span>
+                        <span>#한국영화</span>
+                        <span>#스릴러</span>
+                    </div>
+
+
+                    <div class="mov-btn-wrap">
+                        <a href="#" class="btn view heart-btn">
+                            <img src="./images/movie-more/main/heart-white-1.png" alt="하트">
+                            보고싶어요
+                        </a>
+                        <a href="#" class="btn reserv">예매하기</a>
+                        <a href="#" class="btn view"><img src="./images/movie-more/main/share.png" alt="">공유하기</a>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="scroll-down-wrap" id="scrollDownWrap">
+                <a href="#movie-detail" class="scroll-down-btn" aria-label="아래로 스크롤">
+                    <span class="scroll-text">SCROLL</span>
+                    <span class="scroll-icon">⌄</span>
+                </a>
+            </div>
+        </section>
+
+
+        <!-- 밑부터 콘텐츠내용물 시작 -->
+        <section id="movie-detail">
+
+            <div class="detail-tabs">
+                <button class="tab-btn active" id="btn-info">영화 상세정보</button>
+                <button class="tab-btn" id="btn-review">실관람자 평가</button>
+            </div>
+
+
+            <!-- VVV 여기 아래로 작업 VVV -->
+
+            <div class="wrap2 trailer-layout">
+
+                <div class="trailer-side ">
+
+                    <div class="panal1-info">
+                        <h4>영화정보</h4>
+                        <br>
+                        <div class="jangrul">
+                            <p><strong class="info1-list">장르 </strong>｜<span>액션, 드라마, 스릴러</span></p>
+                        </div>
+
+                        <div class="director"><a href="#">
+                                <p><strong class="info1-list">감독</strong>｜<span>감독 이름</span></p>
+                            </a> </div>
+
+                    </div>
+
+                    <div class="info-2">
+                        <!-- <h3>줄거리</h3> -->
+
+
+                        <div class="story-text" id="storyText"> <br>
+
+                            <h5>" 나는 오늘, 언니를 납치했다 " <br>
+                                하나씩 드러나는 진실, 끝이 없는 덫이 시작된다!
+                            </h5>
+
+                            <br>
+                            <p>
+                                동생의 수술 비용을 마련하기 위해 기억의 돈이 필요한 ‘하린’(정지소)은
+                                ‘태수’(이수혁)의 의뢰로 ‘소진’(차영희)의 남자친구가 되어 접근한다.
+                                <br>
+                                눈 떠보니 낯선 공간에 갇힌 ‘소진’. ‘하린’과 ‘태수’는 부잣집 딸 ‘소진’의 몸값으로 10억 원을 요구한다…
+                                <br>
+                                나는 오늘, 언니를 꺼안았습니다. 동생의 수술 비용을 마련하기 위해 기억의 돈이 필요한 ‘하린’(정지소)은
+                                ‘태수’(이수혁)의 보호로 ‘소진’(차영희)의 남자친구가 되어 접근한다.
+                                <br>
+                                눈 떠보니 낯선 공간에 공백인 ‘소진’. ‘하린’과 ‘태수’는 부잣집 딸 ‘소진’의 몸값으로 10억 원을 요구한다……
+                            </p>
+                        </div>
+
+                        <button class="story-toggle" id="storyToggle">더보기</button>
+
+
+                    </div>
+
+                    <div class="actor">
+
+                        <p><strong class="info1-list">감독 / 출연</strong>
+
+                        </p>
+
+                        <div class="actor-slider">
+
+                            <!-- <button type="button" class="actor-nav actor-prev"></button> -->
+
+                            <ul class="actor-list" id="actorList">
+
+                                <li class="cast">
+                                    <img src="./images/movie-more/section1/auctor (1).png">
+                                    <strong>진성문</strong>
+                                    <span>감독</span>
+                                </li>
+
+                                <li class="cast">
+                                    <img src="./images/movie-more/section1/auctor (2).jpg">
+                                    <strong>차주영</strong>
+                                    <span>소진 역</span>
+                                </li>
+
+                                <li class="cast">
+                                    <img src="./images/movie-more/section1/auctor (3).jpg">
+                                    <strong>이수혁</strong>
+                                    <span>태수 역</span>
+                                </li>
+
+                                <li class="cast">
+                                    <img src="./images/movie-more/section1/auctor (4).webp">
+                                    <strong>정지소</strong>
+                                    <span>하린 역</span>
+                                </li>
+
+
+
+                            </ul>
+
+                            <!-- <button type="button" class="actor-nav actor-next"></button> -->
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+                <div class="chage-tab-page">
+                    <div class="trailer-main tab-panel active" id="info">
+                        <!-- <h3>트레일러</h3> -->
+
+                        <div class="trailer-player">
+                            <iframe id="mainTrailer" width="560" height="315"
+                                src="https://www.youtube.com/embed/l57q_fca_Xs?si=Jgi7blGQJkWYG0O9"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>"
+
+                        </div>
+
+                        <div class="trailer-thumb-slider">
+                            <button type="button" class="thumb-nav thumb-prev" aria-label="이전 예고편"></button>
+
+                            <ul class="trailer-thumb-list" id="trailerThumbList">
+                                <li class="trailer-thumb active"
+                                    data-video="https://www.youtube.com/embed/l57q_fca_Xs?si=Jgi7blGQJkWYG0O9">
+                                    <button type="button">
+                                        <span class="thumb-img">
+                                            <img src="./images/movie-more/section2/trailer (1).png" alt="1차 예고편">
+                                        </span>
+                                        <span class="thumb-label">1차 예고편</span>
+                                    </button>
+                                </li>
+
+                                <li class="trailer-thumb"
+                                    data-video="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1&rel=0&playsinline=1">
+                                    <button type="button">
+                                        <span class="thumb-img">
+                                            <img src="./images/movie-more/section2/trailer (2).png" alt="2차 예고편">
+                                        </span>
+                                        <span class="thumb-label">2차 예고편</span>
+                                    </button>
+                                </li>
+
+                                <li class="trailer-thumb"
+                                    data-video="https://www.youtube.com/embed/ysz5S6PUM-U?autoplay=1&mute=1&rel=0&playsinline=1">
+                                    <button type="button">
+                                        <span class="thumb-img">
+                                            <img src="./images/movie-more/section2/trailer (3).png" alt="3차 예고편">
+                                        </span>
+                                        <span class="thumb-label">3차 예고편</span>
+                                    </button>
+                                </li>
+
+                                <li class="trailer-thumb"
+                                    data-video="https://www.youtube.com/embed/aqz-KE-bpKQ?autoplay=1&mute=1&rel=0&playsinline=1">
+                                    <button type="button">
+                                        <span class="thumb-img">
+                                            <img src="./images/movie-more/section2/trailer (1).png" alt="4차 예고편">
+                                        </span>
+                                        <span class="thumb-label">4차 예고편</span>
+                                    </button>
+                                </li>
+                            </ul>
+
+                            <button type="button" class="thumb-nav thumb-next" aria-label="다음 예고편"></button>
+                        </div>
+                    </div>
+                    <div class="panal2-movie-review tab-panel " id="review">
+                        <div class="review-box">
+                            <button class="rv-nav rv-prev" type="button" aria-label="이전"></button>
+
+                            <div class="review-viewport">
+                                <h3>실관람 평가(100+)</h3>
+                                <p><span class="scoreicon">🥰</span>주관람객<strong> "여자,20대층"</strong>이 <strong>
+                                        "🍿좋아요(70%)"</strong>로 평가했어요!</p>
+                                <div class="review-track" id="reviewTrack">
+
+
+
+                                    <!-- 1페이지 -->
+                                    <div class="review-page">
+                                        <article class="review-card">
+                                            <div class="rv-top">
+                                                <div class="rv-who">
+                                                    <img src="./images/movie-more/section1-2/user-reivew.png" alt="">
+                                                    <div>
+                                                        <strong>관람객 이름</strong>
+                                                        <span>2D / 2026.01.30</span>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <span class="rv-badge">🍿 좋아요</span>
+                                                    <span><img class=" scoreicon"
+                                                            src="images/movie-more/section1-2/scoreicon.svg"
+                                                            alt=""></span>
+                                                </div>
+                                            </div>
+                                            <p class="rv-text">믿고보는 감독님의 연출력입니다.</p>
+                                        </article>
+
+                                        <article class="review-card">
+                                            <div class="rv-top">
+                                                <div class="rv-who">
+                                                    <img src="./images/movie-more/section1-2/user-reivew.png" alt="">
+                                                    <div>
+                                                        <strong>관람객 이름</strong>
+                                                        <span>IMAX / 2026.04.29</span>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <span class="rv-badge">🍿 좋아요</span>
+                                                    <span><img class=" scoreicon"
+                                                            src="images/movie-more/section1-2/scoreicon.svg"
+                                                            alt=""></span>
+                                                </div>
+                                            </div>
+                                            <p class="rv-text">배우들 감정선이 진짜 좋았어요.</p>
+                                        </article>
+
+                                        <article class="review-card">
+                                            <div class="rv-top">
+                                                <div class="rv-who">
+                                                    <img src="./images/movie-more/section1-2/user-reivew.png" alt="">
+                                                    <div>
+                                                        <strong>관람객 이름</strong>
+                                                        <span>SCREENX / 2026.07.29</span>
+                                                    </div>
+                                                </div>
+                                                <span class="rv-badge">🍿 좋아요</span>
+                                            </div>
+                                            <p class="rv-text">영상미와 분위기가 너무 좋았습니다.</p>
+                                        </article>
+
+                                        <article class="review-card">
+                                            <div class="rv-top">
+                                                <div class="rv-who">
+                                                    <img src="./images/movie-more/section1-2/user-reivew.png" alt="">
+                                                    <div>
+                                                        <strong>관람객 이름</strong>
+                                                        <span>SCREENX / 2026.07.29</span>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <span class="rv-badge">🍿 좋아요</span>
+                                                    <span><img class=" scoreicon"
+                                                            src="images/movie-more/section1-2/scoreicon.svg"
+                                                            alt=""></span>
+                                                </div>
+                                            </div>
+                                            <p class="rv-text">영상미와 분위기가 너무 좋았습니다.</p>
+                                        </article>
+
+                                    </div>
+
+                                    <!-- 2페이지 -->
+                                    <div class="review-page">
+                                        <article class="review-card">
+                                            <div class="rv-top">
+                                                <div class="rv-who">
+                                                    <img src="./images/movie-more/section1-2/user-reivew.png" alt="">
+                                                    <div>
+                                                        <strong>관람객 이름</strong>
+                                                        <span>DOLBY / 2026.11.30</span>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <span class="rv-badge">🎬 추천</span><span><img class=" scoreicon"
+                                                            src="images/movie-more/section1-2/scoreicon.svg"
+                                                            alt=""></span>
+                                                </div>
+                                            </div>
+                                            <p class="rv-text">초반 몰입감이 엄청 좋아서 시간 가는 줄 몰랐어요.</p>
+                                        </article>
+
+                                        <article class="review-card">
+                                            <div class="rv-top">
+                                                <div class="rv-who">
+                                                    <img src="./images/movie-more/section1-2/user-reivew.png" alt="">
+                                                    <div>
+                                                        <strong>관람객 이름</strong>
+                                                        <span>2D / 2026.01.10</span>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <span class="rv-badge">🎬 추천</span><span><img class=" scoreicon"
+                                                            src="images/movie-more/section1-2/scoreicon.svg"
+                                                            alt=""></span>
+                                                </div>
+                                            </div>
+                                            <p class="rv-text">OST랑 장면 전환이 세련돼서 만족했습니다.</p>
+                                        </article>
+
+                                        <article class="review-card">
+                                            <div class="rv-top">
+                                                <div class="rv-who">
+                                                    <img src="./images/movie-more/section1-2/user-reivew.png" alt="">
+                                                    <div>
+                                                        <strong>관람객 이름</strong>
+                                                        <span>3D / 2026.05.30</span>
+                                                    </div>
+                                                </div>
+                                                <span class="rv-badge">🎬 추천</span>
+                                            </div>
+                                            <p class="rv-text">긴장감 유지가 잘 돼서 끝까지 재밌었어요.</p>
+                                        </article>
+
+                                        <article class="review-card">
+                                            <div class="rv-top">
+                                                <div class="rv-who">
+                                                    <img src="./images/movie-more/section1-2/user-reivew.png" alt="">
+                                                    <div>
+                                                        <strong>관람객 이름</strong>
+                                                        <span>3D / 2026.05.30</span>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <span class="rv-badge">🎬 추천</span><span><img class=" scoreicon"
+                                                            src="images/movie-more/section1-2/scoreicon.svg"
+                                                            alt=""></span>
+                                                </div>
+                                            </div>
+                                            <p class="rv-text">긴장감 유지가 잘 돼서 끝까지 재밌었어요.</p>
+                                        </article>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <button class="rv-nav rv-next" type="button" aria-label="다음"></button>
+                        </div>
+
+
+                    </div>
+
+
+
+
+
+                </div>
+
+
+
+            </div>
+
+            <div class="event">
+                <div class="event-swiper-wrap">
+                    <h3>이벤트</h3>
+                    <br>
+                    <div class="event-swiper swiper eventSwiper">
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide">
+                                <a href="#" class="event-card">
+                                    <img src="./images/movie-more/section3/event1.png" alt="이벤트이미지1">
+                                    <div class="event-card__txt">
+                                        <strong>시스터</strong>
+                                        <span>영화 | 개봉기념 무대인사</span>
+                                        <span class="event-card__date">26.02.07(토) ~ 26.02.08(일)</span>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <a href="#" class="event-card">
+                                    <img src="./images/movie-more/section3/event1.png" alt="이벤트이미지2">
+                                    <div class="event-card__txt">
+                                        <strong>시스터</strong>
+                                        <span>영화 | 특별상영회</span>
+                                        <span class="event-card__date">26.02.07(토) ~ 26.02.08(일)</span>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <a href="#" class="event-card">
+                                    <img src="./images/movie-more/section3/event1.png" alt="이벤트이미지3">
+                                    <div class="event-card__txt">
+                                        <strong>시스터</strong>
+                                        <span>영화 | 관람권 이벤트</span>
+                                        <span class="event-card__date">26.02.07(토) ~ 26.02.08(일)</span>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <a href="#" class="event-card">
+                                    <img src="./images/movie-more/section3/event1.png" alt="이벤트이미지4">
+                                    <div class="event-card__txt">
+                                        <strong>시스터</strong>
+                                        <span>영화 | 콜라보이벤트</span>
+                                        <span class="event-card__date">26.02.07(토) ~ 26.02.08(일)</span>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+
+                        <div class="swiper-button-prev event-prev"></div>
+                        <div class="swiper-button-next event-next"></div>
+                        <div class="event-pagination"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="box-wrap">
+
+
+
+
+                <div class="photo">
+                    <h3>스틸컷</h3>
+                    <br>
+
+                    <div class="steel-gallery" id="steelGallery">
+                        <!-- 1줄 -->
+                        <a href="#" class="steel-card row1 wide">
+                            <img src="./images/movie-more/section2/steel-cut11.jpg" alt="스틸컷 1">
+                        </a>
+                        <a href="#" class="steel-card row1">
+                            <img src="./images/movie-more/section2/steel-cut24.jpg" alt="스틸컷 2">
+                        </a>
+                        <a href="#" class="steel-card row1">
+                            <img src="./images/movie-more/section2/steel-cut25.jpg" alt="스틸컷 3">
+                        </a>
+
+                        <!-- 2줄 -->
+                        <a href="#" class="steel-card row2">
+                            <img src="./images/movie-more/section2/steel-cut20.jpg" alt="스틸컷 4">
+                        </a>
+                        <a href="#" class="steel-card row2">
+                            <img src="./images/movie-more/section2/steel-cut27.jpg" alt="스틸컷 5">
+                        </a>
+                        <a href="#" class="steel-card row2">
+                            <img src="./images/movie-more/section2/steel-cut21.jpg" alt="스틸컷 6">
+                        </a>
+
+                        <!-- 마지막 +n 카드 -->
+                        <button type="button" class="steel-card row2 steel-more" id="steelMoreBtn">
+                            <img src="./images/movie-more/section2/steel-cut28.jpg" alt="숨겨진 스틸컷 더보기">
+                            <span class="dim"></span>
+                            <span class="more-text">+3</span>
+                        </button>
+
+                        <!-- 숨겨진 3줄째 이후 -->
+                        <a href="#" class="steel-card hidden-shot">
+                            <img src="./images/movie-more/section2/steel-cut08.jpg" alt="스틸컷 8">
+                        </a>
+                        <a href="#" class="steel-card hidden-shot">
+                            <img src="./images/movie-more/section2/steel-cut09.jpg" alt="스틸컷 9">
+                        </a>
+                        <a href="#" class="steel-card hidden-shot">
+                            <img src="./images/movie-more/section2/steel-cut10.jpg" alt="스틸컷 10">
+                        </a><a href="#" class="steel-card hidden-shot">
+                            <img src="./images/movie-more/section2/steel-cut11.jpg" alt="스틸컷 8">
+                        </a>
+                        <a href="#" class="steel-card hidden-shot">
+                            <img src="./images/movie-more/section2/steel-cut12.jpg" alt="스틸컷 9">
+                        </a>
+                        <a href="#" class="steel-card hidden-shot">
+                            <img src="./images/movie-more/section2/steel-cut13.jpg" alt="스틸컷 10">
+                        </a><a href="#" class="steel-card hidden-shot">
+                            <img src="./images/movie-more/section2/steel-cut14.jpg" alt="스틸컷 8">
+                        </a>
+                        <a href="#" class="steel-card hidden-shot">
+                            <img src="./images/movie-more/section2/steel-cut15.jpg" alt="스틸컷 9">
+                        </a>
+                        <a href="#" class="steel-card hidden-shot">
+                            <img src="./images/movie-more/section2/steel-cut16.jpg" alt="스틸컷 10">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+
+        </section>
+    </main>
+    <footer id="footer"></footer>
+
+
+</body>
+
+</html>

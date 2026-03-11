@@ -73,11 +73,13 @@
 
 
     display: none;
+
 }
 
 .tab-wrap.active {
     position: relative;
     display: block;
+
 }
 
 .movieList-sub-menu {
@@ -176,6 +178,7 @@
     /* grid-template-columns: 200px 200px 200px; */
     /* grid-template-columns: repeat(3, 200px); */
     /* grid-template-columns: 1tr 1tr 1tr; */
+    /* grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); */
     grid-template-columns: repeat(4, auto);
     /* 기기 디스플레이 맞게 숫자만 바꿔줌 - 계산해서 보임 - 2차원적 개념 플렉스와차이 */
     gap: 100px;
@@ -198,7 +201,10 @@
 
 .content>div .movie1 .img-box img {
     /* width: 287px; */
-    height: 465px;
+    /* height: 465px; */
+    width: 100%;
+    height: auto;
+    display: block;
     border-radius: 10PX;
     z-index: 0;
 }
@@ -238,7 +244,7 @@
     color: #fff;
     font-size: 25px;
     align-items: center;
-    margin-top: 5px;
+    margin-top: 13px;
 }
 
 .content>div .movie1 .text-box .title>p>a {
@@ -406,9 +412,121 @@
 
 /* =============반응형============== */
 /* ipad */
-@media screen and (max-width: 1280px) {}
+@media screen and (max-width: 1280px) {
+    .content>.list-wrap {
+
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .movieList-sub-menu {
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    .m-button-list {
+        gap: 24px;
+        flex-wrap: wrap;
+        /* 탭메뉴 줄바꿈 허용 */
+    }
+
+    .inner form {
+        width: 240px;
+        /* 검색창 줄이기 */
+        height: 38px;
+    }
+
+    .content>div .movie1 .text-box .title {
+        font-size: 20px;
+    }
+
+    .btn {
+        width: 92px;
+        height: 44px;
+    }
+}
+
+
+
 
 /* mobile */
-@media screen and (max-width:768px) {}
+@media screen and (max-width:768px) {
+    .content>.list-wrap {
 
-@media screen and (max-width:480px) {}
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .movieList-sub-menu {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .m-button-list {
+        gap: 16px;
+    }
+
+    .movie-list-wrap span {
+        padding-left: 0;
+        /* 오른쪽 텍스트 들여쓰기 제거 */
+    }
+
+    .inner form {
+        width: 100%;
+        max-width: 360px;
+        height: 36px;
+    }
+
+    .content>div .movie1 .img-box img {
+        height: 300px;
+    }
+
+    .content>div .movie1 .text-box .title {
+        font-size: 16px;
+    }
+
+    .content>div .movie1 .sub-info {
+        font-size: 13px;
+        padding: 4px 0;
+    }
+
+    .mov-btn-wrap {
+        gap: 8px;
+    }
+
+    .btn {
+        width: 84px;
+        height: 40px;
+        padding: 10px 0;
+    }
+}
+
+
+
+@media screen and (max-width:480px) {
+
+    .content {}
+
+    .content>.list-wrap {
+
+        grid-template-columns: 1fr
+    }
+
+    /* 포스터 */
+    .content>div .movie1 .img-box img {
+        height: 420px;
+    }
+
+    /* 제목 */
+    .content>div .movie1 .text-box .title {
+        font-size: 14px;
+    }
+
+    /* 버튼 */
+    .btn {
+        width: 76px;
+        height: 36px;
+    }
+
+
+
+}
