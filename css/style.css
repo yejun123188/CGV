@@ -1646,9 +1646,11 @@ header form:hover>input {
 
 .text-box .desc {
     line-height: 1.4;
-    /* -webkit-line-clamp: 2;
+    display: -webkit-box;
     -webkit-box-orient: vertical;
-    align-items: center; */
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    white-space: normal;
 }
 
 /* 모어버튼 */
