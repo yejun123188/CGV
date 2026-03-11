@@ -9,7 +9,10 @@
     <link rel="stylesheet" href="./css/pretendard-font.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/special-footer-notice-respond.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/respond.css">
+    <link rel="stylesheet" href="./css/main-respond-jy.css">
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script defer src="./js/main-notice.js"></script>
     <script defer src="./js/main-movie.js"></script>
@@ -133,6 +136,9 @@
                     <div class="mov-btn-wrap">
                         <a href="#" class="btn reserv">예매하기</a>
                         <a href="#" class="btn view">상세보기</a>
+                    </div>
+                    <div class="scroll-arrow">
+                        <img src="./images/D-arrow.png" alt="스크롤 화살표">
                     </div>
                 </div>
             </div>
@@ -959,11 +965,11 @@
                 <!-- VVV 여기 아래로 작업 VVV -->
                 <!-- 탭메뉴 -->
                 <div class="btn-wrap">
-                    <button class="btn active">special</button>
-                    <button class="btn">영화 / 극장</button>
-                    <button class="btn">제휴</button>
-                    <button class="btn">멤버십</button>
-                    <button class="btn">지난 이벤트</button>
+                    <button class="btn active" data-category="special">special</button>
+                    <button class="btn" data-category="movie">영화 / 극장</button>
+                    <button class="btn" data-category="benefit">제휴</button>
+                    <button class="btn" data-category="membership">멤버십</button>
+                    <button class="btn" data-category="last">지난 이벤트</button>
                 </div>
 
                 <!-- 메인(좌측) -->
@@ -1096,9 +1102,9 @@
                         </div>
                         <!-- pager-btn -->
                         <div class="pager-btn">
-                            <div class="left-btn"><a href="#"><img src="./images/left-arrow.png" alt=""></a></div>
+                            <div class="left-btn"><button><img src="./images/left-arrow.png" alt=""></button></div>
                             <span class="curr-num">1</span> / <span class="total-num">2</span>
-                            <div class="right-btn"><a href="#"><img src="./images/right-arrow.png" alt=""></a></div>
+                            <div class="right-btn"><button><img src="./images/right-arrow.png" alt=""></button></div>
                         </div>
                     </div>
 
@@ -1292,7 +1298,7 @@
                         </li>
                         <li>
 
-                            <P>2025.07.15 </P>
+                            <P class="notice-date">2025.07.15 </P>
                             <br>
                             <P>[CGV] 서비스 이용 규정 변경 안내</P>
                         </li>
@@ -1306,7 +1312,7 @@
             </div>
             <div class="inner">
                 <!-- VVV 여기 아래로 작업 VVV -->
-                <div class="icon-list-wrap">
+                <div class="icon-list-wrㅌap">
                     <ul class="icon-list">
                         <li>
                             <a href="#">
@@ -1355,7 +1361,7 @@
                         <p>통신판매업신고번호 : 2017-서울용산-0662사업자정보확인</p>
                         <p>사업자등록번호 : 104-81-45690</p>
                         <p>호스팅사업자 : CJ올리브네트웍스</p>
-                        <p> 대표이메일 : cjcgvmaster@cj.net</p>
+                        <p> <a href="mailto:cjcgvmaster@cj.net">대표이메일 : cjcgvmaster@cj.net</a></p>
                     </address>
                     <ul class="qr-list">
                         <li>
@@ -1384,7 +1390,7 @@
                             <optgroup label="물류 & 신유통">
                                 <option>CJ대한통운</option>
                                 <option>CJ대한통운 건설부문</option>
-                                <option>CJ올리브영/option>
+                                <option>CJ올리브영</option>
                                 <option>CJ올리브네트웍스</option>
                                 <option>CJ ENM 커머스부문</option>
                             </optgroup>
@@ -1422,6 +1428,10 @@
         <button class="ham-close">
             <img src="./images/ham-close.png" alt="닫기">
         </button>
+        <form>
+            <input type="text">
+            <button><img src="./images/search.png" alt=""></button>
+        </form>
         <nav class="ham-nav">
             <ul class="ham-main">
                 <li>
@@ -1521,8 +1531,16 @@
             }
 
             closeBtn.addEventListener('click', closeHam);
+
+            let visualWrap = document.querySelector('.main-visual-wrap');
+            let mainVideo = document.querySelector('.main-video');
+
+            mainVideo.addEventListener('ended', () => {
+                visualWrap.classList.add('active');
+            });
         });
     </script>
+    <script src="./js/event-sec.js"></script>
 </body>
 
 </html>

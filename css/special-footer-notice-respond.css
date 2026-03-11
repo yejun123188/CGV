@@ -1,0 +1,259 @@
+/* ipad */
+@media screen and (max-width: 1280px) {}
+
+@media screen and (max-width: 1020px) {
+
+    .slider-wrap::before,
+    .slider-wrap::after {
+        height: 30%;
+    }
+
+    .f-inner-left {
+
+        display: block;
+    }
+
+    .footer-bottom .bt-list {
+        gap: 15px;
+        padding-top: 5px;
+    }
+
+    .footer-bottom .sns-list {
+        padding-top: 5px;
+    }
+
+    .qr-list p {
+        font-size: 1em;
+    }
+}
+
+/* mobile */
+@media screen and (max-width:768px) {
+
+    /*specail */
+    .slider-wrap::before,
+    .slider-wrap::after {
+        height: 20%;
+    }
+
+    .special-section .theater-list .img-box {
+        height: 350px;
+    }
+
+
+
+    /* notice */
+    .notice-section .more-btn {
+        font-size: 14px;
+    }
+
+    .notice-section-name h2 {
+        font-size: 16px;
+
+    }
+
+    .notice-section-name p {
+        font-size: 16px;
+
+
+    }
+
+    .notice-section .top-list li:nth-child(2) {
+        font-size: 12px;
+    }
+
+    .notice-section .icon-list a {
+        /* width: 80px;
+        height: 87px; */
+    }
+
+    .notice-section .icon-list a>img {
+
+        width: 40px;
+        height: 40px;
+    }
+
+    .notice-section .icon-list a>p {
+        font-size: 20px;
+    }
+
+    /* footer */
+    .footer-logo img {
+        width: 130px;
+    }
+
+    .qr-list {
+        display: none;
+    }
+
+    .f-inner-left {
+        display: block;
+    }
+
+    .footer-bottom {
+        align-items: flex-end;
+    }
+
+    .footer-bottom .bt-list {
+        display: none;
+    }
+
+    .footer-bottom .sns-list {
+        /* display: none; */
+        gap: 29px;
+    }
+}
+
+@media screen and (max-width:590px) {
+    /* button */
+
+    .special-section .spc-btn-wrap .btn {
+        flex-shrink: 0;
+        font-size: 0.8rem;
+        padding: 10px 26px;
+        height: 40px;
+        line-height: 20px;
+    }
+
+
+    /* notice */
+    .section-header {
+        display: block;
+    }
+
+    .notice-section-name h2 {
+        font-size: 15px;
+
+    }
+
+    .notice-section-name p {
+        font-size: 15px;
+
+
+    }
+
+    .notice-section .top-list li:nth-child(2) {
+        font-size: 12px;
+    }
+
+    .notice-section .notice-date {
+        display: none;
+    }
+
+    .notice-section .icon-list a>img {
+
+        width: 35px;
+        height: 35px;
+    }
+
+    .notice-section .icon-list a>p {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width:495px) {
+
+
+
+    .notice-section-name p {
+        display: none;
+    }
+
+    .notice-section .top-list li:nth-child(2) {
+        font-size: 14px;
+    }
+
+    .notice-section .icon-list a>p {
+        font-size: 14px;
+    }
+
+    /* footer */
+
+    .footer-bottom .sns-list img {
+        padding-bottom: 5px;
+    }
+
+    footer .sns-list li {
+        width: 25px;
+        height: 25px;
+
+    }
+}
+
+@media screen and (max-width:480px) {
+
+    /* button */
+    .special-section .spc-btn-wrap {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 8px;
+    }
+
+    .special-section .spc-btn-wrap .btn {
+        flex-shrink: 0;
+        font-size: 0.8rem;
+        padding: 6px 12px;
+        height: 36px;
+    }
+
+    /* notice */
+
+
+    .notice-section .icon-list {
+        margin: 100px 0;
+    }
+
+    .notice-section-name h2 {
+        font-size: 14px;
+
+    }
+
+    .notice-section .top-list li:nth-child(2) {
+        font-size: 12px;
+    }
+
+    .notice-section-name p {
+        display: none;
+    }
+
+    .notice-section .notice-date {
+        display: none;
+    }
+
+
+    .notice-section .icon-list a>img {
+
+        width: 25px;
+        height: 25px;
+    }
+
+    .notice-section .icon-list a>p {
+        font-size: 12px;
+    }
+
+    /* footer */
+    .footer-logo img {
+        width: 100px;
+    }
+
+    .footer-bottom {
+        padding-top: 15px;
+        align-items: flex-end;
+    }
+
+    .select-company {
+        font-size: 12px;
+        width: 145px;
+    }
+
+    .footer-bottom .sns-list img {
+        padding-bottom: 5px;
+    }
+
+    footer .sns-list li {
+        width: 25px;
+        height: 25px;
+    }
+
+
+}

@@ -262,14 +262,14 @@ form>button img {
     width: 24px;
 }
 
-form:hover {
+header form:hover {
     width: 200px;
     background: rgba(255, 255, 255, 0.4);
     box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+}
 
-    form>input {
-        width: 24px;
-    }
+header form:hover>input {
+    width: 120px;
 }
 
 .gnb-list>li {
@@ -339,15 +339,12 @@ form:hover {
 /* ------------------------------------------------------------------ */
 /* 메인 비디오 (예준) */
 .main-visual-wrap {
-    padding: 0;
-}
-
-.main-visual-wrap {
     position: relative;
     width: 100%;
     height: 953px;
     overflow: hidden;
     margin-top: -170px;
+    padding: 0;
 }
 
 /* 배경 */
@@ -362,9 +359,14 @@ form:hover {
     transform: translate(-50%, -50%);
 }
 
+.main-video {
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
 .main-image {
     opacity: 0;
-    transition: 0.8s ease;
+    transition: opacity 1s ease;
 }
 
 .main-visual-wrap::after {
@@ -382,27 +384,30 @@ form:hover {
     inset: 0;
     display: flex;
     align-items: flex-end;
-    z-index: 9999;
+    z-index: 10;
+    transition: background 1s ease;
 }
 
 .visual-content {
     width: 100%;
     max-width: 1700px;
     margin: 0 auto;
-    padding: 0 50px 50px 50px;
-    color: #fff;
+    padding: 0 50px 50px;
+    transition: 1s ease;
 }
 
 .movie-logo {
-    width: clamp(240px, 21.875vw, 420px);
+    width: 420px;
     padding: 20px 0;
     margin-bottom: 10px;
+    animation: 3s ease;
 }
 
 /* 버튼 */
 .main-visual-wrap .mov-btn-wrap {
     display: flex;
     gap: 10px;
+    transition: 1s ease;
 }
 
 .main-visual-wrap .btn {
@@ -434,6 +439,102 @@ form:hover {
 
 .main-visual-wrap .view:hover {
     background-color: #FFFFFF;
+}
+
+/* 영상 종료 */
+.main-visual-wrap.active .main-video {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.main-visual-wrap.active .main-image {
+    opacity: 1;
+}
+
+.main-visual-wrap.active .visual-overlay {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.main-visual-wrap.active .visual-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    text-align: center;
+}
+
+
+.main-visual-wrap.active .movie-logo {
+    position: absolute;
+    top: 400px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 650px;
+    animation: 3s ease;
+    padding: 0 50px;
+}
+
+.main-visual-wrap.active .mov-btn-wrap {
+    justify-content: center;
+    position: absolute;
+    bottom: 70px;
+}
+
+.main-visual-wrap.active .reserv {
+    box-shadow: 0 0 20px rgba(127, 127, 127, 0.25);
+    background-color: #EE3123B3;
+}
+
+.main-visual-wrap.active .reserv:hover {
+    background-color: var(--main);
+}
+
+.scroll-arrow {
+    display: none;
+    margin-top: 20px;
+    text-align: center;
+    opacity: 0;
+    position: absolute;
+    bottom: 30px;
+}
+
+.scroll-arrow img {
+    width: 32px;
+    display: block;
+}
+
+.main-visual-wrap.active .scroll-arrow {
+    display: block;
+    opacity: 1;
+    animation: ArrowAni 0.8s infinite alternate;
+}
+
+@keyframes logoFade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes ArrowAni {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+
+    100% {
+        transform: translateY(15px);
+        opacity: 1;
+    }
 }
 
 /* ------------------------------------------------------------------ */
@@ -1361,13 +1462,13 @@ form:hover {
 
 /* ------------------------------------------------------------------ */
 /* 혜택 / 이벤트 (주연) */
-/* 탭메뉴 */
 .event-section {
-    overflow: hidden;
+    overflow: visible;
+    padding-top: -60px;
 }
 
 .event-section .inner {
-    overflow: hidden;
+    overflow: visible;
 }
 
 .event-section .btn {
@@ -1391,13 +1492,22 @@ form:hover {
     background: var(--red-btn);
 }
 
+.event-section .btn-wrap {
+    padding-top: 0 !important;
+}
+
+.event-section button {
+    background: none;
+    border: none;
+}
+
 /* 메인 */
 .main-slider-wrap {
-    height: 540px;
+    height: 600px;
     display: flex;
     gap: 68px;
     /* gap: 135px; */
-    justify-content: space-between;
+    justify-content: flex-start;
     margin-top: 45px;
     position: relative;
     padding-left: 100px;
@@ -1407,6 +1517,7 @@ form:hover {
     position: relative;
     width: 55%;
     height: 540px;
+    /* flex-shrink: 0; */
 }
 
 .main-slider {
@@ -1421,7 +1532,9 @@ form:hover {
 .slider {
     display: flex;
     height: inherit;
-    width: calc(830px * 6);
+    /* width: calc(830px * 6); */
+    width: 600%;
+    transition: transform 0.5s ease;
 }
 
 .slider .banner {
@@ -1485,32 +1598,42 @@ form:hover {
 /* 페이지 리스트 */
 .page-list-wrap {
     position: relative;
-    width: 544px;
+    flex: 1;
+    width: 0;
+    min-width: 0;
     margin-left: 50px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 0;
 }
 
 .page-list {
     display: flex;
-    width: 1100px;
+    width: 200%;
+    transition: 0.5s;
+    /* flex: 1; */
+}
+
+.page-list ul {
+    flex-shrink: 0;
 }
 
 .page1,
-.page2 {
+.page2,
+.page-item {
     display: flex;
     flex-direction: column;
     gap: 32px;
-    width: 50%;
-}
-
-.page1 {
-    margin-right: 70px;
 }
 
 .page1 li a,
-.page2 li a {
+.page2 li a,
+.page-item li a {
     display: flex;
     align-items: center;
-    gap: 38px;
+    gap: 24px;
 }
 
 .thumb {
@@ -1529,6 +1652,8 @@ form:hover {
 
 .text-box {
     overflow: hidden;
+    flex: 1;
+    min-width: 0;
 }
 
 .text-box .title {
@@ -1543,9 +1668,11 @@ form:hover {
 
 .text-box .desc {
     line-height: 1.4;
-    -webkit-line-clamp: 2;
+    display: -webkit-box;
     -webkit-box-orient: vertical;
-    align-items: center;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    white-space: normal;
 }
 
 /* 모어버튼 */
@@ -1575,10 +1702,8 @@ form:hover {
     gap: 15px;
     font-size: var(--px12);
     font-weight: 500;
-    margin-top: 36px;
-    /* position: absolute; */
-    /* top: 0;
-    right: 0; */
+    margin-top: 25px;
+    /* flex-direction: column; */
 }
 
 .pager-btn img {
@@ -1621,7 +1746,7 @@ form:hover {
 
 /* 광고배너 */
 .ad-banner-wrap {
-    /* height: 257px; */
+    height: 300px;
     /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#c88dfb+0,a290fe+100 */
     background: linear-gradient(to bottom, rgba(200, 141, 251, 1) 0%, rgb(114, 91, 231) 100%);
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
@@ -1648,18 +1773,19 @@ form:hover {
 }
 
 .ad-banner p {
-    font-size: var(--px32);
+    font-size: clamp(1rem, 1.8vw, var(--px32));
     font-weight: 400;
     margin: 0;
     color: #35007f;
+    white-space: nowrap;
 }
 
 .ad-banner>strong {
-    font-size: 4.2em;
+    font-size: clamp(2rem, 3.5vw, 4.2em);
     line-height: 1.2;
     color: var(--mian-text);
-    font-family: "YeogiOttaeJalnan"
-
+    font-family: "YeogiOttaeJalnan";
+    white-space: nowrap;
 }
 
 .ad-banner .btn {
@@ -1718,14 +1844,14 @@ form:hover {
     background-color: var(--Hblk-btn);
 }
 
-.btn-wrap {
+.special-section .btn-wrap {
     display: flex;
     gap: 10px;
     padding-top: 60px;
-    /* padding-left: 157px; */
+
 }
 
-.btn-wrap button {
+.special-section .btn-wrap button {
     border: none;
     width: auto;
     padding: 0 23px;
@@ -1737,17 +1863,17 @@ form:hover {
     font-size: 16px;
 }
 
-.btn-wrap button:hover {
+.special-section .btn-wrap button:hover {
     background: rgba(238, 49, 35, 0.5);
     color: var(--mian-text);
 }
 
-.btn-wrap .active {
+.special-section .btn-wrap .active {
     background: rgba(238, 49, 35, 0.5);
     color: var(--mian-text);
 }
 
-.slider-wrap {
+.special-section .slider-wrap {
     position: relative;
     /* overflow: hidden; */
     max-width: 1920px;
@@ -1756,34 +1882,8 @@ form:hover {
 
 }
 
-.slider-wrap .next-button {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 1100px;
-    transform: translate(-50%, -50%);
-    display: block;
-    z-index: 10;
-    pointer-events: none;
-}
 
-.slider-wrap .next-button .left,
-.slider-wrap .next-button .right {
-    position: absolute;
-    bottom: 10
-}
 
-.slider-wrap .next-button .left {
-    left: -10px;
-}
-
-.slider-wrap .next-button .right {
-    right: 20px;
-}
-
-.slider-wrap .next-button a {
-    pointer-events: auto;
-}
 
 .special-section .arrow-btn-wrap {
     position: absolute;
@@ -1795,8 +1895,7 @@ form:hover {
     z-index: 99999;
 }
 
-.wrap {
-    /* border: 1px solid red; */
+.special-section .wrap {
     position: relative;
 }
 
@@ -1813,16 +1912,16 @@ form:hover {
     z-index: 99;
 }
 
-.slider-wrap::before {
+.special-section .slider-wrap::before {
     transform: translateX(-50%) translateY(-60%);
 }
 
-.slider-wrap::after {
+.special-section .slider-wrap::after {
     transform: translateX(-50%) translateY(50%);
     bottom: 0;
 }
 
-.theater-list .img-box {
+.special-section .theater-list .img-box {
     width: 100%;
     height: 480px;
     /* 모든 슬라이드의 높이를 이 값으로 통일 (원하는 높이로 조절) */
@@ -1832,7 +1931,7 @@ form:hover {
     /* 기존 곡률 유지 */
 }
 
-.theater-list li img {
+.special-section .theater-list li img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -1840,18 +1939,18 @@ form:hover {
 
 }
 
-.theater-list .text-box {
+.special-section .theater-list .text-box {
     position: absolute;
     bottom: 15%;
     padding-left: 56px;
 }
 
-.theater-list .text-box p {
+.special-section .theater-list .text-box p {
     font-size: var(--px16);
     font-weight: 600;
 }
 
-.theater-list .text-box .title {
+.special-section .theater-list .text-box .title {
     font-size: var(--px40);
     font-weight: 700;
 }
@@ -1864,12 +1963,12 @@ form:hover {
 }
 
 /* 불렛(동그라미) 색상 변경 (기본색이 안 보일 수 있음) */
-.swiper-pagination-bullet {
+.special-section .swiper-pagination-bullet {
     background: #fff !important;
     opacity: 0.5;
 }
 
-.swiper-pagination-bullet-active {
+.special-section .swiper-pagination-bullet-active {
     background: var(--red-btn) !important;
     /* CGV 레드 포인트 컬러 */
     opacity: 1;
@@ -1884,7 +1983,7 @@ form:hover {
 }
 
 .notice-list {
-    max-width: 1700px;
+    /* max-width: 1700px; */
     margin: 0 auto;
     padding: 0 50px;
 }
@@ -1928,6 +2027,11 @@ form:hover {
     padding: 35px 0;
 }
 
+.notice-list {
+    max-width: 1700px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
 
 .notice-section .top-list {
     /* padding: 34px 0; */
@@ -1936,8 +2040,6 @@ form:hover {
     justify-content: space-between;
     position: relative;
 }
-
-
 
 .notice-section .top-list::before {
     top: 0;
@@ -1971,8 +2073,8 @@ form:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 93px;
-    height: 100px;
+    /* width: 93px; */
+    /* height: 100px; */
     gap: 10px;
 }
 
@@ -2041,7 +2143,7 @@ address p {
     padding-top: 30px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
 
 }
 
@@ -2049,7 +2151,7 @@ address p {
     border: none;
     border-radius: 20px;
     appearance: none;
-    background: url(/images/footer/footerup.png) no-repeat right 10px center;
+    background: url(../images/footer/footerup.png) no-repeat right 10px center;
     background-color: #fff;
     padding: 2px 10px 0;
 }
@@ -2078,7 +2180,7 @@ address p {
     border-radius: 40%;
 }
 
-.sns-list img {
+footer .sns-list img {
     width: 20px;
 }
 
@@ -2146,6 +2248,22 @@ address p {
     height: 40px;
 }
 
+.ham-panel form {
+    position: absolute;
+    right: 50px;
+    top: 38px;
+}
+
+.ham-panel form:hover {
+    width: 200px;
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.ham-panel form:hover>input {
+    width: 120px;
+}
+
 body.active .ham-overlay {
     opacity: 1;
     pointer-events: auto;
@@ -2175,7 +2293,7 @@ body.active .ham-panel {
 
 .ham-main-title {
     display: inline-block;
-    width: 280PX;
+    width: 280px;
     font-size: var(--px24);
     font-weight: 700;
     color: #ffffff;
