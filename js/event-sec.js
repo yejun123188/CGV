@@ -220,7 +220,7 @@ function renderContent(cat) {
         ul.style.display = 'flex';
         ul.style.flexDirection = 'column'
     });
-    pageList.style.width = `${totalPages * 100}%`;
+    pageList.style.width = `${wrapPx * totalPages}px`;
     pageList.style.display = 'flex';
     pageList.style.flexWrap = 'nowrap';
 
@@ -322,7 +322,7 @@ let dragStartX = 0;
 let isDragging = false;
 
 function onDragStart(x) {
-    if (window.innerHTML > 1280) return;
+    if (window.innerWidth > 1280) return;
     dragStartX = x;
     isDragging = true;
     clearInterval(autoSlideTimer);
@@ -350,7 +350,7 @@ function onDragEnd(x) {
 
 // 터치이벤트
 mainSlider.addEventListener('touchstart', e => onDragStart(e.touches[0].clientX), { passive: true });
-mainSlider.addEventListener('touched', e => onDragEnd(e.changedTouches[0].clientX));
+mainSlider.addEventListener('touchend', e => onDragEnd(e.changedTouches[0].clientX));
 
 // 마우스 이벤트
 mainSlider.addEventListener('mousedown', e => {
@@ -375,4 +375,22 @@ function updateCursor() {
     mainSlider.style.cursor = window.innerWidth <= 1280 ? 'grab' : '';
 }
 updateCursor();
-window.addEventListener('resize', updateCursor);
+
+function recalcPageList() {
+    const pageListWrap = document.querySelector('.page-list-wrap');
+    if (!pageListWrap) return;
+    const wrapPx = pageListWrap.offsetWidth;
+    const uls = pageList.querySelectorAll('ul');
+    if (!uls.length) return;
+    uls.forEach(ul => {
+        ul.style.width = `${wrapPx}px`;
+    });
+    pageList.style.width = `${wrapPx * uls.length}px`;
+    pageList.style.transition = 'none';
+    pageList.style.transform = `translateX(-${wrapPx * subPageIdx}px)`;
+}
+
+window.addEventListener('resize', () => {
+    updateCursor();
+    recalcPageList();
+});

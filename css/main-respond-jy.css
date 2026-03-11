@@ -96,9 +96,10 @@
         display: -webkit-box;
         -webkit-box-orient: vertical;
         text-overflow: ellipsis;
-        -webkit-line-clamp: 2;
+        -webkit-line-clamp: 3;
         white-space: normal;
         overflow: hidden;
+        word-break: break-all;
     }
 
     .thumb {
@@ -230,9 +231,10 @@
         line-height: 1.4;
         display: -webkit-box !important;
         -webkit-box-orient: vertical;
-        -webkit-line-clamp: 2;
+        -webkit-line-clamp: 3;
         overflow: hidden !important;
         white-space: normal !important;
+        word-break: break-all;
     }
 
     .thumb {
