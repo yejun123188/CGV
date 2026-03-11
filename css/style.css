@@ -1809,69 +1809,7 @@ header form:hover>input {
 
 /* ------------------------------------------------------------------ */
 /* 특별관 (효진) */
-.special-section .spc-btn-wrap {
-    display: flex;
-    justify-content: flex-start;
-    gap: 10px;
-    margin-top: 15px;
-    margin-bottom: 50px;
 
-}
-
-.special-section .spc-btn-wrap .btn {
-    display: inline-block;
-    width: auto;
-    padding: 12px 28px;
-    height: 48px;
-    border-radius: var(--radius);
-    line-height: 24px;
-    transition: all 0.3s ease;
-}
-
-.special-section .reserv {
-    background-color: var(--red-btn);
-}
-
-.special-section .reserv:hover {
-    background-color: var(--Hred-btn);
-}
-
-.special-section .view {
-    background-color: var(--blk-btn);
-}
-
-.special-section .view:hover {
-    background-color: var(--Hblk-btn);
-}
-
-.special-section .btn-wrap {
-    display: flex;
-    gap: 10px;
-    padding-top: 60px;
-
-}
-
-.special-section .btn-wrap button {
-    border: none;
-    width: auto;
-    padding: 0 23px;
-    height: 49px;
-    border-radius: 28px;
-    background: #0A0B0C;
-    color: var(--mian-text);
-    z-index: 9999;
-    font-size: 16px;
-}
-
-.special-section .btn-wrap button:hover {
-    background: rgba(238, 49, 35, 0.5);
-    color: var(--mian-text);
-}
-
-.special-section .btn-wrap .active {
-    background: rgba(238, 49, 35, 0.5);
-    color: var(--mian-text);
-}
 
 .special-section .slider-wrap {
     position: relative;
