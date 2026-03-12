@@ -273,6 +273,83 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
+    // ─── 스틸컷 모달 ─────────────────────────────────────────────
+    const steelModal = document.getElementById("steelModal");
+    const steelModalImg = document.getElementById("steelModalImg");
+    const steelModalClose = document.getElementById("steelModalClose");
+    const steelModalBackdrop = document.getElementById("steelModalBackdrop");
+    const steelModalPrev = document.getElementById("steelModalPrev");
+    const steelModalNext = document.getElementById("steelModalNext");
+    const steelModalCounter = document.getElementById("steelModalCounter");
+
+    // 클릭 가능한 스틸컷 카드 전체 (steelMoreBtn 제외)
+    function getSteelCards() {
+        return Array.from(document.querySelectorAll(
+            "#steelGallery .steel-card:not(#steelMoreBtn)"
+        ));
+    }
+
+    let modalIndex = 0;
+
+    function openModal(index) {
+        const cards = getSteelCards();
+        if (!cards.length) return;
+        modalIndex = index;
+        updateModalImg(cards);
+        steelModal.classList.add("open");
+        document.body.style.overflow = "hidden";
+    }
+
+    function closeModal() {
+        steelModal.classList.remove("open");
+        document.body.style.overflow = "";
+    }
+
+    function updateModalImg(cards) {
+        const img = cards[modalIndex].querySelector("img");
+        steelModalImg.src = img.src;
+        steelModalImg.alt = img.alt;
+        steelModalCounter.textContent = `${modalIndex + 1} / ${cards.length}`;
+        steelModalPrev.disabled = modalIndex === 0;
+        steelModalNext.disabled = modalIndex === cards.length - 1;
+    }
+
+    // 갤러리 클릭 이벤트 (이벤트 위임)
+    const steelGallery = document.getElementById("steelGallery");
+    if (steelGallery && steelModal) {
+        steelGallery.addEventListener("click", function (e) {
+            const card = e.target.closest(".steel-card:not(#steelMoreBtn)");
+            if (!card) return;
+            e.preventDefault();
+            const cards = getSteelCards();
+            const index = cards.indexOf(card);
+            if (index !== -1) openModal(index);
+        });
+
+        steelModalClose.addEventListener("click", closeModal);
+        steelModalBackdrop.addEventListener("click", closeModal);
+
+        steelModalPrev.addEventListener("click", () => {
+            if (modalIndex > 0) { modalIndex--; updateModalImg(getSteelCards()); }
+        });
+        steelModalNext.addEventListener("click", () => {
+            const cards = getSteelCards();
+            if (modalIndex < cards.length - 1) { modalIndex++; updateModalImg(cards); }
+        });
+
+        // 키보드 탐색
+        document.addEventListener("keydown", (e) => {
+            if (!steelModal.classList.contains("open")) return;
+            if (e.key === "Escape") closeModal();
+            if (e.key === "ArrowLeft" && modalIndex > 0) { modalIndex--; updateModalImg(getSteelCards()); }
+            if (e.key === "ArrowRight") {
+                const cards = getSteelCards();
+                if (modalIndex < cards.length - 1) { modalIndex++; updateModalImg(cards); }
+            }
+        });
+    }
+
+
     // ─── 하트 버튼 ───────────────────────────────────────────────
     const heartBtn = document.querySelector(".heart-btn");
     if (heartBtn) {
