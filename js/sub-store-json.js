@@ -16,7 +16,7 @@ function renderStore(info) {
         box.innerHTML = `
 <a href="#">
     <div class="img-box">
-        <img src="./images/hy-sub/combo/${item.img}.png" alt="${item.title}">
+        <img src="./images/hy-sub/${item.img}.png" alt="${item.title}">
     </div>
     <div class="text-box">
         <h3>${item.title}</h3>
