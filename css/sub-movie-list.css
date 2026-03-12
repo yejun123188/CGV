@@ -179,9 +179,10 @@
     /* grid-template-columns: repeat(3, 200px); */
     /* grid-template-columns: 1tr 1tr 1tr; */
     /* grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); */
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(4, 1fr);
     /* 기기 디스플레이 맞게 숫자만 바꿔줌 - 계산해서 보임 - 2차원적 개념 플렉스와차이 */
-    gap: 100px;
+    gap: 40px 24px;
+    align-items: stretch;
     /* 위치는 바뀌지 않음 */
     /* margin-top: 30px; */
     /* margin-left: 160px;
@@ -190,30 +191,41 @@
 
 .content>div .movie1 {
     position: relative;
-    /* padding: 30px; */
-    /* align-items: center; */
     text-align: center;
-    /* width: 311px; */
-    /* height: 558px; */
-    /* margin-bottom: 55px; */
-    /* background: green; */
-}
-
-.content>div .movie1 .img-box img {
-    /* width: 287px; */
-    /* height: 465px; */
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 10PX;
-    z-index: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .content>div .movie1 .img-box {
     position: relative;
     margin: 0 auto;
-    /* width: 287px; */
-    /* height: 441px; */
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.content>div .movie1 .img-box img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 10px;
+    z-index: 0;
+}
+
+.content>div .movie1 .text-box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.content>div .movie1 .text-box .sub-info {
+    flex: 1;
+}
+
+.content>div .movie1 .text-box .mov-btn-wrap {
+    margin-top: auto;
 }
 
 .content>.list-wrap .movie1 .img-box p {
@@ -306,13 +318,13 @@
 }
 
 /* .content>div .movie1 .btn-box {
-
+ 
     display: flex;
     flex-grow: 0;
     margin-top: 15px;
     ;
     gap: 9px;
-
+ 
 } */
 
 .mov-btn-wrap {
@@ -322,14 +334,27 @@
 }
 
 .btn {
-    display: inline-block;
-    width: 100px;
-    padding: 12px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 0;
+    min-width: 0;
+    padding: 12px 6px;
     height: 48px;
     border-radius: var(--radius);
-    line-height: 24px;
+    line-height: 1;
     transition: all 0.3s ease;
-    text-aline: center;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.mov-btn-wrap .btn img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    flex-shrink: 0;
 }
 
 .reserv {
@@ -372,7 +397,7 @@
 
     /* display: flex;
     color: #fff;
-
+ 
     width: 94px;
     height: px;
     border: 1px solid rgba(0, 0, 0, 0.5);
@@ -389,7 +414,7 @@
 .content>div .movie1 .btn-box .like-btn .img {
 
     /* .content>div .movie1 .text-box .story-btn {
-
+ 
     height: ;
     color: #fff;
     border: 1px solid rgba(0, 0, 0, 0.5);
@@ -414,8 +439,8 @@
 /* ipad */
 @media screen and (max-width: 1280px) {
     .content>.list-wrap {
-
         grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 32px 20px;
     }
 
     .movieList-sub-menu {
@@ -440,7 +465,6 @@
     }
 
     .btn {
-        width: 92px;
         height: 44px;
     }
 }
@@ -451,8 +475,8 @@
 /* mobile */
 @media screen and (max-width:768px) {
     .content>.list-wrap {
-
         grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 28px 14px;
     }
 
     .movieList-sub-menu {
@@ -477,7 +501,7 @@
     }
 
     .content>div .movie1 .img-box img {
-        height: 300px;
+        object-fit: cover;
     }
 
     .content>div .movie1 .text-box .title {
@@ -490,13 +514,13 @@
     }
 
     .mov-btn-wrap {
-        gap: 8px;
+        gap: 6px;
     }
 
     .btn {
-        width: 84px;
         height: 40px;
-        padding: 10px 0;
+        padding: 10px 4px;
+        font-size: 13px;
     }
 }
 
@@ -507,14 +531,11 @@
     .content {}
 
     .content>.list-wrap {
-
-        grid-template-columns: 1fr
+        grid-template-columns: 1fr;
+        gap: 40px 0;
     }
 
-    /* 포스터 */
-    .content>div .movie1 .img-box img {
-        height: 420px;
-    }
+    /* 포스터 - aspect-ratio로 비율 고정됨 */
 
     /* 제목 */
     .content>div .movie1 .text-box .title {
@@ -523,10 +544,8 @@
 
     /* 버튼 */
     .btn {
-        width: 76px;
         height: 36px;
+        font-size: 12px;
     }
-
-
 
 }
