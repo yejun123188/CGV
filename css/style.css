@@ -979,7 +979,19 @@ header form:hover>input {
 
 @media screen and (max-width:480px) {
 
+    .blind-1 .b-title {
+        font-size: 16px;
+        font-weight: 800;
+    }
 
+    .blind-1 .genres {
+        font-size: 12px;
+    }
+
+    .blind .zulgeri {
+        line-height: 12px;
+        font-size: 12px;
+    }
 
     .ticket-box {
         height: 80px;
