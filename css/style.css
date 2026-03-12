@@ -632,11 +632,11 @@ header form:hover>input {
 }
 
 .movie-list {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
-    justify-content: space-between;
-    position: relative;
 }
+
 
 .poster-box {
     position: relative;
@@ -692,19 +692,31 @@ header form:hover>input {
 
 .poster-box:hover .blind {
     display: flex;
+    padding: 0 30px;
 }
 
 .poster-box .blind {
+    display: none;
     position: absolute;
-    top: 90px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: #ffffff;
     pointer-events: none;
+    width: 100%;
+    padding: 1.2rem;
+    /* background: green; */
 }
 
 .movie-title {
     display: flex;
     gap: 12px;
     align-items: center;
+}
+
+.movie-title h3 {
+    white-space: nowrap;
+
 }
 
 .movie-title .age-box {
@@ -717,42 +729,9 @@ header form:hover>input {
     text-align: center;
 }
 
-.movie-title .one {
-    background-color: rgba(211, 151, 54, 80);
-
-}
-
-.movie-title .two {
-    font-weight: 600;
-    background-color: rgba(64, 140, 64, 80);
-    letter-spacing: -2px;
-    font-size: 14px;
-}
-
-.movie-title .three {
-    background-color: rgba(190, 178, 47, 80);
-
-}
-
-.movie-title .four {
-    background-color: rgba(202, 73, 73, 80);
-    ;
-
-}
-
-.text-box .title-sub::before {
-    content: "";
-    display: block;
-    top: 65%;
-    left: 18%;
-    width: 15px;
-    height: 16px;
-    position: absolute;
-    background: url(../images/movie/에그지수.png);
-}
-
 .movie-list li {
     text-align: center;
+    min-width: 0;
 }
 
 .movie-list img {
@@ -768,36 +747,41 @@ header form:hover>input {
 }
 
 .ticket-box {
-    position: relative;
+    background: url(../images/movie/poster-ticket.png) no-repeat;
+    border-radius: 0 0 30px 30px;
+    height: 120px;
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 
 .ticket-box .text-box {
-    position: absolute;
-    bottom: 25%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    ;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: static;
+    transform: none;
+    margin: 20px 0;
 }
 
 .ticket-box .text-box .movie-title {
     font-size: var(--px24);
-    padding-bottom: 19px;
     display: flex;
     justify-content: center;
 }
 
 .ticket-box .text-box .title-sub {
     display: flex;
+    gap: 10px;
+    width: 100%;
     justify-content: center;
-    gap: 3px;
-
 }
 
 .ticket-box .text-box .title-sub p {
     font-size: var(--px16);
-    margin-right: 7px;
+    white-space: nowrap;
 }
 
 /* 무비섹션 - 줄거리 호버 */
@@ -809,26 +793,13 @@ header form:hover>input {
 }
 
 .poster-box .blind {
-    display: none;
     flex-direction: column;
-    /* gap: 20px; */
     justify-content: left;
 }
 
-.poster-box .blind p {
-    padding: 0 30px;
-    /* text-align: center */
-    /* font-weight: 100;
-    font-size: 12px; */
-}
 
 .blind .blind-1 {
     text-align: left;
-    width: 350px;
-    /* text-align: center; */
-    transform: translate(20px, 8px);
-
-
 }
 
 .blind-1 .b-title {
@@ -842,22 +813,20 @@ header form:hover>input {
 }
 
 .blind .zulgeri {
+    margin-top: 2rem;
     text-align: left;
     letter-spacing: 2;
-
+    line-height: 25px;
     font-weight: 100;
-    padding-top: 30px;
-    padding-left: 30px;
-    transform: translate(-10px, 8px);
-    width: 350px;
     display: -webkit-box;
-    /* 방향설정 세로방향 */
     -webkit-box-orient: vertical;
-    /* 줄수 장하기 */
-    -webkit-line-clamp: 11;
+    -webkit-line-clamp: 9;
     overflow: hidden;
-    /* 줄을 변경될 경우 단어를 묶어서 */
     word-break: keep-all;
+}
+
+.blind .zulgeri p {
+    display: inline;
 }
 
 .chart-section .mov-btn-wrap {
@@ -876,6 +845,7 @@ header form:hover>input {
     border-radius: var(--radius);
     line-height: 24px;
     transition: all 0.3s ease;
+    white-space: nowrap;
 }
 
 .chart-section .reserv {
@@ -894,139 +864,209 @@ header form:hover>input {
     background-color: var(--Hblk-btn);
 }
 
+@media screen and (max-width:1450px) {
+    .ticket-box .text-box .title-sub p:last-child {
+        display: none;
+    }
+}
+
 
 @media screen and (max-width:1280px) {
-
-    .section-header>.section-title {
-        font-size: 28px;
+    .chart-section .btn {
+        font-size: 1em;
     }
 
-    .section-header>.sub-title {
-        font-size: 28px;
+    .movieNone {
+        display: none;
+    }
+
+    .movie-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .movie-title h3 {
+        font-size: 3vw;
+    }
+
+    .title-sub p {
+        font-size: 1vw;
+    }
+
+    .blind .zulgeri {
+
+        -webkit-line-clamp: 7;
+
+    }
+
+
+}
+
+@media screen and (max-width:1000px) {
+
+    .ticket-box {
+        height: 100px;
     }
 
     .m-button-list {
         gap: 30px;
     }
 
-    .m-button-list a {
-        font-size: 18px;
+    .movie-btn-wrap span {
+        padding-left: 30px;
     }
 
-    .movie-list {
-        flex-wrap: wrap;
+    .ticket-box .text-box {
+        top: 40%;
     }
 
-    .movie-list li {
-        width: calc((100% - 80px) / 2);
+    .chart-section .btn {
+        padding: 12px 20px;
     }
-
-    .ticket-box .text-box .movie-title {
-        font-size: 20px;
-    }
-
-    .title-sub p {
-        font-size: 14px;
-    }
-
 }
+
+
+@media screen and (max-width:880px) {
+    .blind .zulgeri {
+
+        -webkit-line-clamp: 5;
+
+    }
+
+    .blind-1 .b-title {
+        font-size: 24px;
+    }
+}
+
+
 
 @media screen and (max-width:768px) {
 
-    .inner {
-        padding: 0 20px;
-    }
-
-    .section-header {
-        flex-direction: column;
-        gap: 5px;
-        margin-bottom: 30px;
-    }
-
-    .section-header>.section-title {
-        font-size: 24px;
-    }
-
-    .section-header>.sub-title {
-        font-size: 20px;
-    }
-
-    .movie-btn-wrap {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
-    }
 
     .m-button-list {
-        flex-wrap: wrap;
-        gap: 15px;
+        gap: 20px;
     }
 
-    .m-button-list a {
-        font-size: 16px;
-    }
-
-    .movie-list {
-        flex-wrap: wrap;
-        gap: 16px;
-    }
-
-    .movie-list li {
-        width: calc((100% - 16px) / 2);
-    }
-
-    .ticket-box .text-box .movie-title {
-        font-size: 18px;
-    }
-
-    .title-sub {
-        gap: 4px;
-    }
-
-    .title-sub p {
-        font-size: 13px;
-    }
-
-    .mov-btn-wrap .btn {
-        padding: 10px 18px;
-        height: 40px;
+    .movie-btn-wrap .m-button-list a {
         font-size: 14px;
     }
 
+    .movie-btn-wrap span {
+        padding-left: 20px;
+    }
+
+    .ticket-box .text-box {
+        top: 50%;
+    }
+
+    .movieNone {
+        display: block;
+    }
+
+    .movie-list {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .chart-section .btn {
+        padding: 12px 28px;
+        height: 40px;
+        line-height: 20px;
+    }
+
+    .chart-section .mov-btn-wrap {
+        margin-top: 10px;
+    }
 }
 
 @media screen and (max-width:480px) {
 
-    .movie-list li {
-        width: 100%;
+    .blind-1 .b-title {
+        font-size: 16px;
+        font-weight: 800;
+    }
+
+    .blind-1 .genres {
+        font-size: 12px;
+    }
+
+    .blind .zulgeri {
+        line-height: 12px;
+        font-size: 12px;
+    }
+
+    .ticket-box {
+        height: 80px;
     }
 
     .m-button-list {
         gap: 10px;
     }
 
-    .m-button-list a {
-        font-size: 14px;
-    }
-
-    .ticket-box .text-box .movie-title {
-        font-size: 16px;
-    }
-
-    .title-sub p {
+    .movie-btn-wrap .m-button-list a {
         font-size: 12px;
     }
 
-    .mov-btn-wrap {
-        flex-direction: column;
-        gap: 6px;
+    .movie-btn-wrap span {
+        padding-left: 10px;
     }
 
-    .mov-btn-wrap .btn {
-        width: 100%;
-        text-align: center;
+    .title-sub p,
+    .title-sub img {
+        display: none;
     }
 
+    .chart-section .btn {
+        font-size: 14px;
+        padding: 12px 12px;
+        height: 36px;
+        line-height: 10px;
+
+    }
+}
+
+@media screen and (max-width:390px) {
+    .blind-1 .b-title {
+        font-size: 16px;
+        font-weight: 800;
+    }
+
+    .blind-1 .genres {
+        font-size: 12px;
+    }
+
+    .blind .zulgeri {
+        line-height: 18px;
+        font-size: 12px;
+    }
+
+    .ticket-box {
+        height: 80px;
+    }
+
+    .m-button-list {
+        gap: 10px;
+    }
+
+    .movie-btn-wrap .m-button-list a {
+        font-size: 12px;
+    }
+
+    .movie-btn-wrap span {
+        padding-left: 10px;
+    }
+
+    .title-sub p,
+    .title-sub img {
+        display: none;
+    }
+
+    .chart-section .btn {
+        font-size: 14px;
+        padding: 12px 12px;
+        height: 36px;
+        line-height: 10px;
+
+    }
 }
 
 
@@ -1239,9 +1279,11 @@ header form:hover>input {
 
 .text-box .desc {
     line-height: 1.4;
-    /* -webkit-line-clamp: 2;
+    display: -webkit-box;
     -webkit-box-orient: vertical;
-    align-items: center; */
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    white-space: normal;
 }
 
 /* 모어버튼 */
