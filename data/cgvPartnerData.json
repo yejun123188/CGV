@@ -1,0 +1,17 @@
+[
+  {"img":"card1.jpg","date":"26.01.10(토)~26.02.10(화)","partnerInfo":"기타제휴"},
+  {"img":"card2.jpg","date":"26.02.01(일)~26.05.01(금)","partnerInfo":"기타제휴"},
+  {"img":"card3.jpg","date":"상시","partnerInfo":"기타제휴"},
+  {"img":"card4.jpg","date":"26.03.05(목)~26.04.05(일)","partnerInfo":"신용카드"},
+  {"img":"card5.jpg","date":"26.01.20(화)~26.04.20(월)","partnerInfo":"기타제휴"},
+  {"img":"card6.jpg","date":"26.04.01(수)~26.05.01(금)","partnerInfo":"신용카드"},
+  {"img":"card7.jpg","date":"상시","partnerInfo":"신용카드"},
+  {"img":"card8.jpg","date":"26.05.12(화)~26.08.12(수)","partnerInfo":"포인트"},
+  {"img":"card9.jpg","date":"26.06.03(수)~26.07.03(금)","partnerInfo":"통신사"},
+  {"img":"card10.jpg","date":"26.07.01(수)~26.10.01(목)","partnerInfo":"통신사"},
+  {"img":"card11.jpg","date":"상시","partnerInfo":"신용카드"},
+  {"img":"card12.jpg","date":"26.08.15(토)~26.09.15(화)","partnerInfo":"포인트"},
+  {"img":"card13.jpg","date":"26.09.05(토)~26.12.05(토)","partnerInfo":"포인트"},
+  {"img":"card14.jpg","date":"26.10.10(토)~26.11.10(화)","partnerInfo":"포인트"},
+  {"img":"card15.jpg","date":"상시","partnerInfo":"기타제휴"}
+]

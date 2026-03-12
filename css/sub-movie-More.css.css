@@ -2515,3 +2515,180 @@ html {
     }
 
 }
+
+/* ================= 1000px 이하 이벤트 카드 보정 ================= */
+@media screen and (max-width: 1000px) {
+
+    /* 카드 세로 방향으로 전환 */
+    .event-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        min-height: auto;
+        padding: 14px;
+    }
+
+    /* 이미지 고정 비율 유지, 가로 꽉 채움 */
+    .event-card img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        border-radius: 10px;
+        flex-shrink: 0;
+    }
+
+    /* 텍스트 영역 넘침 방지 */
+    .event-card__txt {
+        width: 100%;
+        min-width: 0;
+        overflow: hidden;
+    }
+
+    .event-card__txt strong {
+        font-size: 17px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: block;
+    }
+
+    .event-card__txt span {
+        font-size: 13px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: block;
+    }
+
+    /* 슬라이드 padding 여유 */
+    .event-swiper .swiper-slide {
+        padding: 0 10px;
+    }
+
+    .event-swiper {
+        padding: 0 36px;
+    }
+
+    .event-swiper-wrap {
+        padding: 20px 16px 48px;
+    }
+}
+
+/* ================= 280px 최소 너비 보정 ================= */
+@media screen and (max-width: 360px) {
+
+    /* 전체 최소 너비 보장 - 이 이하로 찌그러지지 않음 */
+    body {
+        min-width: 280px;
+    }
+
+    /* 공통 래퍼 최소 너비 */
+    .detail-tabs,
+    .wrap2,
+    .box-wrap,
+    .event h3,
+    .event-swiper-wrap,
+    .hero-inner {
+        width: calc(100% - 16px);
+        min-width: 0;
+    }
+
+    /* 히어로 포스터 */
+    .hero-poster img {
+        width: min(65vw, 220px);
+        height: auto;
+    }
+
+    /* 버튼 찌그러짐 방지 */
+    .hero-btns button,
+    .btn {
+        min-width: 0;
+        width: 100%;
+        font-size: 13px;
+        padding: 8px 10px;
+    }
+
+    .mov-btn-wrap {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    /* 탭 버튼 */
+    .tab-btn {
+        font-size: 15px;
+        padding: 10px 0 12px;
+    }
+
+    /* 트레일러 영역 */
+    .trailer-main {
+        flex: none;
+        width: 100%;
+    }
+
+    .trailer-player iframe {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+
+    /* 썸네일 라벨 */
+    .thumb-label {
+        min-width: 0;
+        font-size: 11px;
+        padding: 0 6px;
+    }
+
+    /* 배우 카드 */
+    .trailer-side .actor-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    /* 리뷰 카드 */
+    #review .review-card {
+        padding: 14px;
+        border-radius: 14px;
+    }
+
+    /* 이벤트 카드 */
+    .event-card {
+        padding: 10px;
+    }
+
+    .event-card img {
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+
+    .event-card__txt strong {
+        font-size: 14px;
+    }
+
+    .event-card__txt span {
+        font-size: 12px;
+    }
+
+    .event-swiper {
+        padding: 0 20px;
+    }
+
+    .event-swiper-wrap {
+        padding: 12px 8px 38px;
+    }
+
+    /* 스틸컷 */
+    .steel-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .steel-card img {
+        height: 110px;
+    }
+
+    /* 페이지네이션 */
+    .event-pagination {
+        font-size: 12px;
+    }
+}
