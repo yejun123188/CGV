@@ -691,6 +691,7 @@ header form:hover>input {
 
 .poster-box:hover .blind {
     display: flex;
+    padding: 0 30px;
 }
 
 .poster-box .blind {
@@ -729,6 +730,7 @@ header form:hover>input {
 
 .movie-list li {
     text-align: center;
+    min-width: 0;
 }
 
 .movie-list img {
@@ -744,12 +746,13 @@ header form:hover>input {
 }
 
 .ticket-box {
-    position: relative;
-    background-color: red;
     background: url(../images/movie/poster-ticket.png) no-repeat;
     border-radius: 0 0 30px 30px;
     height: 120px;
     background-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 
@@ -757,10 +760,9 @@ header form:hover>input {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: static;
+    transform: none;
+    margin: 20px 0;
 }
 
 .ticket-box .text-box .movie-title {
@@ -779,7 +781,6 @@ header form:hover>input {
 .ticket-box .text-box .title-sub p {
     font-size: var(--px16);
     white-space: nowrap;
-
 }
 
 /* 무비섹션 - 줄거리 호버 */
@@ -814,7 +815,7 @@ header form:hover>input {
     margin-top: 2rem;
     text-align: left;
     letter-spacing: 2;
-
+    line-height: 25px;
     font-weight: 100;
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -844,7 +845,6 @@ header form:hover>input {
     line-height: 24px;
     transition: all 0.3s ease;
     white-space: nowrap;
-
 }
 
 .chart-section .reserv {
@@ -871,6 +871,9 @@ header form:hover>input {
 
 
 @media screen and (max-width:1280px) {
+    .chart-section .btn {
+        font-size: 1em;
+    }
 
     .movieNone {
         display: none;
@@ -881,14 +884,23 @@ header form:hover>input {
     }
 
     .movie-title h3 {
-        font-size: 24px;
+        font-size: 3vw;
     }
+
+    .title-sub p {
+        font-size: 1vw;
+    }
+
+
 }
 
 @media screen and (max-width:1000px) {
 
+    .ticket-box {
+        height: 100px;
+    }
+
     .m-button-list {
-        display: flex;
         gap: 30px;
     }
 
@@ -896,20 +908,29 @@ header form:hover>input {
         padding-left: 30px;
     }
 
-    .movie-btn-wrap .m-button-list a {
-        font-size: var(--px16)
-    }
-
     .ticket-box .text-box {
         top: 40%;
     }
 
-    .movie-title h3 {
-        font-size: 22px;
+    .chart-section .btn {
+        padding: 12px 20px;
     }
 }
 
 @media screen and (max-width:768px) {
+
+
+    .m-button-list {
+        gap: 20px;
+    }
+
+    .movie-btn-wrap .m-button-list a {
+        font-size: 14px;
+    }
+
+    .movie-btn-wrap span {
+        padding-left: 20px;
+    }
 
     .ticket-box .text-box {
         top: 50%;
@@ -923,9 +944,49 @@ header form:hover>input {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
     }
+
+    .chart-section .btn {
+        padding: 12px 28px;
+        height: 40px;
+        line-height: 20px;
+    }
+
+    .chart-section .mov-btn-wrap {
+        margin-top: 10px;
+    }
 }
 
-@media screen and (max-width:480px) {}
+@media screen and (max-width:480px) {
+
+    .ticket-box {
+        height: 80px;
+    }
+
+    .m-button-list {
+        gap: 10px;
+    }
+
+    .movie-btn-wrap .m-button-list a {
+        font-size: 12px;
+    }
+
+    .movie-btn-wrap span {
+        padding-left: 10px;
+    }
+
+    .title-sub p,
+    .title-sub img {
+        display: none;
+    }
+
+    .chart-section .btn {
+        font-size: 14px;
+        padding: 12px 12px;
+        height: 36px;
+        line-height: 10px;
+
+    }
+}
 
 /* ------------------------------------------------------------------ */
 /* 혜택 / 이벤트 (주연) */
@@ -1276,69 +1337,7 @@ header form:hover>input {
 
 /* ------------------------------------------------------------------ */
 /* 특별관 (효진) */
-.special-section .spc-btn-wrap {
-    display: flex;
-    justify-content: flex-start;
-    gap: 10px;
-    margin-top: 15px;
-    margin-bottom: 50px;
 
-}
-
-.special-section .spc-btn-wrap .btn {
-    display: inline-block;
-    width: auto;
-    padding: 12px 28px;
-    height: 48px;
-    border-radius: var(--radius);
-    line-height: 24px;
-    transition: all 0.3s ease;
-}
-
-.special-section .reserv {
-    background-color: var(--red-btn);
-}
-
-.special-section .reserv:hover {
-    background-color: var(--Hred-btn);
-}
-
-.special-section .view {
-    background-color: var(--blk-btn);
-}
-
-.special-section .view:hover {
-    background-color: var(--Hblk-btn);
-}
-
-.special-section .btn-wrap {
-    display: flex;
-    gap: 10px;
-    padding-top: 60px;
-
-}
-
-.special-section .btn-wrap button {
-    border: none;
-    width: auto;
-    padding: 0 23px;
-    height: 49px;
-    border-radius: 28px;
-    background: #0A0B0C;
-    color: var(--mian-text);
-    z-index: 9999;
-    font-size: 16px;
-}
-
-.special-section .btn-wrap button:hover {
-    background: rgba(238, 49, 35, 0.5);
-    color: var(--mian-text);
-}
-
-.special-section .btn-wrap .active {
-    background: rgba(238, 49, 35, 0.5);
-    color: var(--mian-text);
-}
 
 .special-section .slider-wrap {
     position: relative;
