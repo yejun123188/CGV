@@ -2804,3 +2804,129 @@ html {
     font-size: 14px;
     letter-spacing: 0.05em;
 }
+
+/* ─── 관람객 평 반응형 보정 ──────────────────────────────────────── */
+
+/* review-box: 뷰포트 밖으로 못 나가게 */
+#review .review-box {
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* review-viewport: 너비 제한 */
+#review .review-viewport {
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* review-track: 항상 flex, 넘침 방지 */
+#review .review-track {
+    display: flex;
+    width: 100%;
+}
+
+/* review-page: 항상 최소 100% 유지 */
+#review .review-page {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+/* rv-top: 좁은 화면에서 줄바꿈 허용 */
+.rv-top {
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* rv-who: 최소 너비 0 */
+.rv-who {
+    min-width: 0;
+    flex: 1 1 auto;
+}
+
+.rv-who strong,
+.rv-who span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* 980px: 1열 */
+@media (max-width: 980px) {
+    #review .review-page {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* 768px */
+@media screen and (max-width: 768px) {
+    #review .review-viewport p {
+        font-size: 14px;
+        padding: 12px 0;
+        word-break: keep-all;
+    }
+
+    #review .review-page {
+        grid-template-columns: 1fr !important;
+        gap: 12px;
+    }
+
+    #review .review-card {
+        padding: 16px;
+        margin: 0;
+    }
+}
+
+/* 480px */
+@media screen and (max-width: 480px) {
+    #review .review-box {
+        gap: 6px;
+    }
+
+    .rv-nav {
+        width: 36px !important;
+        height: 36px !important;
+    }
+
+    #review .review-page {
+        grid-template-columns: 1fr !important;
+        gap: 10px;
+    }
+
+    #review .review-card {
+        padding: 14px;
+        margin: 0;
+    }
+
+    .rv-top {
+        gap: 8px;
+    }
+
+    .rv-badge {
+        font-size: 12px;
+        padding: 0 10px;
+        height: 28px;
+    }
+
+    .rv-text {
+        font-size: 13px;
+    }
+}
+
+/* 360px */
+@media screen and (max-width: 360px) {
+    #review .review-viewport h3 {
+        font-size: 16px;
+    }
+
+    #review .review-viewport p {
+        font-size: 13px;
+    }
+
+    .rv-nav {
+        width: 30px !important;
+        height: 30px !important;
+    }
+}
