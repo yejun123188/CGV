@@ -69,6 +69,11 @@
     max-width: 100%;
 }
 
+.btn-wrap {
+    display: flex;
+    gap: 20px;
+}
+
 .btn {
     width: auto;
     padding: 12px 28px;
@@ -191,12 +196,7 @@
 
 
 .product-title select {
-
-
-
     appearance: none;
-
-
     background: url(../images/lyra-icon-arrow-forward-simple.png) no-repeat right 8px center;
     background-color: #323131;
     color: white;

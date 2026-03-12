@@ -28,6 +28,7 @@ section {
     padding: 110px 0 40px;
 }
 
+
 .inner {
     max-width: 1700px;
     margin: 0 auto;
@@ -1420,6 +1421,28 @@ header form:hover>input {
 /* ------------------------------------------------------------------ */
 /* 특별관 (효진) */
 
+/* 모어버튼 */
+
+.special-section {
+    position: relative;
+}
+
+.special-section .more-btn {
+    display: inline-block;
+    font-size: var(--px12);
+    position: absolute;
+    top: 160px;
+    right: 170px;
+}
+
+.special-section .more-btn a {
+    color: var(--support-text);
+    text-decoration: none;
+}
+
+.special-section .more-btn a:hover {
+    color: var(--ssupport-text);
+}
 
 .special-section .slider-wrap {
     position: relative;
