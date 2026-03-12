@@ -322,14 +322,20 @@
 }
 
 .btn {
-    display: inline-block;
-    width: 100px;
-    padding: 12px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 0;
+    min-width: 0;
+    padding: 12px 6px;
     height: 48px;
     border-radius: var(--radius);
-    line-height: 24px;
+    line-height: 1;
     transition: all 0.3s ease;
-    text-aline: center;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .reserv {
@@ -440,7 +446,6 @@
     }
 
     .btn {
-        width: 92px;
         height: 44px;
     }
 }
@@ -490,13 +495,13 @@
     }
 
     .mov-btn-wrap {
-        gap: 8px;
+        gap: 6px;
     }
 
     .btn {
-        width: 84px;
         height: 40px;
-        padding: 10px 0;
+        padding: 10px 4px;
+        font-size: 13px;
     }
 }
 
@@ -523,8 +528,8 @@
 
     /* 버튼 */
     .btn {
-        width: 76px;
         height: 36px;
+        font-size: 12px;
     }
 
 
