@@ -13,10 +13,6 @@
     <script src="./js/header-footer.js"></script>
 </head>
 
-<!-- 하단에 스크립트 추가하면서 body에 position:relative 추가했습니다
-극장별에서 영화 시간 선택하면 예매팝업창 띄우는 거 ai로 코드짜서 구현해뒀어요
-말로 설명하는 거 보다 ai로 썼어도 이렇게 작동(?)하는거라고 보여드리는 게 나을 거 같아서 추가했어요 ! -->
-
 <body>
     <!-- header -->
     <div id="header"></div>
@@ -91,10 +87,8 @@
                 <!-- 지역선택 -->
                 <hr>
                 <div class="local-select">
-                    <ul>
-                        <li><a href="#">강남</a></li>
-                        <li><a href="#">용산아이파크몰</a></li>
-                        <li><a href="#">이천</a></li>
+                    <ul id="selected-list">
+
                     </ul>
                 </div>
 

@@ -142,7 +142,7 @@ form>button img {
 .popular-list ul {
     display: flex;
     gap: 45px;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .popular-list li {
@@ -157,7 +157,7 @@ form>button img {
 }
 
 .popular-list {
-    position: relative;
+    overflow: hidden;
 }
 
 .arrow-btn-wrap>li {
@@ -180,10 +180,14 @@ form>button img {
     position: relative;
 }
 
+.new-list {
+    overflow: hidden;
+}
+
 .new-list ul {
     display: flex;
     gap: 45px;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .new-list li {
