@@ -197,7 +197,7 @@ address p {
     border: none;
     border-radius: 20px;
     appearance: none;
-    background: url(/images/footer/footerup.png) no-repeat right 10px center;
+    background: url(../images/footer/footerup.png) no-repeat right 10px center;
     background-color: #fff;
     padding: 2px 10px 0;
 }
