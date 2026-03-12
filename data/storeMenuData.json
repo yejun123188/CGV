@@ -1,0 +1,415 @@
+[
+    {
+        "img": "combo/combo-01",
+        "title": "두바이 콤보",
+        "text": "두쫀쿠1+팝콘1+탄산M1",
+        "price": "12,900원",
+        "category": "콤보"
+    },
+    {
+        "img": "combo/combo-02",
+        "title": "라지콤보",
+        "text": "팝콘L2+탄산L2",
+        "price": "17,000원",
+        "category": "콤보"
+    },
+    {
+        "img": "combo/combo-03",
+        "title": "설날 복가드 콤보",
+        "text": "팝콘M2+에이드2+SX블록",
+        "price": "20,000원",
+        "category": "콤보"
+    },
+    {
+        "img": "combo/combo-04",
+        "title": "한복미키 무드등 세트",
+        "text": "USB타입 한복입은 미키마우스 보름달 무드등!",
+        "price": "17,000원",
+        "category": "콤보"
+    },
+    {
+        "img": "combo/combo-05",
+        "title": "주토피아 팝콘세트",
+        "text": "아바타 팝콘세트",
+        "price": "17,000원",
+        "category": "콤보"
+    },
+    {
+        "img": "combo/combo-06",
+        "title": "주토피아 캐릭터 우산세트",
+        "text": "우산을 펼치면 캐릭터가 뿅!",
+        "price": "20,000원",
+        "category": "콤보"
+    },
+    {
+        "img": "combo/combo-07",
+        "title": "토핑추가 라비콤보",
+        "text": "맹구짱구토핑팝콘L2+탄산L2",
+        "price": "19,000원",
+        "category": "콤보"
+    },
+    {
+        "img": "combo/combo-08",
+        "title": "CGV콤보",
+        "text": "팝콘L1+탄산M2",
+        "price": "12,000원",
+        "category": "콤보"
+    },
+    {
+        "img": "combo/combo-09",
+        "title": "주토피아 무빙뱃지 세트",
+        "text": "8종 랜덤 무빙뱃지!",
+        "price": "13,900원",
+        "category": "콤보"
+    },
+    {
+        "img": "combo/combo-10",
+        "title": "굿즈축제 세트",
+        "text": "1,900원에 굿즈가?!",
+        "price": "9,900원",
+        "category": "콤보"
+    },
+    {
+        "img": "combo/combo-11",
+        "title": "더블콤보",
+        "text": "팝콘M2+탄산M2",
+        "price": "15,000원",
+        "category": "콤보"
+    },
+    {
+        "img": "combo/combo-12",
+        "title": "스몰세트",
+        "text": "팝콘M1+탄산M1",
+        "price": "8,000원",
+        "category": "콤보"
+    },
+    {
+        "img": "combo/combo-13",
+        "title": "아바타3 스틸컵 세트",
+        "text": "폴리프로필렌(PP) 재질로 제작된 컵입니다.",
+        "price": "19,000원",
+        "category": "콤보"
+    },
+    {
+        "img": "combo/combo-14",
+        "title": "아바타3 틴버킷 세트",
+        "text": "3종 랜덤의 틴버킷!",
+        "price": "12,500원",
+        "category": "콤보"
+    },
+    {
+        "img": "combo/combo-15",
+        "title": "포니타 피카츄 피규어 세트",
+        "text": "붉은 말의 해엔?!",
+        "price": "21,500원",
+        "category": "콤보"
+    },
+    {
+        "img": "combo/combo-16",
+        "title": "폴라베어 키링세트",
+        "text": "코카-콜라 폴라베어 인형키링!",
+        "price": "9,900원",
+        "category": "콤보"
+    },
+    {
+        "img": "combo/combo-17",
+        "title": "KBO 캔쿨러 세트",
+        "text": "최애구단 점퍼로 시원한 직관★",
+        "price": "22,000원",
+        "category": "콤보"
+    },
+    {
+        "img": "combo/combo-18",
+        "title": "CGV 응원굿즈 세트",
+        "text": "두쫀쿠1+팝콘1+탄산M1",
+        "price": "12,900원",
+        "category": "콤보"
+    },
+    {
+        "img": "combo/combo-19",
+        "title": "KBO 팝콘버킷 세트",
+        "text": "승요 스티커로 완성! 만능버킷★!",
+        "price": "16,500원",
+        "category": "콤보"
+    },
+    {
+        "img": "combo/combo-20",
+        "title": "할인★주토피아 팝콘세트",
+        "text": "할인★주토피아 팝콘세트",
+        "price": "7,000원",
+        "category": "콤보"
+    },
+    {
+        "img": "snakc/snack-01",
+        "title": "주토피아 구슬젤리",
+        "text": "닉과 주디 랜덤",
+        "price": "5,800원",
+        "category": "스낵"
+    },
+    {
+        "img": "snakc/snack-02",
+        "title": "두쫀쿠",
+        "text": "피스타치오 듬뿍!!",
+        "price": "6,800원",
+        "category": "스낵"
+    },
+    {
+        "img": "snakc/snack-03",
+        "title": "한입피자",
+        "text": "파인애플과 베이컨의 환상적인 조화",
+        "price": "15,000원",
+        "category": "스낵"
+    },
+    {
+        "img": "snakc/snack-04",
+        "title": "한 마리 통통오징어",
+        "text": "찰덕궁합 와사비마요 소스까지",
+        "price": "9,900원",
+        "category": "스낵"
+    },
+    {
+        "img": "snakc/snack-05",
+        "title": "씨네밀",
+        "text": "영화가 맛있어지다,씨네밀",
+        "price": "6,500원",
+        "category": "스낵"
+    },
+    {
+        "img": "snakc/snack-06",
+        "title": "Auntie Anne's",
+        "text": "고구마무스와 치즈의 조화",
+        "price": "7,500원",
+        "category": "스낵"
+    },
+    {
+        "img": "snakc/snack-07",
+        "title": "바삭 구운 먹태",
+        "text": "바삭 구운 먹태",
+        "price": "6,000원",
+        "category": "스낵"
+    },
+    {
+        "img": "snakc/snack-08",
+        "title": "칠리치즈나쵸",
+        "text": "나쵸1+칠리소스1+치즈소스1",
+        "price": "5,500원",
+        "category": "스낵"
+    },
+    {
+        "img": "snakc/snack-09",
+        "title": "(몸통)즉석구이오징어",
+        "text": "(몸통)즉석구이오징어",
+        "price": "5,500원",
+        "category": "스낵"
+    },
+    {
+        "img": "snakc/snack-10",
+        "title": "핫도그",
+        "text": "플레인/치즈칠리/크리미갈릭",
+        "price": "5,000원",
+        "category": "스낵"
+    },
+    {
+        "img": "snakc/snack-11",
+        "title": "치즈볼",
+        "text": "치즈볼",
+        "price": "5,000원",
+        "category": "스낵"
+    },
+    {
+        "img": "snakc/snack-12",
+        "title": "(팩)겹겹이오징어",
+        "text": "(팩)겹겹이오징어",
+        "price": "4,500원",
+        "category": "스낵"
+    },
+    {
+        "img": "snakc/snack-13",
+        "title": "구슬아이스크림",
+        "text": "구슬아이스크림",
+        "price": "4,000원",
+        "category": "스낵"
+    },
+    {
+        "img": "snakc/snack-14",
+        "title": "와사비마요소스",
+        "text": "와사비마요소스",
+        "price": "500원",
+        "category": "스낵"
+    },
+    {
+        "img": "snakc/snack-15",
+        "title": "플레인핫도그 추가소스",
+        "text": "칠리피클소스/옐로우머스타드소스",
+        "price": "300원",
+        "category": "스낵"
+    },
+    {
+        "img": "popcorn/popcorn-01",
+        "title": "할인★주토피아 팝콘",
+        "text": "할인★주토피아 팝콘",
+        "price": "4,500원",
+        "category": "팝콘"
+    },
+    {
+        "img": "popcorn/popcorn-02",
+        "title": "팝콘(L)",
+        "text": "팝콘(L)",
+        "price": "6,500원",
+        "category": "팝콘"
+    },
+    {
+        "img": "popcorn/popcorn-03",
+        "title": "팝콘(M)",
+        "text": "팝콘(M)",
+        "price": "5,500원",
+        "category": "팝콘"
+    },
+    {
+        "img": "popcorn/popcorn-04",
+        "title": "시그니처 팝콘",
+        "text": "팝콘 맛집 CGV의 시그니처 팝콘!",
+        "price": "4,500원",
+        "category": "팝콘"
+    },
+    {
+        "img": "popcorn/popcorn-05",
+        "title": "맹구짱구 반반팝콘(L)",
+        "text": "단짠단짠 팝콘과 맹구짱구의 환상적 콜라보!",
+        "price": "8,500원",
+        "category": "팝콘"
+    },
+    {
+        "img": "popcorn/popcorn-06",
+        "title": "흰둥이 초코팝콘",
+        "text": "화이트초코맛 흰둥이 팝콘♥",
+        "price": "5,500원",
+        "category": "팝콘"
+    },
+    {
+        "img": "popcorn/popcorn-07",
+        "title": "토핑추가! 팝콘(L)",
+        "text": "소금빵맛 맹구짱구 토핑이 올라가요!",
+        "price": "7,500원",
+        "category": "팝콘"
+    },
+    {
+        "img": "drink/drink-01",
+        "title": "탄산각! 스엑블록세트",
+        "text": "ScreenX 블록 단품+탄산M 증정",
+        "price": "18,500원",
+        "category": "음료"
+    },
+    {
+        "img": "drink/drink-02",
+        "title": "에이드",
+        "text": "상큼하게 에이드 한 잔!",
+        "price": "6,000원",
+        "category": "음료"
+    },
+    {
+        "img": "drink/drink-03",
+        "title": "핑크레몬에이드",
+        "text": "탄산 없이 가볍게 한 잔!",
+        "price": "6,000원",
+        "category": "음료"
+    },
+    {
+        "img": "drink/drink-04",
+        "title": "셀프 탄산(L)",
+        "text": "원하는 맛으로 시원하게!",
+        "price": "4,000원",
+        "category": "음료"
+    },
+    {
+        "img": "drink/drink-05",
+        "title": "셀프 탄산(M)",
+        "text": "원하는 맛으로 시원하게!",
+        "price": "3,500원",
+        "category": "음료"
+    },
+    {
+        "img": "drink/drink-06",
+        "title": "BIG 디카페인 콜드브루",
+        "text": "사이즈는 BIG! 디카페인으로 가볍게!",
+        "price": "6,500원",
+        "category": "음료"
+    },
+    {
+        "img": "drink/drink-07",
+        "title": "디카페인 콜드브루",
+        "text": "디카페인으로 가볍게 한 잔!",
+        "price": "5,500원",
+        "category": "음료"
+    },
+    {
+        "img": "drink/drink-08",
+        "title": "짐빔하이볼350ml",
+        "text": "제대로 즐길 짐빔 됐어?",
+        "price": "6,000원",
+        "category": "음료"
+    },
+    {
+        "img": "drink/drink-09",
+        "title": "맥주",
+        "text": "영화와 맥주 한 잔으로 완벽한 하루!",
+        "price": "5,000원",
+        "category": "음료"
+    },
+    {
+        "img": "drink/drink-10",
+        "title": "BIG 커피",
+        "text": "더 크게 즐기는 BIG 커피!",
+        "price": "6,000원",
+        "category": "음료"
+    },
+    {
+        "img": "drink/drink-11",
+        "title": "아이스티",
+        "text": "달달한~ 복숭아맛 아이스티",
+        "price": "5,000원",
+        "category": "음료"
+    },
+    {
+        "img": "drink/drink-12",
+        "title": "헛개수",
+        "text": "건강하고 깔끔한 차",
+        "price": "2,000원",
+        "category": "음료"
+    },
+    {
+        "img": "drink/drink-13",
+        "title": "PET음료",
+        "text": "PET음료",
+        "price": "3,000원",
+        "category": "음료"
+    },
+    {
+        "img": "drink/drink-14",
+        "title": "커피",
+        "text": "달콤쌉싸름한 풍미 가득 커피",
+        "price": "4,500원",
+        "category": "음료"
+    },
+    {
+        "img": "drink/drink-15",
+        "title": "생수(다이아몬드EC)",
+        "text": "생수(다이아몬드EC)",
+        "price": "2,500원",
+        "category": "음료"
+    },
+    {
+        "img": "drink/drink-16",
+        "title": "켈리 500ml",
+        "text": "켈리 500ml",
+        "price": "5,000원",
+        "category": "음료"
+    },
+    {
+        "img": "drink/drink-17",
+        "title": "환타프로즌",
+        "text": "오렌지/포도",
+        "price": "4,000원",
+        "category": "음료"
+    }
+]
