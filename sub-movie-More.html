@@ -8,12 +8,15 @@
     <link rel="icon" href="./images/favicon.ico">
     <link rel="stylesheet" href="./css/pretendard-font.css">
     <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/sub-common.css">
+
     <!-- vvv css 이름 변경 후 경로 재수정 vvv -->
     <link rel="stylesheet" href="./css/sub-movie-More.css.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    <script defer src="js/sub-movie-More.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="./js/header-footer.js"></script>
+    <script defer src="./js/header-footer.js"></script>
+    <script src="js/sub-movie-More.js"></script>
 </head>
 
 <body>
@@ -567,6 +570,18 @@
 
         </section>
     </main>
+    <!-- 스틸컷 모달 -->
+    <div class="steel-modal" id="steelModal" aria-modal="true" role="dialog" aria-label="스틸컷 확대보기">
+        <div class="steel-modal__backdrop" id="steelModalBackdrop"></div>
+        <button class="steel-modal__close" id="steelModalClose" aria-label="닫기">✕</button>
+        <button class="steel-modal__nav steel-modal__prev" id="steelModalPrev" aria-label="이전">&#8249;</button>
+        <div class="steel-modal__img-wrap">
+            <img src="" alt="스틸컷 확대" id="steelModalImg">
+        </div>
+        <button class="steel-modal__nav steel-modal__next" id="steelModalNext" aria-label="다음">&#8250;</button>
+        <div class="steel-modal__counter" id="steelModalCounter"></div>
+    </div>
+
     <footer id="footer"></footer>
 
 
