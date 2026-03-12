@@ -40,6 +40,9 @@
         height: 350px;
     }
 
+    .special-section .more-btn {
+        padding: 0 20px;
+    }
 
 
     /* notice */
@@ -194,6 +197,11 @@
         font-size: 0.8rem;
         padding: 6px 12px;
         height: 36px;
+    }
+
+    .special-section .more-btn {
+        top: 80px;
+        padding: 0 16px;
     }
 
     /* notice */

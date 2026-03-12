@@ -1427,12 +1427,18 @@ header form:hover>input {
     position: relative;
 }
 
+.special-section .inner {
+    position: relative;
+}
+
 .special-section .more-btn {
     display: inline-block;
     font-size: var(--px12);
+    max-width: 1600px;
     position: absolute;
-    top: 160px;
-    right: 170px;
+    padding: 0 50px;
+    right: 0;
+    top: 40px;
 }
 
 .special-section .more-btn a {

@@ -355,6 +355,7 @@
     height: 18px;
     object-fit: contain;
     flex-shrink: 0;
+    margin-right: 10px;
 }
 
 .reserv {
