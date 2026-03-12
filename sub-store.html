@@ -11,8 +11,10 @@
     <!-- vvv css 이름 변경 후 경로 재수정 vvv -->
     <link rel="stylesheet" href="./css/sub-store.css">
     <link rel="stylesheet" href="./css/sub-store-respond.css">
+    <link rel="stylesheet" href="./css/special-footer-notice-respond.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <script src="./js/header-footer.js"></script>
+    <script defer src="./js/sub-store-json.js"></script>
 </head>
 
 <body>
@@ -37,10 +39,10 @@
             <div class="inner">
                 <!-- VVV 여기 아래로 작업 VVV -->
                 <div class="btn-wrap">
-                    <button class="btn active">콤보</button>
+                    <!-- <button class="btn active">콤보</button>
                     <button class="btn">팝콘</button>
                     <button class="btn">음료</button>
-                    <button class="btn">스낵</button>
+                    <button class="btn">스낵</button> -->
                 </div>
 
                 <div class="best-seller-wrap ">
@@ -49,44 +51,41 @@
                     <div class="seller-wrap swiper">
                         <ul class="best-seller-list swiper-wrapper">
 
-                            <li class="swiper-slide"><a href="#"><img
-                                        src="./images/hy-sub/combo/imgi_20_00000201708000038803_640.png"
+                            <li class="swiper-slide"><a href="#"><img src="./images/hy-sub/combo/combo-12.png"
                                         alt="스몰세트 콤보"></a>
                                 <p class="best-title">스몰 세트</p>
                             </li>
-                            <li class="swiper-slide"><a href="#"><img
-                                        src="./images/hy-sub/combo/imgi_15_20260106023223_640.png" alt="랜덤굿즈 콤보"></a>
+                            <li class="swiper-slide"><a href="#"><img src="./images/hy-sub/combo/combo-10.png"
+                                        alt="랜덤굿즈 콤보"></a>
                                 <p class="best-title">굿즈축제 세트</p>
                             </li>
-                            <li class="swiper-slide"><a href="#"><img
-                                        src="./images/hy-sub/combo/imgi_8_20260205024232_640.png" alt="두바이 콤보"></a>
+                            <li class="swiper-slide"><a href="#"><img src="./images/hy-sub/combo/combo-01.png"
+                                        alt="두바이 콤보"></a>
                                 <p class="best-title">두쫀쿠 세트</p>
                             </li>
-                            <li class="swiper-slide"><a href="#"><img
-                                        src="./images/hy-sub/combo/imgi_22_20251125020825_640.png" alt="주토피아 콤보"></a>
-                                <p class="best-title">주토피아 캐릭터우산 세트</p>
+                            <li class="swiper-slide"><a href="#"><img src="./images/hy-sub/combo/popcorn-07.png"
+                                        alt="주토피아 콤보"></a>
+                                <p class="best-title">토핑추가!팝콘(L)</p>
                             </li>
-                            <li class="swiper-slide"><a href="#"><img
-                                        src="./images/hy-sub/combo/imgi_18_00000201708000045703_640.png"
+                            <li class="swiper-slide"><a href="#"><img src="./images/hy-sub/combo/popcorn-05.png"
                                         alt="CGV콤보"></a>
-                                <p class="best-title">CGV콤보</p>
+                                <p class="best-title">맹구짱구 반반팝콘</p>
                             </li>
-                            <li class="swiper-slide"><a href="#"><img src="./images/hy-sub/combo/combo20.png"
+                            <li class="swiper-slide"><a href="#"><img src="./images/hy-sub/combo/combo-20.png"
                                         alt="할인★주토피아 팝콘세트"></a>
                                 <p class="best-title">할인★주토피아 팝콘세트</p>
                             </li>
-                            <li class="swiper-slide"><a href="#"><img
-                                        src="./images/hy-sub/combo/imgi_23_20251215022023_640.png"
+                            <li class="swiper-slide"><a href="#"><img src="./images/hy-sub/combo/snack-05.png"
                                         alt="아바타3 스틸컵 세트"></a>
-                                <p class="best-title">아바타3 스틸컵 세트</p>
+                                <p class="best-title">씨네밀</p>
                             </li>
-                            <li class="swiper-slide"><a href="#"><img src="./images/hy-sub/combo/combo18.png"
+                            <li class="swiper-slide"><a href="#"><img src="./images/hy-sub/combo/combo-18.png"
                                         alt="CGV 응원굿즈 세트"></a>
                                 <p class="best-title">CGV 응원굿즈 세트</p>
                             </li>
-                            <li class="swiper-slide"><a href="#"><img
-                                        src="./images/hy-sub/combo/imgi_13_20251104019944_640.png" alt="폴라베어키링 세트"></a>
-                                <p class="best-title">폴라베어키링 세트</p>
+                            <li class="swiper-slide"><a href="#"><img src="./images/hy-sub/combo/drink-01.png"
+                                        alt="폴라베어키링 세트"></a>
+                                <p class="best-title">탄산각!스엑블록세트</p>
                             </li>
 
                         </ul>
@@ -113,6 +112,11 @@
                     <h3>COMBO</h3>
                     <div class="grid-wrap">
                         <div class="box-wrap">
+
+                        </div>
+                        <!-- 
+                        <div class="box-wrap">
+                            <a href="#">
                             <div class="img-box"><a href="#"><img
                                         src="./images/hy-sub/combo/imgi_8_20260205024232_640.png" alt="두바이 콤보"></a>
                             </div>
@@ -121,6 +125,7 @@
                                 <p>두쫀쿠1+팝콘1+탄산M1</p>
                                 <p class="price">12,900원</p>
                             </div>
+                            </a>
                         </div>
                         <div class="box-wrap">
                             <div class="img-box"><a href="#"><img
@@ -271,7 +276,7 @@
                                 <p>코카-콜라 폴라베어 인형키링!</p>
                                 <p class="price">9,900원</p>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <!-- <div class="number-next">
