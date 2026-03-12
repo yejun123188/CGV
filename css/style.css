@@ -892,6 +892,12 @@ header form:hover>input {
         font-size: 1vw;
     }
 
+    .blind .zulgeri {
+
+        -webkit-line-clamp: 7;
+
+    }
+
 
 }
 
@@ -917,6 +923,21 @@ header form:hover>input {
         padding: 12px 20px;
     }
 }
+
+
+@media screen and (max-width:880px) {
+    .blind .zulgeri {
+
+        -webkit-line-clamp: 5;
+
+    }
+
+    .blind-1 .b-title {
+        font-size: 24px;
+    }
+}
+
+
 
 @media screen and (max-width:768px) {
 
@@ -959,6 +980,8 @@ header form:hover>input {
 
 @media screen and (max-width:480px) {
 
+
+
     .ticket-box {
         height: 80px;
     }
@@ -988,6 +1011,53 @@ header form:hover>input {
 
     }
 }
+
+@media screen and (max-width:390px) {
+    .blind-1 .b-title {
+        font-size: 16px;
+        font-weight: 800;
+    }
+
+    .blind-1 .genres {
+        font-size: 12px;
+    }
+
+    .blind .zulgeri {
+        line-height: 18px;
+        font-size: 12px;
+    }
+
+    .ticket-box {
+        height: 80px;
+    }
+
+    .m-button-list {
+        gap: 10px;
+    }
+
+    .movie-btn-wrap .m-button-list a {
+        font-size: 12px;
+    }
+
+    .movie-btn-wrap span {
+        padding-left: 10px;
+    }
+
+    .title-sub p,
+    .title-sub img {
+        display: none;
+    }
+
+    .chart-section .btn {
+        font-size: 14px;
+        padding: 12px 12px;
+        height: 36px;
+        line-height: 10px;
+
+    }
+}
+
+
 
 /* ------------------------------------------------------------------ */
 /* 혜택 / 이벤트 (주연) */
