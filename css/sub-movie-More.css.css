@@ -335,7 +335,7 @@ section {
 } */
 
 
-.mov-btn-wrap {
+.main-hero .mov-btn-wrap {
     display: flex;
     width: auto;
     flex-wrap: nowrap;
@@ -343,12 +343,12 @@ section {
 
 }
 
-.mov-btn-wrap img {
+.main-hero .mov-btn-wrap img {
     margin-right: 7px;
     width: 25px;
 }
 
-.btn {
+.main-hero .btn {
     width: auto;
     padding: 12px 28px;
     height: 48px;
